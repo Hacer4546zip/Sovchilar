@@ -8,7 +8,7 @@
             font-family: Arial, sans-serif;
             background-color: #f7f7f7;
             margin: 0;
-            padding: 20px;
+            padding: 5px;
         }
 
         h1 {
@@ -71,7 +71,7 @@
             padding: 10px;
             font-family: monospace;
             font-size: 14px;
-            border: 1px solid #C00;
+            border: 3px solid #000;
             border-radius: 5px;
             box-sizing: border-box;
             margin-bottom: 15px;
@@ -223,7 +223,7 @@
     updateOnlineUsers();
 
     // Jamlangan online foydalanuvchilar sonini har 6 soniyada yangilash
-    setInterval(updateOnlineUsers, 20000);
+    setInterval(updateOnlineUsers, 50000);
 
     // Xabar yuborish
     document.getElementById('send-button').addEventListener('click', function() {
