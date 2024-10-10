@@ -412,7 +412,7 @@
         ];
 
         if (codeUsed) {
-            output.innerHTML = "Kechrasiz Siz Xato Tergan Ko'rinasiz Yoki siz Xozir Saxifadan Chiqib Qaytib Kirib Kodni Yozing...!✋️ eslatma Tog'ri kod terilgan ammo qizni havolasi chiqmagan bo'lsa Demak u qiz Zaynet 🤐 Bunday Holatda Siz 1 2 Soatdan Sung Qayta Saxifaga Kirib Kodni Qayta Tering Va Qizni Havolasi Yana O'zini Joyiga Qaytib Qo'yiladi 🟢 Va Qizga Xabar Yozishingiz Mumkun 🔐";
+            output.innerHTML = "🟣 Saxifadan Chiqib Qayta Kiring Va Kodni Takror Yozing ♻️ Agar Shunda Xam Havola Chiqmasa Demak Bu Qiz Zaynet Birov Vaxtdan Sung Qayta Yozing Kodni";
             return; // Agar kod ishlatilgan bo'lsa, funktsiyani to'xtatamiz
         }
 
