@@ -200,8 +200,6 @@
     <p></p>
     <textarea rows="10" cols="50" placeholder="Havolani Yuklang ....."></textarea>
     <br>
-    
-</html>
 
     <h2>2 Qadam 👣 Kodi Yozing 👇</h2>
     <textarea id="codeArea" placeholder="Kodni yozing ......"></textarea>
