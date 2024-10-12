@@ -8,7 +8,7 @@
             font-family: Arial, sans-serif;
             background-color: #f7f7f7;
             margin: 0;
-            padding: 5px;
+            padding: 20px;
         }
 
         h1 {
@@ -71,7 +71,7 @@
             padding: 10px;
             font-family: monospace;
             font-size: 14px;
-            border: 3px solid #000;
+            border: 1px solid #C00;
             border-radius: 5px;
             box-sizing: border-box;
             margin-bottom: 15px;
@@ -188,12 +188,26 @@
         <input type="text" id="message-input" placeholder="Chatga Xabar yozing..." />
         <button id="send-button">Yuborish</button>
     </div>
+    <html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💚 Pastgi Qatorga kelinni havolasini yuklang.....!</title>
+</head>
+<body>
+    <h1>1 Chi Qadamni 👣 Boslash uchun siz Hozir Kanalga Kiring va Kelin Nomzodni Havolasidan Nusxa Oling va  joyga
+     kelin nomzodni havolasini yuklang.....👇</h1>
+    <p></p>
+    <textarea rows="10" cols="50" placeholder="Havolani Yuklang ....."></textarea>
+    <br>
     
-    <h2>Kodingizni Tering (****) Pastga Qarang 👇 </h2>
+</html>
+
+    <h2>2 Qadam 👣 Kodi Yozing 👇</h2>
     <textarea id="codeArea" placeholder="Kodni yozing ......"></textarea>
     <button id="runBtn">🔐  Kodni Tasdiqlash  ✋️</button>
-
-    <h2>🟢 Келинни Хаволаси Чикади 👇</h2>
+    
+    <h2>3 Qadam 👣 Келинни Хаволаси Чикади 👇</h2>
     <div id="output"></div>
     <div class="button-container">
         <a href="https://t.me/Vovo_Admen" target="_blank">🔐 Kod sotib olish</a>
@@ -223,7 +237,7 @@
     updateOnlineUsers();
 
     // Jamlangan online foydalanuvchilar sonini har 6 soniyada yangilash
-    setInterval(updateOnlineUsers, 50000);
+    setInterval(updateOnlineUsers, 20000);
 
     // Xabar yuborish
     document.getElementById('send-button').addEventListener('click', function() {
@@ -412,7 +426,7 @@
         ];
 
         if (codeUsed) {
-            output.innerHTML = "🟣 Saxifadan Chiqib Qayta Kiring Va Kodni Takror Yozing ♻️ Agar Shunda Xam Havola Chiqmasa Demak Bu Qiz Zaynet Birov Vaxtdan Sung Qayta Yozing Kodni";
+            output.innerHTML = "Servirda Xato kanalga kiring va Kelin nomzodni havolasidan Nusxa oling qayta shu saxifaga kiring va Kodni Tering...🔐";
             return; // Agar kod ishlatilgan bo'lsa, funktsiyani to'xtatamiz
         }
 
