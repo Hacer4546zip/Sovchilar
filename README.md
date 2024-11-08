@@ -202,7 +202,7 @@
                 <div class="link-message">
                     <h3>Tug'ri Ishlatish uchun siz video qo'llanmani ko'ring..!</h3>
                     <input type="url" id="url" placeholder="Havolani joylashtiring....">
-                    <h2>👤 Келин номзодни Хаволасига кириб булмаса демак у зайнет ❗️ ...!</h2>
+                    <h2>👤 Келин номзодни Хаволасига кириб булмаса демак у зайнет ❗️</h2>
                 </div>
                 <div class="button-container" id="buttonContainer">
                     <a href="#" id="girlLink" class="access-button" target="_blank">Qizning havolasi</a>
