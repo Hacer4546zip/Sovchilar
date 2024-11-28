@@ -7,7 +7,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #a1a1a; /* Qora fon */
-            color: white; /* Oq matn */
+            color: #ffffff; /* Oq matn */
             display: flex;
             flex-direction: column;
             justify-content: center; /* Vertikal markazlash */
@@ -87,7 +87,7 @@
         }
 
         button:hover {
-            background-color: #005600;
+            background-color: #00d500;
         }
 
         .error-message {
@@ -99,7 +99,7 @@
         .chat-box {
             max-height: 300px; /* Chat oyna balandligi */
             overflow-y: auto; /* Oqim kerak bo'lsa, skroll qiladi */
-            background-color: #1c1c1c;
+            background-color: #45383c;
             padding: 10px;
             border-radius: 10px;
             margin-bottom: 10px;
@@ -117,7 +117,7 @@
         }
 
         .user-message {
-            text-align: right; /* Foydalanuvchi xabarlari o'ng tomonda */
+            text-align: Height; /* Foydalanuvchi xabarlari o'ng tomonda */
             color: #00ff00; /* Foydalanuvchi xabarlari yashil rangda */
         }
 
@@ -165,15 +165,15 @@
         }
 
         .access-button {
-            background-color: #00ff00; /* Tugma rangi */
-            color: black; /* Tugma matn rangi */
-            border-radius: 10px; /* Tugma burchaklarini yumshatish */
-            padding: 10px 30px; /* Tugma ichidagi bo'shliqlar */
+            background-color: #f3f3f3; /* Tugma rangi */
+            color: #030303; /* Tugma matn rangi */
+            border-radius: 100px; /* Tugma burchaklarini yumshatish */
+            padding: 20px 60px; /* Tugma ichidagi bo'shliqlar */
             text-decoration: none; /* Tugma matnini chizilgan holda ko'rsatmaslik */
         }
 
         .access-button:hover {
-            background-color: #005600; /* Tugma ustiga bosilganda rang o'zgarishi */
+            background-color: #cb0000; /* Tugma ustiga bosilganda rang o'zgarishi */
         }
 
         .centered-button {
@@ -202,7 +202,7 @@
                 <div class="link-message">
                     <h3>Tug'ri Ishlatish uchun siz video qo'llanmani ko'ring..!</h3>
                     <input type="url" id="url" placeholder="Havolani joylashtiring....">
-                    <h2>👤 Келин номзодни Хаволасига кириб булмаса демак у зайнет ❗️</h2>
+                    <h2>👤 Келин номзодни Хаволасига кириб булмаса демак у зайнет ❗️ ...!</h2>
                 </div>
                 <div class="button-container" id="buttonContainer">
                     <a href="#" id="girlLink" class="access-button" target="_blank">Qizning havolasi</a>
@@ -229,7 +229,7 @@
     </div>
 
     <script>
-        const validPins = ['760', '6622', '6722', '6287', '9926', '769', '6515', '5615']; // Yangi pin kodlar ro'yhati
+        const validPins = ['760', '6622', '6722']; // Yangi pin kodlar ro'yhati
         const botMessages = [
             "Kicha Mazza Qildim, telfonda gaplashdim 🥰",
             "Vay iflos xaromi ekan, lichkamga mani sukib qochib kitibdi",
