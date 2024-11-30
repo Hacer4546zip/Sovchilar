@@ -228,7 +228,7 @@
     </div>
 
     <script>
-        const validPins = ['760', '769', '6622', '6722']; // Yangi pin kodlar ro'yhati
+        const validPins = ['760', '769', '6622', '6287']; // Yangi pin kodlar ro'yhati
         const botMessages = [
             "Kicha Mazza Qildim, telfonda gaplashdim 🥰",
             "Vay iflos xaromi ekan, lichkamga mani sukib qochib kitibdi",
