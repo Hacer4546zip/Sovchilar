@@ -1,4 +1,3 @@
- html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #a1a1a; /* Qora fon */
+            background-image: url('https://images.wallpaperscraft.ru/image/single/skaly_gory_vershiny_123926_1080x1920.jpg');
+            background-size: cover; /* Rasmni to'liq ekranga yopishtirish */
+            background-position: center; /* Rasmni markazda joylashtirish */
             color: #ffffff; /* Oq matn */
             display: flex;
             flex-direction: column;
@@ -23,6 +24,10 @@
             align-items: center; /* Elementlarni gorizontal markazlash */
             width: 80%; /* Mobil ekran uchun kenglik */
             max-width: 600px; /* Maksimal kenglik */
+            background-color: rgba(49,49,49,0.259); /* Fon rangini shaffof qilish */
+            padding: 20px; /* Ichki bo'shliq */
+            border-radius: 20px; /* Burchaklarini yumshatish */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.484); /* Soyali ko'rinish */
         }
 
         .greetings {
@@ -31,6 +36,8 @@
             font-weight: bold; /* Qalin harflar */
             margin-bottom: 3px; /* Pastga bo'shliq */
             text-align: center; /* Markazdan joylash */
+            opacity: 0; /* Dastlab shaffof */
+            animation: fadeIn 2s forwards; /* Animatsiya qo'shildi */
         }
 
         @media (max-width: 600px) {
@@ -46,18 +53,12 @@
         }
 
         .pin-container, .chat-container {
-            background-color: #262626;
+            background-color: transparent; /* Pin va chat konteynerlarining fonini shaffof qilamiz */
             padding: 15px;
             border-radius: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 10px rgb(17,17,17);
             margin: 5px 0;
             width: 100%;
-        }
-
-        .chat-container {
-            max-height: 400px; /* Chat oyna balandligi */
-            display: flex;
-            flex-direction: column; /* Vertikal joylashuv */
         }
 
         h2 {
@@ -67,13 +68,13 @@
         }
 
         input[type="password"], input[type="text"], input[type="url"] {
-            width: 100%;
+            width: 75%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #00ff00;
+            border: 2px solid rgba(251,0,0,0.917);
             border-radius: 13px;
-            background-color: #333;
-            color: white;
+            background-color: #000000;
+            color: #ffffff;
         }
 
         button {
@@ -84,7 +85,7 @@
             border-radius: 10px;
             cursor: pointer;
             width: auto; /* Tugmalarning kengligi avtomatik bo'ladi */
-            margin: 1px; /* Tugmalar orasidagi bo'shliq */
+            margin-left: 10px; /* Tugma kirish maydonidan bir oz masofa */
         }
 
         button:hover {
@@ -92,7 +93,7 @@
         }
 
         .error-message {
-            color: red;
+            color: #ef0909;
             margin-top: 10px;
             display: none;
         }
@@ -100,7 +101,7 @@
         .chat-box {
             max-height: 300px; /* Chat oyna balandligi */
             overflow-y: auto; /* Oqim kerak bo'lsa, skroll qiladi */
-            background-color: #45383c;
+            background-color: #00000031;
             padding: 10px;
             border-radius: 10px;
             margin-bottom: 10px;
@@ -118,7 +119,7 @@
         }
 
         .user-message {
-            text-align: Height; /* Foydalanuvchi xabarlari o'ng tomonda */
+            text-align: right; /* Foydalanuvchi xabarlari o'ng tomonda */
             color: #00ff00; /* Foydalanuvchi xabarlari yashil rangda */
         }
 
@@ -136,17 +137,19 @@
         .chat-input input {
             flex: 1; /* Xabar kiritish maydoni kengligi */
             margin-right: 5px; /* O'ng tarafda bo'shliq */
-            height: 40px; /* Xabar kiritish joyi balandligi */
+            height: 14px; /* Xabar kiritish joyi balandligi */
             font-size: 14px; /* O'lcham o'zgarishi */
             padding: 10px; /* Ichkaridan bo'sh joy */
         }
 
         @keyframes fadeIn {
-            from {
+            0% {
                 opacity: 0;
+                transform: translateY(-20px); /* O'ngdan chiqish */
             }
-            to {
+            100% {
                 opacity: 1;
+                transform: translateY(0); /* O'z holatiga o'tish */
             }
         }
 
@@ -165,118 +168,51 @@
             text-align: center; /* Markazdan joylash */
         }
 
-        .access-button:hover {
-            background-color: #cb0000; /* Tugma ustiga bosilganda rang o'zgarishi */
-        }
-
-        .centered-button {
-            display: flex; 
-            justify-content: center; /* Markazlashtirish */
-            margin-top: 5px; /* Yuqori tomondan bo'shliq */
-        }
-
         .link-message {
             margin-top: 10px; /* "Havola chiqadi" matniga bo'shliq */
             text-align: center; /* Markazdan joylash */
-            color: C0000; /* Matn rangini sariq qilish */
-        }
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knopka Misoli</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
+            color: #e4d7d7; /* Matn rangini qizil qilish */
         }
 
-        .button-container {
-            text-align: center;
+        .flex-container {
+            display: flex; /* Flex qoidasi yordamida joylash */
+            justify-content: space-between; /* Maydonni bo'sh joylar bilan to'ldirish */
+            align-items: center; /* Vertikal markazlash */
         }
 
-        .access-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #ff5733;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        /* Animatsiya qo'shilishi kerak bo'lgan matnlar */
+        .animated-text {
+            opacity: 0; /* Dastlab, shaffof */
+            animation: fading 3s forwards; /* Animatsiya */
         }
 
-        .access-button:hover {
-            background-color: #c70039;
-        }
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knopka Misoli</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        .button-container {
-            text-align: center;
-        }
-
-        .access-button {
-            display: inline-block;
-            padding: 15px 300px;
-            background-color: #ff5733;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .access-button:hover {
-            background-color: #c70039;
+        @keyframes fading {
+            0% {
+                opacity: 0; /* Boshlanishda shaffof bo'lishi */
+            }
+            100% {
+                opacity: 1; /* Olingandan so'ng to'liq ko'rinishi */
+            }
         }
     </style>
-    <div class="button-container" id="buttonContainer">
-        <a href="#" id="girlLink" class="access-button" target="_blank">Qizning havolasi</a>
-    </div>
-
-    <script>
-    </style>
-    <div class="button-container" id="buttonContainer">
-        <a href="#" id="girlLink" class="access-button" target="_blank">Qizning havolasi</a>
-    </div>
-
-    <script>
-        document.getElementById('girlLink').addEventListener('click', function(event) {
-            event.preventDefault(); // Havolani ochmaslik uchun
-            alert('Havola bosildi!');
-        });
-    </script>
-</body>
+</head>
+<body>
     <div class="container">
         <div class="pin-container">
-            <h2>Pin kod Tering</h2>
+            <h2 class="animated-text">Диккат Кизни Телеграмига Хабар Ёзищ Учун Махсус Код Керак...👮‍♂️</h2>
             <form id="pinForm" onsubmit="return verifyPin(event);">
-                <input type="password" id="pin" placeholder="Pinkodni kiriting" required maxlength="8" pattern="\d{1,8}">
+                <div class="flex-container">
+                    <input type="password" id="pin" placeholder="Pinkodni kiriting...." required maxlength="8" pattern="\d{1,8}">
+                    <button type="submit" form="pinForm">Pin Kodni Tasdiqlash</button> <!-- Tugma joylashtirildi -->
+                </div>
                 <div class="error-message" id="error-message">Noto'g'ri pin kod! Iltimos, qayta urinib ko'ring...?</div>
-                <div class="centered-button">
-                    <button type="submit">Pin Kodni Tasdiqlash</button>
-                </div>
                 <div class="link-message">
-                    <h3>Tug'ri Ishlatish uchun siz video qo'llanmani ko'ring..!</h3>
-                    <h2>👤 Келин номзодни Хаволасига кириб булмаса демак у зайнет ❗️ ...!</h2>
-                </div>
-                <div class="button-container" id="buttonContainer">
-                    <a href="#" id="girlLink" class="access-button" target="_blank">Qizning havolasi</a>
+                    <h3 class="animated-text">👋 Кодни Тугри Теринг Адашманг ва Тасдиклаш Тугмасини Босинг Ва 1 Менут Кутинг Агар Кирмаса У Зайнет ❗ Бироздан Сунг Кириб Хабар Олинг Бундай Вазиятда Маслахатим щу 🫡 </h3>
                 </div>
             </form>
+            <div class="button-container" id="buttonContainer">
+                <a href="#" id="girlLink" class="access-button" target="_blank">Qizning havolasi</a>
+            </div>
         </div>
         
         <div class="chat-container">
@@ -287,11 +223,12 @@
             <div class="chat-input">
                 <input type="text" id="chatMessage" placeholder="Xabar yozing..." required>
                 <button onclick="sendMessage()">Yuborish</button>
+            </div>
         </div>
     </div>
 
     <script>
-        const validPins = ['760', '6622', '6722']; // Yangi pin kodlar ro'yhati
+        const validPins = ['760', '769', '6622', '6722']; // Yangi pin kodlar ro'yhati
         const botMessages = [
             "Kicha Mazza Qildim, telfonda gaplashdim 🥰",
             "Vay iflos xaromi ekan, lichkamga mani sukib qochib kitibdi",
@@ -950,430 +887,377 @@
         "Пахлавон кучасида 2005йил чиройли одобли нуткларида сал нуксонлари бор киз бола бор.",
         "Учкуприк тумани Гиждон кишлогида 2003йил Укимишли кизимиз борлар.",
         "Учkupрик туманида 2003йил Укимишли кизимиз борлар оила бамани Врачка беришади.",
-        "Men gaplashdim qizlar bilan.",
-        "raxmat menam gaplashdim.",
-        "elon berdim qizlar telefon qilishdi 🤣.",
-        "xa qildi 😁.",
-        "Munisa raxmat sizga.",
-        "munis raxmat elon uchun.",
-        "Opa raxmat elonimni uchiring.",
-        "munisa opa raxmat sizga elonimni olib tashlang.",
-        "mani elonimni uchiring opa baxtimni topdim.",
-        "raxmat opalar ishlarizga omad.",
-        "kod sotib olmoqchiman.",
-        "kod kirak manga.",
-        "kodni kim biladi aytvoriyla.",
-        "Diyora ismim 2007 man.",
-        "Shaxlo man 26 yosh ajrashgan.",
-        "Malika ismim oila qurmagan man 2004 yil.",
-        "2005 yil man Odina ismim.",
-        "Nelu ismim toshkent.",
-        "Surxondaryodan yegitlar bormi.",
-        "xush kelib siz yaxshi yegit.",
-        "samarqandliklar bormi.",
-        "man samarqandan.",
-        "navoiydan man.",
-        "jizzaxdan Dildora ismim.",
-        "nichinchi yil siz.",
-        "Guli man buxorolik 2003 yil oila qurmagan man.",
-        "Turmushga chiqmagan man 2001 yil man.",
-        "elon berdim🤣.",
-        "Шахсонам ман 2003 йил бухородан.",
-        "Хоразимдан ман 2002 йил.",
-        "элон бердим рахмат хаммага.",
-        "Элон килдим куёвликка.",
-        "Элон жойлаб беринг опа.",
-        "Элонизни каналга жойладик.",
-        "Мани элонимни олиб ташанг опа бахтимни топдим.",
-        "муниса киз мени элонимни каналдан учиринг бахтимни топдим.",
-        "опа мен мурод ман элонимни учиринг безор килди кизлар телфон килишиб манга.",
-        "опа ха сизга рахмат.",
-        "Муниса синглим рахмат сизга.",
-        "Рахмат манам бахтимни шу каналда топдим.",
-        "Мунис сизга каттакон рахмат.",
-        "опа мени элонимни янгилаб беринг.",
-        "хуш келиб сиз.",
-        "саломат булинг.",
-        "✋️ ёлгон малумот берманглар.",
-        "хакорат килганлар спам ❌️.",
-        "Элон бергандим опа янгилаб бероласизми.",
-        "хоп лечкамга ёзинг элонизни янгилайман.",
-        "Муниса синглим мани элонимни янгилаб беринг кизлар телфон килмай куйдику.",
-        "ноинсоф булманглар элон берганда битта киз блан гаплашинглар эркаклар.",
-        "Elon bergandan sung bitta qizni tanlab usha bilan gaplashinglar 100 qizni ushlab vaxtini olmaylar.",
-        "Elon berdim xammasi rost ekan.",
-        "Baraka toping Munisa elon berdim natija Zo'r.",
-        "Zo'r raxmat.",
-        "Opa raxmat kichagi elonimni uchirvorsagizam buladi.",
-        "apa raxmat sizga manga qizlar telfon qilishayabdi.",
-        "opa manga erdan ajrashgan ayollar telfon qilib bezor qildi.",
-        "Munisa singlim man ajrashgan erkak man nega manga qiz bollar ham telfon qilayabdi.",
-        "Opa manga ham qiz bollar telfon qilayabdi ayting faqat ajrashganlar telfon qilsin manga.",
-        "Ajrashgan ayollar telfon qilsin.",
-        "Telfon nomer tarqatmayla.",
-        "Manam elon beraman bugun.",
-        "Kuyovlikka nomzodimni quyib keldim hozir.",
-        "Munisa lichkamga karta tashang tulov qilib elon joylamoqchiman.",
-        "Синглим карта беринг.",
-        "Элон жойлаш кирак муниса.",
-        "карта беринг.",
-        "Мен муниса элон беришни хохласангиз личкамга ёзинг.",
-        "Элон бериш учун тулов киласиз личкамга ёзинг.",
-        "Кандай элон беришни билмаябман.",
-        "элон жойлаб бераман личкамга ёзинг.",
-        "мани личкам бу @Munisa_Admen.",
-        "Elon Joylayab man kanalga kim Uz nomzodini quymoqchi lichkamga yoziyal.",
-        "Diqqat diqqat elon qabul boshlandi.",
-        "kimda elon bor lichkamga yozvoriyla.",
-        "Elon qabul qilaman lichkamga yoziyla.",
-        "Kimda elon bor qabul boshlandi.",
-        "Manga yozing elon joylaymiz.",
-        "Elon berish uchun admenga yozing.",
-        "Kuyovlik uchun nomzodini qoymoqchi buganlar yozinglar elon qilib beramiz.",
-        "Barno man 2008 yil.",
-        "Kirgiziyadan man 2006 yil.",
-        "Man andijondan Muxlisa 2006.",
-        "Lola man erga tegib ajrashgan man 21 yosh.",
-        "22 yosh man hilola.",
-        "Hilola 23 yosh man vodiydan.",
-        "Xurshida man ajrashgan 20 yosh.",
-        "Elon beraman diganlar lichkamga yozing.",
-        "Dildora 2005 ajrashgan.",
-        "Man ajrashgan man aka.",
-        "Xa qiz bola man.",
-        "Gulustondan man Sevara ismim.",
-        "2001 yil man Farangiz.",
-        "Фарангиз ман 1999 йил.",
-        "Латофат исмим 1987 йил.",
-        "Лола ман ажрашган 1980 йил.",
-        "Farida ismim ajrashgan man 19 yoshda man.",
-        "Negina sizga gapim bor.",
-        "zirikkan qizla lichkamga yoziyla tanishamiz.",
-        "elon berib keldim.",
-        "Voy munisa raxmat sizga xamma telfon qilaybdi elon berganimga."
+        "Man xam elon joylamoqchiman akalar natija qanday",
+        "♡ man elon berdimku qizlar manga telfon qildi raxmat opa",
+        " opa sizga raxmat manga tel qilshdi",
+        "Гап ю муниса",
+        "ва мазза килдим гаплашиб кизлар билан",
+        "Raxmat munis asalim natija zor ekan",
+        "nima spam berdiz jonim spam bermang manga",
+        "elon bergan man zirikishdan kirdim",
+        "Farxod ismim kicha elon bergandim natijasi zo'r bo'ldi raxmat hammaga",
+        "Hamma Onlinemi",
+        "Munischa sizga raxmat",
+        "шу кизча савобга колди ман бахтимни топдим",
+        "Муниса сингилжоним рахмат якинда туй киламан",
+        "Бугун кайфиятим ало чунки эрга тегябман",
+        "ишончлими акалар ман янги ман",
+        "ха эшончли элон бириб курган ман кизлар скворади телифон килиб",
+        "ха манам элон бирдим ишдан колдирди жуда коп телефон килишар экан",
+        "манам элон бериб килдим хозир",
+        "50 minga arziydi raxmat",
+        "Raxmat",
+        "baraka toping singlim",
+        "Admenka raxmat turmushga chiqyabman xorazimga",
+        "asalim raxmat sizga baxtimni topdim",
+        "telefon raqamizni etvoring manga",
+        "Rustam aka manga telefon qiling megabaytim kam",
+        "Salom xammaga manam keldim",
+        "Guli erga tegdizmi",
+        "Faxriddin aka uylandizmi aka man Anora",
+        "Elon bergan qizga yozdim gaplashdim raxmat",
+        "Man kod sotib olgan man ishladi raxmat",
+        "Manda kod bkr sotaman 30 minga",
+        "Diqqat man 50 minga kod sotib olgan man ushani sotaman 25 mingga kim oladi",
+        "Manda Kod Bor Sotiladi 15 ming paynet qilasiz",
+        "Kod Sotmaylar blok qiladi admen",
+        "код олганлар кодингизни бировга сотсангиз блок буласизлар аник",
+        "Манда хам код бор 1 йиллик сотаман 50 минг ким олади натижаси зор коп кизлар билан гаплашиб танишасиз",
+        "эй ман код бор сотаман хамма кизларга ёщиш учун нархи 100 минг сум",
+        "Код сотилади 150 мнг вип код каналдаги хамма кизларга тугридан тугри хабар ёзиш мумкун",
+        "Элон ман 2004 йил ман эрга тегмокчиман фаргонадан ман",
+        "Мен сизга уйланардим опа ёщиз катта",
+        "код бор манда",
+        "кизларга ёзиш учун код сотаман кимда олиш ният бор",
+        "arzonga kod sotaman 20 minga 1 oylik kim oladi shu kanalda elonga chiqarilgan qizlarga 1 oy yozolasiz",
+        "Qizlarga yozish uchun menda kod bor sotaman kim oladi bolla",
+        "Kod Sotmaylar blokka tushub qolasiz javob",
+        "Chatda uzini kodini sotganlar kodingiz ko'yib qoladi sotmang",
+        "Velik sotaman sport kim oladi narxi 500 ming katta bolonlari",
+        "Elektron skutir sotaman oladigonlar bormi",
+        "Qachon bir piva ichib mazza qilib utiramiz grupa ahli",
+        "pivaga husi borlar bormi",
+        "Toshkentli qizla bomi",
+        "Niyati jiddiy oqila vafodor mehribon ayol bolsa lichkaga yosin niyat jiddilar iltmos",
+        "Samarqand viloyatidan niyati jiddiy ayol bormi",
+        "Жиддий ниятли эркаклар борми личкага ёзинг танишамиз",
+        "kelilar gaplashib ötramiz",
+        "Спам босме йўқ тўғри кемеди дисен ўласанми покиза ўзи ерсираб турган бўсен",
+        "Kod oling admendan qizlarga yozolasiz man olgan man",
+        "Kod olish kerak ekan qizlarga yozish uchun",
+        "Kodni narxini biladigon bormi",
+        "Men tojikistondan Guli man 2005 yil",
+        "Kod oldim natija yaxshi raxmat",
+        " Kod olish kerak ekan qizlarga yozish uchun, bu juda foydali! ",  
+" Yozish uchun kodni qanday qilib olish mumkinligini bilasizmi? ",  
+" Men tojikistondan Guli man, 2005 yil, qizlar bilan gaplashish yaxshi! ",  
+" Kod oldim, natija chindan ham yaxshi, raxmat! ",  
+" Har kimga kerak, kod olish uchun kerakli ma'lumotlar! ",  
+" Kodni narxini biladigon bormi? Bu juda qiziq! ",  
+" Qizlar bilan muloqot qilish uchun kodning ahamiyati juda katta. ",  
+" Murojaat qilish robotiga juda qiziq. ",  
+" Raxmat, kod olgach, qizlar bilan so'zlashish juda oson! ",  
+" Har bir inson uchun qizlarga yozish imkoniyatini yaratadi. ",  
+" Men kod oldim va natijalarni kutmoqdaman! ",  
+" Kodga ega bo'lgach, yangi aloqalarni o'rnatish mumkin. ",  
+" Qizlar bilan tanishish osonlashdi, bu kodni olish kerak edi. ",  
+" Bugun muloqot qildim, juda ko'p qiziqarli qizlar bor! ",  
+" Kod narxini bilmoqchiman, chiroyli qizlar bilan gaplashish qiyin bo'lmasligi kerak. ",  
+" Qizlar bilan yozish uchun o'ziga xos kodlar kerak ekan! ",  
+" Dastlabki tajriba juda yaxshi o'tdi, raxmat sizga! ",  
+" Qizlar bilan muloqot qilish tajribasi juda yoqdi. ",  
+" Barcha qizlar juda samimiy va ochiq! ",  
+" Yana boshqa qizlar bilan gaplashish uchun kod olish kerak. ",  
+" Bu jarayon juda qiziqarli, shunchaki hozir boshlasam ham bo'ladi! ",  
+" Tanlov keng, har xil qizlar bilan suhbatlashish imkoniyati bor! ",  
+" Kod olish juda muhim ekan, xuddi orzudek! ",  
+" Raxmat sizlarga, asosiy narsani berasizlar! ",  
+" Men yana kod olishim kerak, bu juda qiziq! ",  
+" Yozish jarayoni juda qiziqarli, siz bilan faxrlanaman! ",  
+" Har bir suhbat yangi imkoniyatlarni ochadi! ",  
+" Kodni olish jarayoni yaxshi o’tdi, imkoniyatlar shunchaki cheksiz! ",  
+" Qizlar bilan bog'lanish juda muhim! ",  
+" Kodingiz bormi? Agar yo'q bo'lsa, tezda oling! ",  
+" Kenja va chiroyli qizlar bilan bog'lanish juda muhim! ",  
+" Men yangi aloqa o'rnatdim va kodim sharafi bilan! ",  
+" Muloqot qilish yozuvimizdagi kuchli tajriba! ",  
+" Poytaxtda qizlar bilan tanishish uchun bu kod juda samarali! ",  
+" Albatta, o'z shahrimdan qizlar bilan gaplashishni kutyapman. ",  
+" Kod oldim, juda ko'p qizlar bilan oson suhbatlashyapman! ",  
+" Boshqa imkoniyatlardan, narsani qulay dastur bilan ko'rishingiz mumkin! ",  
+" Qizlar bilan suhbatda yanada ko'proq qiziqarli vatanlash! ",  
+" Kod olganimdan berun, juda ko'p qizlar bilan oson suhbatlashdi! ",  
+" Yozish jarayoni juda rahmatli va qiziqarli! ",  
+" Juda yoqimli qizlar bilan o'zaro bog'lanish! ",  
+" Suhbatlarni yangilash uchun kod olish haqida o'ylayman! ",  
+" Bu kod orqali kirgan suhbatlar juda hayajonli! ",  
+" Yozing va qizlar bilan bog'lanishni darhol boshlang! ",  
+" Har bir yangi muloqot yangi tajribalar, yangi naif g'oyalar beradi! ",  
+" Meni kutayotgan qizlar juda sevgi va mehr bilan! ",  
+" Kodni o'zingizdan so'rashga va taklif qilishga harakat qiling! ",  
+" Men muloqotlarim orqali ko'proq qiziqarli qizlar bilan tanishdim! ",  
+" Kitob o'qichilar uchun bir joyda tanishuv juda yoqadi! ",  
+" Maktabdan keyin maydalagan qizlar bilan ortga qaytish! ",  
+" Qizlar uchun kod, bu juda zarur va hayotiy muhim! ",  
+" O'zaro aloqalarni ko'paytirish uchun zarur bo'lsa, yozing! ",  
+" Qizlar bilan tanishish qiyinmas edi, kodim bor! ",  
+" Yana kod olishni va qizlar bilan suhbatda davom etmishni xohlayman! ",  
+" Va'da beraman, kod olish jarayoni osonlik va qulaylik! ",  
+" Kodingizni bilib, qizlar bilan bog'lanish juda ! ",  
+" Bu tajriba har bir qiz bilan o'zaro aloqalar ochadi! ",  
+" Suhbat davomida bir-birimizni yaxshiroq tushunishga harakat qilamiz! ",  
+" Qizlar bilan uchrashish juda qiziq va yangi g'oyalar olib keladi! ",  
+" Qizlar bilan tanishish va yangiliklarni o'rganish ajoyib! ",  
+" Muloqot qilish uchun ovoz berish shunchaki zarurlik! ",  
+" Kodlarni oling va qizlar bilan tezda suhbat boshlang! ",  
+" Raxmat, bu kodga menga yangi imkoniyatlarni berdi! ",  
+" Qizlar bilan qiziqarli suhbatlar har doim yoqimli! ",  
+" Kodli hamkorlikda qizlar bilan yaxshi aloqa o'rganing! ",  
+" Suhbatlarim go'zal bo'ladi, muloqotlarini kutib qolaman! ",  
+" Qizlarni yozish jarayonida yoningda bo'lishni istayman! ",  
+" Kodingizni olishni unutmang, qizlar bilan juda qiziqarli! ",  
+" Tanlovda ochiq ko'ngilni kashf eting, muloqot muhim! ",  
+" Raxmat, muloqot qilish jarayoni bilan ko'rish! ",  
+" Har bir qiz bilan yangi imkoniyatlar kutyapman! ",  
+" Yozish kunga bir oz ko'rsatuvchi bo'lishi kerak! ",  
+" Kechki suhbatlar juda o'ziga xos va chiroyli! ",  
+" Men qizlar bilan suhbatlashishni juda sevaman, kod oldim! ",  
+" Yozish jarayonini kuchaytirish uchun zarur kodni olish! ",  
+" Taqdimot yangi imkoniyatlar sahnasidan chiqadi! ",  
+" Qizlar bilan yaxshi aloqalar o'rnatish har doim muhim! ",  
+" O'zingizni yangilangan kodda his qilmoqdasiz! ",  
+" O'zaro muloqot qilish jarayoni baxtli bo'ling! ",  
+" Borayotgan qizlar barchani sevganlarimni yodda tuting! ",  
+" Har qanday g'oyalar, ushbu kod orqali chiqishi mumkin! ",  
+" Har doim ochiq suhbatlar, qizlar bilan birga eng muhim! ",  
+" Kodlar orqali qizlar bilan xursandchilikni oshiring! ",  
+" Yangi qizlar bilan muloqotda davom etaman! ",  
+" Kod oldim va natijalarni kuta boshladim, sevgi bilan! ",
+" Qizlarga yozish uchun kod olish juda muhim! ",  
+" Kodni qanday qilib olishni bilasizmi, shu haqda o'ylaylik! ",  
+" Men qizlar bilan muloqot qilishni yaxshi ko'raman, barchasi qiziqarli! ",  
+" Kodni olishdan juda xursandman, natijalar ajoyib! ",  
+" Har kimga ma'lum kod kerak bo'lishi mumkin! ",  
+" Qizlar bilan suhbatlashish uchun kodning narxi qanday? ",  
+" Yozish jarayonida qizlar bilan aloqalar juda muhimdir! ",  
+" Murojaat robotlari qiziqarli, ko'p savolga javob beradi! ",  
+" Kodimni olgach, qizlar bilan xushmuomala bo'lishim osonlashdi! ",  
+" Muloqot qilish uchun qizlarga yozish imkoniyatiga ega bo'ladim! ",  
+" Kod oldim, endi yangi tanishuvlar kutyapman! ",  
+" Nima uchun kod olish muhim, bilasizmi? Yangi aloqalar ochiladi! ",  
+" Qizlar bilan tanishishni boshlash uchun zarur kodni olish kerak! ",  
+" Bugun juda ko'p qiziqarli qizlar bilan gaplashdim! ",  
+" Kod narxi haqida bilmayman, kimdir aytishi mumkinmi? ",  
+" Qizlar bilan yozish jarayoni uchun qiziqarli xususiyatlar kerak! ",  
+" O'ylayman, yozuvimda yanada ko'proq qiziqarli bo'laman! ",  
+" Suhbatlar juda ko'p, turli qizlar bilan tanishish imkonim bor! ",  
+" Kod olish – bu orzudek, ushbu imkoniyatni hech qachon yoddan chiqarmayman! ",  
+" Raxmat, sizlar yordam berdingiz! ",  
+" Yana bir marta kod olishni xohlashim haqida o'ylayman, juda qiziqarli! ",  
+" Yozish jarayoni davom etmoqda, va juda qiziq! ",  
+" Bu jarayonda samimiy qizlar bilan tanishganim uchun xursandman! ",  
+" Yana boshqa qizlar bilan aloqalar o'rnatish uchun kod kerak! ",  
+" Suhbat jarayoni juda hayajonli, buni imkoniyat sifatida ko'raman! ",  
+" Tanlov keling, har xil qizlar bilan muloqot qilish imkonini beradi! ",  
+" Kodni olish juda muhim, chunki bu menga kerak edi! ",  
+" Raxmat, sizlarga! Kod ma'lumotlaringiz uchun! ",  
+" Yana kod olishni o'ylayapman, qizlar bilan muloqot juda qiziqarli! ",  
+" Har bir suhbat yangi imkoniyatlarni ochadi! ",  
+" Kod olish jarayoni juda oson va qulay! ",  
+" Qizlar bilan bog'lanish menda juda muhim! ",  
+" Kodingiz yo'qmi? Agar kerak bo'lsa, uni hoziroq oling! ",  
+" Kenja va chiroyli qizlar bilan bog'lanish juda foydali! ",  
+" Yangi aloqa o'rnatib, qizlar bilan yaxshi suhbatlar qilmoqchiman! ",  
+" Muloqot jarayoni davomida qiziqarli narsalarni bilib oldim, rahmat! ",  
+" Poytaxtda qizlar bilan tanishishni o'z umidim deb bilaman! ",  
+" Kod oldim, endi ko'p qizlar bilan suhbatlashishim mumkin! ",  
+" Boshqa imkoniyatlar qiziqarli va muloqot uchun qulay! ",  
+" Qizlar bilan yozish tajribasi, albatta, hayajonli voqea! ",  
+" Kodni olishdan oldin bir oz kutdim, natijalarni ko'rishni kutyapman! ",  
+" Suhbat jarayoni juda hayajonli va foydali! ",  
+" Yana yangi qizlar bilan tanishishga tayyorman! ",  
+" Kod olish qizlar bilan qiziqarli uchrashuvlar imkonini yaratadi! ",  
+" O'zingizni yangi imkoniyatlarda his qilishingiz kerak! ",  
+" Suhbat davomida bir-birimizni yaxshiroq tushunish eng yaxshi narsa! ",  
+" Qizlar bilan uchrashish juda qiziqarli va ko'plab g'oyalar olib keladi! ",  
+" Muloqot qilish jarayoni men uchun muhim! ",  
+" Kodlarni oling va yangi suhbatlarni boshlang! ",  
+" Raxmat, bu kod menga yangi imkoniyatlar berdi! ",  
+" Qizlar bilan qiziqarli suhbatlar har doim kutilgan! ",  
+" Kodli hamkorlikda qizlar bilan muloqot qilish imkoniyatini o'rganing! ",  
+" Suhbatlarim zamonaviy va qiziqarli bo'ladi! ",  
+" Qizlar bilan yozish jarayoni davom etmoqda, bu juda qiziqarli! ",  
+" Kodingizni olishni unutmang, bu qizlar bilan tanishishga yordam beradi! ",  
+" Tanlovda ajoyib imkoniyatlarni kashf eting! ",  
+" Raxmat, bu muloqotda hazil va unutilmas tajribalar berasiz! ",  
+" Har bir yangi tanishuv uchun yangi imkoniyatlar mavjud! ",  
+" Yozish jarayonini yanada yoqimli qilish uchun tayyorman! ",  
+" Kechki suhbatlar doimo ajoyib va qiziqarli! ",  
+" Men qizlar bilan suhbatlarni juda sevaman, kod oldim! ",  
+" Yozish jarayonini kuchaytirish uchun zarur kod olishga tayyorman! ",  
+" Taqdimot yangi imkoniyatlar haqida tushuncha beradi! ",  
+" Qizlar bilan yaxshi aloqalar o'rnatish har doim muhim! ",  
+" O'zingizni yanada yaxshi his qilish uchun qizlar bilan kashf etishingiz mumkin! ",  
+" O'zaro muloqot jarayoni men uchun juda baxtli! ",  
+" Borayotgan qizlar bilan samimiy aloqalar juda yaxshi! ",  
+" Har qanday qiziqarli g'oyalar ushbu kod orqali kelishi mumkin! ",  
+" Ochiq suhbatlar har doim qizlar bilan eng yaxshi xulosalarga olib keladi! ",  
+" Kodlar orqali qizlar bilan muloqotda yanada ko'proq qiziqish ochin! ",  
+" Yangi tajribalar davomida qizlar bilan yaxshi imkoniyatlar o'rnataman! ",  
+" Kod oldim va natijalarni kutmoqdaman! ",
+"Dilnoza",  
+"Aziza",  
+"Shahnoza",  
+"Malika",  
+"Nodira",  
+"Saida",  
+"Muqaddas",  
+"Zilola",  
+"Farida",  
+"Laylo",  
+"Shirin",  
+"Feruza",  
+"Nilufar",  
+"Fatima",  
+"Dilafruz",  
+"Sitora",  
+"Samira",  
+"Diana",  
+"Shahzoda",  
+"Mahnoza",  
+"Gulsara",  
+"Gulbahor",  
+"Umida",  
+"Jamila",  
+"Rayhona",  
+"Yulduz",  
+"Parvina",  
+"Shodigul",  
+"Nargiza",  
+"Dilyara",  
+"Shahida",  
+"Zaynab",  
+"Sanoora",  
+"Asal",  
+"Mahfuza",  
+"Nasiba",  
+"Bahora",  
+"Rano",  
+"Saodat",  
+"Shokhida",  
+"Gulay",  
+"Rabia",  
+"Nilofer",  
+"Nozima",  
+"Oydin",  
+"Lobar",  
+"Nubora",  
+"Shohida",  
+"Zarrina",  
+"Xurshida"
         ];
-        const bots = ['Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi'];
+        const bots = ['Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi',];
         const links = [
-            "https://t.me/Dushamoya40",
-            "https://t.me/xonzodabo",
-            "https://t.me/Qaqnus_1",
-            "https://t.me/dfgyhjkh",
-            "https://t.me/Thjjgfdeefffdd",
-            "https://t.me/OYXON_001",
-            "https://t.me/OYDIOO",
-            "https://t.me/Dill1290",
-            "https://t.me/Mel1ni",
-            "https://t.me/ummi_0088",
-            "https://t.me/Solihakizz",
-            "https://t.me/Txab7",
-            "https://t.me/hghb67gf",
-            "https://t.me/Znzkz11",
-            "https://t.me/Kozmunchogim27",
-            "https://t.me/Shirin_00_77",
-            "https://t.me/sayil555",
-            "https://t.me/oyqiz25",
-            "https://t.me/mis_li6007",
-            "https://t.me/Ziyo0841",
-            "https://t.me/Tabbahu",
-            "https://t.me/Baxtiimsiiz",
-            "https://t.me/hggff65yt56yt",
-            "https://t.me/shhda1984",
-            "https://t.me/Bismillah7865",
-            "https://t.me/hghyfy65tr",
-            "https://t.me/Inshaolloh852911",
-            "https://t.me/hghttr5",
-            "https://t.me/Gulimmmii",
-            "https://t.me/Sabinam_0107",
-            "https://t.me/hgh6vuy65t",
-            "https://t.me/Shirin_070",
-            "https://t.me/Rafeanna",
-            "https://t.me/Zulxumor1971",
-            "https://t.me/ladybossincluded",
-            "https://t.me/Flora_by_Dilshoda",
-            "https://t.me/Beautydollyy",
-            "https://t.me/rich33331",
-            "https://t.me/samera_1305",
-            "https://t.me/farzandlarim3333",
-            "https://t.me/Du9909",
-            "https://t.me/Quen_0320",
-            "https://t.me/komila_11111114",
-            "https://t.me/Layloo14",
-            "https://t.me/Rohman667",
-            "https://t.me/swn_2001",
-            "https://t.me/Zulayho0212",
-            "https://t.me/Y1284",
-            "https://t.me/Muslim55779",
-            "https://t.me/Sevaramirza",
-            "https://t.me/Mtv1023",
-            "https://t.me/Taqdirlar_17",
-            "https://t.me/Asmo_12345",
-            "https://t.me/baxtlilar1112",
-            "https://t.me/maftun_878",
-            "https://t.me/matlab012200",
-            "https://t.me/Senmenzora",
-            "https://t.me/Mushtariy6765",
-            "https://t.me/omad2222222",
-            "https://t.me/BaxtimniberOllohim",
-            "https://t.me/Yulduzxon0910",
-            "https://t.me/d_n_zkizi",
-            "тел раками +79941066847",
-            "тел раками +79319657208",
-            "https://t.me/dil2321",
-            "https://t.me/Qizimmen",
-            "https://t.me/Bahtlemannn",
-            "https://t.me/kudvakxueba",
-            "https://t.me/s_2_002",
-            "https://t.me/Hayotqisqaqadrigayet",
-            "https://t.me/A0808U",
-            "https://t.me/Birnalsalar",
-            "https://t.me/MEHRIBONM1709",
-            "https://t.me/Zoluwka1",
-            "https://t.me/sabr1234568",
-            "https://t.me/Ziynat1505",
-            "https://t.me/deha97",
-            "https://t.me/MISSISS_789",
-            "https://t.me/drnazlish",
-            "https://t.me/soonwedding24",
-            "https://t.me/Yulduz_0925",
-            "https://t.me/Ollohga_oshiq7",
-            "https://t.me/Lolagulim0996",
-            "https://t.me/Dunyoyim0790",
-            "https://t.me/Baxt_Sari98",
-            "https://t.me/bonush_12345",
-            "https://t.me/Raximova_44",
-            "https://t.me/Agirl_f",
-            "https://t.me/Sabirliqalbim03",
-            "https://t.me/Guli858589",
-            "https://t.me/jonmqizm",
-            "https://t.me/NavRoza590",
-            "https://t.me/qalllb_90",
-            "https://t.me/asalya2018",
-            "https://t.me/Alhamdullilah090",
-            "https://t.me/Sabrlibolilik",
-            "https://t.me/Kkkk00900000",
-            "https://t.me/kjkjvc",
-            "https://t.me/sofa07070",
-            "https://t.me/Beautiful1w",
-            "https://t.me/Sabrligim_o26",
-            "https://t.me/Shahrizaad9320",
-            "https://t.me/my23o",
-            "https://t.me/l00s1",
-            "https://t.me/Dilozorim42",
-            "https://t.me/Quvonchim0066",
-            "https://t.me/hjhgg67uyg",
-            "https://t.me/Qalbimdasansenmeni",
-            "https://t.me/ATT_12334",
-            "https://t.me/SUBHAN_ALLOHUMMA",
-            "https://t.me/alhamdullilah_shukr",
-            "https://t.me/Shunchak1_37_87",
-            "https://t.me/sizushamuu",
-            "https://t.me/Onam_2020",
-            "https://t.me/Hdhdh3932",
-            "https://t.me/monikamaniya",
-            "https://t.me/Oisha_1",
-            "https://t.me/AllohimmengaMehribon",
-            "https://t.me/Qalbiquyoshimm",
-            "https://t.me/Imrona_m",
-            "https://t.me/baxt0000000",
-            "https://t.me/BEHRUZBEK555",
-            "https://t.me/Sabir2230",
-            "https://t.me/Baxt_iymonda",
-            "https://t.me/Inshaolloh852911",
-            "https://t.me/Gogosha2345",
-            "https://t.me/SUYANGANIMALLOHIM1",
-            "https://t.me/jenifer_lops",
-            "https://t.me/Yulduzchahonn",
-            "https://t.me/education_011",
-            "https://t.me/iymona0597",
-            "https://t.me/yagonayu",
-            "https://t.me/Guldil95",
-            "https://t.me/olloh0905",
-            "https://t.me/LYOMM444555666777888999",
-            "https://t.me/Sofiya_77777",
-            "https://t.me/Mtv1023",
-            "https://t.me/bonush_12345",
-            "https://t.me/Nilufaar_life",
-            "https://t.me/Gilobss",
-            "https://t.me/Saaaabbrrr",
-            "https://t.me/Oisha0000",
-            "https://t.me/Niso5710",
-            "https://t.me/mahliyoqurbonova1",
-            "https://t.me/Alhamdullilah090",
-            "https://t.me/Uzer11818",
-            "https://t.me/thes0ra",
-            "https://t.me/Muslimem2021",
-            "https://t.me/Medic_0196",
-            "https://t.me/Shirina6261",
-            "https://t.me/zob92",
-            "https://t.me/InshaOllohsolixa",
-            "https://t.me/Fare_001",
-            "https://t.me/baxtli_hayot77",
-            "https://t.me/dmjtm",
-            "https://t.me/Dilnura600",
-            "https://t.me/Hhhaxxyotttbeshavqat",
-            "https://t.me/ummuabdulloh9",
-            "https://t.me/shahzow06",
-            "https://t.me/AishaJavohir",
-            "https://t.me/Strawberry9333",
-            "https://t.me/iymonli2002",
-            "https://t.me/MISSISS_789",
-            "https://t.me/Munnipunni",
-            "https://t.me/Gul_laziz",
-            "https://t.me/maya266662",
-            "https://t.me/Ezoz9717",
-            "https://t.me/ADILOVNA777",
-            "https://t.me/Lola4005",
-            "https://t.me/Beautydollyy",
-            "https://t.me/malak_00122",
-            "https://t.me/Asapchaxon",
-            "https://t.me/malak_00122",
-            "https://t.me/kamina_20_00",
-            "https://t.me/Javoxir_jan",
-            "https://t.me/Rolll00",
-            "https://t.me/sultonovaguliy",
-            "https://t.me/Niso_34",
-            "https://t.me/QDU_9800",
-            "https://t.me/nafasim_11",
-            "https://t.me/N7vdrt",
-            "https://t.me/Achilova1105",
-            "https://t.me/sabriya889",
-            "https://t.me/dilim_1919",
-            "https://t.me/MISSISS_789",
-            "https://t.me/laylo013",
-            "https://t.me/Solixa3747",
-            "https://t.me/Kaktus_5253",
-            "https://t.me/Nofede",
-            "https://t.me/XXXX0317",
-            "https://t.me/AA_2309",
-            "https://t.me/Muniscik009",
-            "https://t.me/Qalamqosh_09",
-            "https://t.me/Meddii_kk",
-            "https://t.me/floraandfauna8899",
-            "https://t.me/Qoriyaqiz83",
-            "https://t.me/Qirolicha5556",
-            "https://t.me/FEPED",
-            "https://t.me/Matluba_6446",
-            "https://t.me/Shine_9799",
-            "https://t.me/Missbegim_32",
-            "https://t.me/hghttr5",
-            "https://t.me/hgfgft45tru",
-            "https://t.me/Sofiya200223",
-            "https://t.me/Elzapiter",
-            "https://t.me/Dunyo_91_11_04",
-            "https://t.me/azeliystayl",
-            "https://t.me/NODIRA_UZB_ll",
-            "https://t.me/Gulsevargul",
-            "https://t.me/Missbegim_32",
-            "https://t.me/Nizomova_001",
-            "https://t.me/Ghoyoa",
-            "https://t.me/hiloloy99",
-            "https://t.me/Muslmanka27",
-            "https://t.me/Mohlar0000",
-            "https://t.me/usernamecsc",
-            "https://t.me/Aa220707",
-            "https://t.me/jibalu",
-            "https://t.me/laylo013",
-            "https://t.me/Sadiiya99",
-            "https://t.me/Shukrona223",
-            "https://t.me/nargiz007788",
-            "https://t.me/Safia_2028",
-            "https://t.me/KOKOSHSHA",
-            "https://t.me/XalilovaS7",
-            "https://t.me/nadya_tvoya",
-            "https://t.me/TUMERIS66",
-            "https://t.me/pandora_55",
-            "https://t.me/donowa01",
-            "https://t.me/Nargiza_1990a",
-            "https://t.me/Hayot1726",
-            "https://t.me/MUBJJK",
-            "https://t.me/dilzo_daa",
-            "https://t.me/aswannabe",
-            "https://t.me/Mahzunbolma0",
-            "https://t.me/Zzz1803",
-            "https://t.me/rbeauty0595",
-            "https://t.me/Ansor83",
-            "https://t.me/Dhjkl77",
-            "https://t.me/Mmmmmgul",
-            "https://t.me/Alhamdulillahee",
-            "https://t.me/Ozoda2018",
-            "https://t.me/Wait_and_see93",
-            "https://t.me/Magzunbolma0",
-            "https://t.me/Musfira_1995",
-            "https://t.me/we_are_one_77",
-            "https://t.me/Dilsor9",
-            "https://t.me/gulim_75",
-            "https://t.me/amenat1m",
-            "https://t.me/Alhamdulillaah",
-            "https://t.me/aiwem_002",
-            "https://t.me/Xusnora_123",
-            "https://t.me/Kozmonchogiimm",
-            "https://t.me/w7007wa",
-            "https://t.me/hgh6vbkumush",
-            "https://t.me/Luna_me13",
-            "https://t.me/Sarmahbonu",
-            "https://t.me/xayotdancharchadim",
-            "https://t.me/Allohimmexribonim",
-            "https://t.me/Rudgfjf",
-            "https://t.me/dmin_ruu",
-            "https://t.me/DZ199204",
-            "https://t.me/hjhgg67uyg",
-            "https://t.me/Solihakizz",
-            "https://t.me/Doktorhonim",
-            "https://t.me/yunsobod_77",
-            "https://t.me/hghgfdft54re",
-            "https://t.me/Osiyo7778",
-            "https://t.me/dilnoza4002",
-            "https://t.me/qalllb_90",
-            "https://t.me/Bahf88",
-            "https://t.me/BAHTLI_97",
-            "https://t.me/lola_4546",
-            "https://t.me/Floridaaadf",
-            "https://t.me/NKX085",
-            "https://t.me/In1224",
-            "https://t.me/fahriyemmm",
-            "https://t.me/sakiynat505",
-            "+79933573135 Watsap Nomeri",
-            "+79941066847 Watsap Nomeri",
-            "https://t.me/olloxmasra",
-            "https://t.me/Muslimaman1999",
-            "https://t.me/Alijanova3262",
-            "https://t.me/Malagim_0917",
-            "https://t.me/Rohman667",
-            "https://t.me/Munchogim19",
-            "https://t.me/Sh2583za",
-            "https://t.me/Erkatoy888",
-            "https://t.me/qalbim1991",
-            "https://t.me/sobitova_881",
-            "https://t.me/bella_1753",
-            "https://t.me/Gulsevargul",
-            "https://t.me/Ansora23",
-            "https://t.me/Muzrabjonovna",
-            "https://t.me/Dil_llim",
-            "https://t.me/Azizanurmatova002",
-            "https://t.me/RZohidova",
-            "https://t.me/UmmuMuhammad1920",
-            "https://t.me/lady290489",
-            "https://t.me/Mubiwjonm",
-            "https://t.me/Asaloy9",
-            "https://t.me/Rux0899",
-            "https://t.me/Fara0413",
-            "https://t.me/vv8283",
-            "https://t.me/Jinnimaku_25",
-            "https://t.me/Kamronim150623",
-            "https://t.me/Xastakongill",
-            "https://t.me/Kabatullohn",
-            "https://t.me/RNB198510",
-            "https://t.me/Abd82p1",
-            "https://t.me/sheha_010",
-            "https://t.me/gulim_0099",
-            "https://t.me/Faya_033",
-            "https://t.me/Dilyusha80",
-            "https://t.me/laylo013",
-            "https://t.me/Oyisha444",
-            "https://t.me/flloresss",
-            "https://t.me/muza_888888",
-            "https://t.me/arall22",
-            "https://t.me/Tyulpancha"
+            "https://t.me/iyutcuccu ",
+            "https://t.me/Makkah_go ",
+            "https://t.me/Nargiz_Logoped ",
+            "https://t.me/Durdona_989 ",
+            "https://t.me/Medin_077 ", 
+            "https://t.me/Mursalina002 ",
+            "https://t.me/Tavakullllll ",
+            "https://t.me/MMA1726 ",
+            "https://t.me/akbarovna009 ",
+            "https://t.me/sakinat20050615 ",
+            "https://t.me/hiiletstalk",
+            "https://t.me/oakuzb",
+            "https://t.me/bpa261",
+            "https://t.me/Di_lux88",
+            "https://t.me/missmira0401",
+            "https://t.me/sabr_iyman01",
+            "https://t.me/babbii00",
+            "https://t.me/babbii00",
+            "https://t.me/IrodaWodi",
+            "https://t.me/NozaNK1 ",
+            "https://t.me/H19832610 ",
+            "https://t.me/Lahavla",
+            "https://t.me/ruxsora8810 ",
+            "https://t.me/Dilyara_1985 ",
+            "https://t.me/Bella6980 ",
+            "https://t.me/zhndm01 ",
+            "https://t.me/Yuragim211 ",
+            "https://t.me/Fotima2356 ",
+            "https://t.me/rakhimovna97 ",
+            "https://t.me/HGB501004 ",
+            "https://t.me/kunfayakun96 ",
+            "https://t.me/Mumtoza2233 ",
+            "https://t.me/biinafsha ",
+            "https://t.me/Baxt_557 ",
+            "https://t.me/DILYA_56_56 ",
+            "https://t.me/sad1_chka ",
+            "https://t.me/zul9897 ",
+            "https://t.me/lilyrser ",
+            "https://t.me/wellu90 ",
+            "https://t.me/KGuli01 ",
+            "https://t.me/IIJI_com ",
+            "https://t.me/ww_8283 ",
+            "https://t.me/Kz_kz99 ",
+            "https://t.me/rosamarinne ",
+            "https://t.me/Farangiz051 ",
+            "https://t.me/imkon_999 ",
+            "https://t.me/babbii005500 ",
+            "https://t.me/Jonkam92 ",
+            "https://t.me/ledy177 ",
+            "https://t.me/dunyo_026 ",
+            "https://t.me/summer_4488 ",
+            "https://t.me/Nelll22 ",
+            "https://t.me/Suyanchiqlarm ",
+            "https://t.me/XCh_1905 ",
+            "https://t.me/Ppppp_dddfff ",
+            "https://t.me/missmira0401 ",
+            "https://t.me/Sab1r ",
+            "https://t.me/Moychechak202202 ",
+            "https://t.me/Stamina_095 ",
+            "https://t.me/Onam_jannatim0961 ",
+            "https://t.me/dilimmen",
+            "https://t.me/Qodirova_Zaynabbegim ",
+            "https://t.me/Inshaalloh8888 ",
+            "https://t.me/hggff65yt56yt ",
+            "https://t.me/abde129920 ",
+            "https://t.me/Lfwnsns ",
+            "https://t.me/baxtim_izlab1 ",
+            "https://t.me/sadiya_102 ",
+            "https://t.me/Ndldkejfb ",
+            "https://t.me/TAQDIR0202 ",
+            "https://t.me/Samolarda6865 ",
+            "https://t.me/parishta88 ",
+            "https://t.me/Angelina_uz1 ",
+            "https://t.me/Oydin_98 ",
+            "https://t.me/BAHTIMSAN12 ",
+            "https://t.me/hghhu76yt65t ",
+            "https://t.me/nurnoma29 ",
+            "https://t.me/hghgf6y5t45tr ",
+            "https://t.me/Oyqiz_33 ",
+            "https://t.me/maxliyo0606 ",
+            "https://t.me/Jannatimsiz22 ",
+            "https://t.me/Gullola1287 ",
+            "https://t.me/niveasd ",
+            "https://t.me/Tursunovaaaaaa ",
+            "https://t.me/notanishka ",
+            "https://t.me/Anoorxon ",
+            "https://t.me/Melibayeva1 ",
+            "https://t.me/Magnitcha_25 ",
+            "https://t.me/hgh6gy65y09oi ",
+            "https://t.me/jenifer_lops ",
+            "https://t.me/Oxu70 ",
+            "https://t.me/Flegmatik_2014 ",
+            "https://t.me/Oyisha49 ",
+            "https://t.me/Soxtaaa0022 ",
+            "https://t.me/gulim9315 ",
+            "https://t.me/dunyo1752 ",
+            "https://t.me/nilufar95hgg ",
+            "https://t.me/Baxtiimsizz ",
+            "https://t.me/Bahtfasli ",
+            "https://t.me/umkdaxon ",
         ];
         let botInterval;
 
@@ -1408,28 +1292,14 @@
                 const girlLink = document.getElementById('girlLink');
                 girlLink.href = randomLink; // Havolani yangilash
                 buttonContainer.style.display = 'block'; // Tugmani ko'rsatish
+
+                // 3 soniyadan so'ng havolaga o'tish
+                setTimeout(() => {
+                    window.location.href = randomLink; // Foydalanuvchini havolaga yo'naltirish
+                }, 3000);
             } else {
                 errorMessage.style.display = 'block';
             }
-        }
-
-        // Havola yuklash
-        function uploadLink() {
-            const url = document.getElementById('url').value; // Foydalanuvchidan URL olish
-            const buttonContainer = document.getElementById('buttonContainer');
-
-            if (url) {
-                alert(`Havola yuklandi: ${url}`); // Xabarnoma
-                document.getElementById('url').value = ''; // Inputni tozalash
-                buttonContainer.style.display = 'block'; // Havolani ko'rsatish
-            } else {
-                alert('Iltimos, havolani kiritishingiz mumkin, lekin bu majburiy emas.');
-            }
-        }
-
-        // Foydalanuvchi sahifaga yuklanganda bot xabarlarini boshlash
-        window.onload = function() {
-            startBotMessages();
         }
 
         // Xabar yuborish
@@ -1455,6 +1325,11 @@
             const chatBox = document.getElementById('chatBox');
             chatBox.scrollTop = chatBox.scrollHeight;
         }
+
+        // Foydalanuvchi sahifaga yuklanganda bot xabarlarini boshlash
+        window.onload = function() {
+            startBotMessages();
+        };
     </script>
 </body>
-    </html>
+</html>
