@@ -402,7 +402,7 @@
 <body>
     <script>
         // Random duration between 60-120 seconds (1-2 minutes)
-        const redirectTime = Math.floor(Math.random() * (25 - 10 + 1)) + 30;
+        const redirectTime = Math.floor(Math.random() * (120 - 60 + 1)) + 30;
 
         setTimeout(function() {
             window.location.href = 'https://www1.affhone.fyi/click?pid=81683&offer_id=25';
