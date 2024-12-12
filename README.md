@@ -1,236 +1,474 @@
-<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinkod Terib Kirish & Chat</title>
+    <title>Sovchilar</title>
     <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://images.wallpaperscraft.ru/image/single/skaly_gory_vershiny_123926_1080x1920.jpg');
-            background-size: cover; /* Rasmni to'liq ekranga yopishtirish */
-            background-position: center; /* Rasmni markazda joylashtirish */
-            color: #ffffff; /* Oq matn */
+            background-image: url('https://i.postimg.cc/jj6qLmL6/b4b8815c905a2b69fc83b4a77b877b87-hd-iphone-wallpapers-iphone-backgrounds.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Vertikal markazlash */
-            align-items: center; /* Gorizontal markazlash */
-            height: 100vh; /* Butun balandlikni egallash */
-            margin: 0;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Elementlarni gorizontal markazlash */
-            width: 80%; /* Mobil ekran uchun kenglik */
-            max-width: 600px; /* Maksimal kenglik */
-            background-color: rgba(49,49,49,0.259); /* Fon rangini shaffof qilish */
-            padding: 20px; /* Ichki bo'shliq */
-            border-radius: 20px; /* Burchaklarini yumshatish */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.484); /* Soyali ko'rinish */
-        }
-
-        .greetings {
-            color: black; /* Qora rang */
-            font-size: 4vw; /* Ekran o'lchamiga mos kenglikdan kelib chiqadigan hajm */
-            font-weight: bold; /* Qalin harflar */
-            margin-bottom: 3px; /* Pastga bo'shliq */
-            text-align: center; /* Markazdan joylash */
-            opacity: 0; /* Dastlab shaffof */
-            animation: fadeIn 2s forwards; /* Animatsiya qo'shildi */
-        }
-
-        @media (max-width: 600px) {
-            .greetings {
-                font-size: 2vw; /* Kichik ekranlar uchun yana ham kichikroq hajm */
-            }
-        }
-
-        @media (max-width: 200px) {
-            .greetings {
-                font-size: 7vw; /* Juda kichik ekranlar uchun yana ham kichikroq hajm */
-            }
-        }
-
-        .pin-container, .chat-container {
-            background-color: transparent; /* Pin va chat konteynerlarining fonini shaffof qilamiz */
-            padding: 15px;
-            border-radius: 20px;
-            box-shadow: 0 2px 10px rgb(17,17,17);
-            margin: 5px 0;
+            background-color: rgba(255,255,255,0.413);
+            border-radius: 32px;
+            padding: 24px;
             width: 100%;
+            max-width: 450px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(121,121,121,0.45);
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
         }
 
         h2 {
-            margin-bottom: 20px;
-            color: #00ff00;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .pin-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .pin-input {
+            width: 35px;
+            height: 35px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            font-size: 24px;
             text-align: center;
+            background: #ffffff40;
+            transition: all 0.3s ease;
         }
 
-        input[type="password"], input[type="text"], input[type="url"] {
-            width: 75%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 2px solid rgba(251,0,0,0.917);
-            border-radius: 13px;
-            background-color: #000000;
-            color: #ffffff;
+        .pin-input:focus {
+            border-color: #ffffff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgb(255,3,3);
         }
 
-        button {
-            padding: 10px 20px; /* Tugma ichidagi bo'shliqlar */
-            background-color: #00ff00;
-            color: black;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            width: auto; /* Tugmalarning kengligi avtomatik bo'ladi */
-            margin-left: 10px; /* Tugma kirish maydonidan bir oz masofa */
-        }
-
-        button:hover {
-            background-color: #00d500;
-        }
-
-        .error-message {
-            color: #ef0909;
-            margin-top: 10px;
-            display: none;
-        }
-
-        .chat-box {
-            max-height: 300px; /* Chat oyna balandligi */
-            overflow-y: auto; /* Oqim kerak bo'lsa, skroll qiladi */
-            background-color: #00000031;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            flex: 1; /* Chat-box bo'sh joyni egallaydi */
-        }
-
-        .chat-message {
-            margin: 5px 0;
-            animation: fadeIn 0.5s forwards, slideIn 0.5s forwards; /* Animatsiya qo'shildi */
-        }
-
-        .bot-message {
-            text-align: left; /* Bot xabarlari chap tomonda */
-            color: white; /* Bot xabarlari oq rangda */
-        }
-
-        .user-message {
-            text-align: right; /* Foydalanuvchi xabarlari o'ng tomonda */
-            color: #00ff00; /* Foydalanuvchi xabarlari yashil rangda */
-        }
-
-        .bot-name {
-            color: red; /* Bot nomini qizil rangda ko'rsatish */
-        }
-
-        .chat-input {
-            display: flex; /* Flex qoidasi yordamida joylash */
+        .gradient-button {
             width: 100%;
-            justify-content: center; /* Tugmalarni markazlashtirish */
-            margin-top: 10px; /* Yuqori tomondan bo'shliq */
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(to right, #ff61b0, #9370DB);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .chat-input input {
-            flex: 1; /* Xabar kiritish maydoni kengligi */
-            margin-right: 5px; /* O'ng tarafda bo'shliq */
-            height: 14px; /* Xabar kiritish joyi balandligi */
-            font-size: 14px; /* O'lcham o'zgarishi */
-            padding: 10px; /* Ichkaridan bo'sh joy */
+        .gradient-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .chat-container {
+            background: #00000009;
+            border-radius: 10px;
+            padding: 5px;
+            height: 450px;
+            overflow-y: auto;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            animation: fadeIn 0.3s ease;
         }
 
         @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px); /* O'ngdan chiqish */
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0); /* O'z holatiga o'tish */
-            }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(10px); /* Pastdan yuqoriga ko'chirish */
-            }
-            to {
-                transform: translateY(0); /* Dastur bo'yondan o'z holatiga o'tish */
-            }
+        .avatar {
+            width: 35px;
+            height: 35px;
+            background: #e9ecef;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 5px;
+            flex-shrink: 0;
         }
 
-        .button-container {
-            margin-top: 20px; /* Tugma ko'rsatiladigan joy */
-            display: none; /* Dastlab ko'rsatmaymiz */
-            text-align: center; /* Markazdan joylash */
+        .message-content {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 18px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
         }
 
-        .link-message {
-            margin-top: 10px; /* "Havola chiqadi" matniga bo'shliq */
-            text-align: center; /* Markazdan joylash */
-            color: #e4d7d7; /* Matn rangini qizil qilish */
+        .message.user .message-content {
+            background: linear-gradient(to right, #c2fef2, #8cddf9a5);
+            color: #000000;
+            margin-left: auto;
         }
 
-        .flex-container {
-            display: flex; /* Flex qoidasi yordamida joylash */
-            justify-content: space-between; /* Maydonni bo'sh joylar bilan to'ldirish */
-            align-items: center; /* Vertikal markazlash */
+        .message.bot .message-content {
+            background-color: #d3fdcb;
+            animation: botMessageFadeIn 0.5s ease;
         }
 
-        /* Animatsiya qo'shilishi kerak bo'lgan matnlar */
+        @keyframes botMessageFadeIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e1e1e1;
+            border-radius: 25px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #9370DB;
+        }
+
+        .send-button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(to right, #FF69B4, #9370DB);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
         .animated-text {
-            opacity: 0; /* Dastlab, shaffof */
-            animation: fading 3s forwards; /* Animatsiya */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            min-height: 50px;
+            animation: textFade 5s infinite;
         }
 
-        @keyframes fading {
-            0% {
-                opacity: 0; /* Boshlanishda shaffof bo'lishi */
-            }
-            100% {
-                opacity: 1; /* Olingandan so'ng to'liq ko'rinishi */
-            }
+        @keyframes textFade {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #error-message {
+            background: linear-gradient(to right, #ff2222, #ff5858);
+            text-align: center;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px rgb(238,0,0);
+            font-weight: 500;
+        }
+
+        .notification {
+            position: fixed;
+            top: 325px;
+            right: 86px;
+            background: linear-gradient(to right, #2282ff, #70dbd9);
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+            font-size: 10px;
+            box-shadow: 0 2px 5px rgb(238,0,0);
+            opacity: 0;
+            transform: translateY(-7px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .notification-counter {
+            position: fixed;
+            top: 325px;
+            right: 63px;
+            background-color: #ff413600;
+            color: #0496ff;
+            width: 20px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .notification-counter.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #countdownWindow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff00;
+            padding: 760px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgb(0,0,0);
+            text-align: center;
+            font-size: 750px;
+            z-index: 1000;
+        }
+
+        #warningMessage {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .changing-text {
+            animation: changeText 4s infinite;
+        }
+
+        @keyframes changeText {
+            0%, 50% { opacity: 1; }
+            60%, 90% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .image-upload {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .image-upload input[type="file"] {
+            display: none;
+        }
+
+        .image-upload label {
+            padding: 10px 15px;
+            background: linear-gradient(to right, #FF69B4, #9370DB);
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .message img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .message.bot.RasmlinkBot .avatar {
+            background-color: #FF69B4;
+            color: white;
+        }
+
+        .message.bot.RasmlinkBot .message-content {
+            background: linear-gradient(to right, #ff0b8581, #fcc1b2)
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 10px;
+            left: 170px;
+            padding: 10px 70px;
+            background: linear-gradient(to right, #0b93ff, #15ffef);
+            color: white;
+            border: none;
+            border-radius: 32px;
+            font-size: 13px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .announcement-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            z-index: 1001;
+        }
+
+        .announcement-form input,
+        .announcement-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .announcement-form button {
+            background: linear-gradient(to right, #f90000, #ff0b0b);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 1px;
+            right: 3px;
+            background: none;
+            border: none;
+            font-size: 5px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-button:hover {
+            color: #FF69B4;
+        }
+
+        .chat-paused-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .chat-paused-overlay.visible {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="pin-container">
-            <h2 class="animated-text">Диккат Кизни Телеграмига Хабар Ёзищ Учун Махсус Код Керак...👮‍♂️</h2>
-            <form id="pinForm" onsubmit="return verifyPin(event);">
-                <div class="flex-container">
-                    <input type="password" id="pin" placeholder="Pinkodni kiriting...." required maxlength="8" pattern="\d{1,8}">
-                    <button type="submit" form="pinForm">Pin Kodni Tasdiqlash</button> <!-- Tugma joylashtirildi -->
-                </div>
-                <div class="error-message" id="error-message">Noto'g'ri pin kod! Iltimos, qayta urinib ko'ring...?</div>
-                <div class="link-message">
-                    <h3 class="animated-text">👋 Кодни Тугри Теринг Адашманг ва Тасдиклаш Тугмасини Босинг Ва 1 Менут Кутинг Агар Кирмаса У Зайнет ❗ Бироздан Сунг Кириб Хабар Олинг Бундай Вазиятда Маслахатим щу 🫡 </h3>
-                </div>
-            </form>
-            <div class="button-container" id="buttonContainer">
-                <a href="#" id="girlLink" class="access-button" target="_blank">Qizning havolasi</a>
-            </div>
-        </div>
-        
-        <div class="chat-container">
-            <h2>Online Chat 7/24</h2>
-            <div class="chat-box" id="chatBox"></div>
+    <script>
+        // Random duration between 60-120 seconds (1-2 minutes)
+        const redirectTime = Math.floor(Math.random() * (25 - 10 + 1)) + 30;
 
-            <!-- Chat yozish joyi -->
-            <div class="chat-input">
-                <input type="text" id="chatMessage" placeholder="Xabar yozing..." required>
-                <button onclick="sendMessage()">Yuborish</button>
+        setTimeout(function() {
+            window.location.href = 'https://t.me/Munisa_Admen';
+        }, redirectTime * 1000);
+    </script>
+    <div class="container" id="sovchilarPage">
+        <h1 id="mainTitle" class="changing-text">Sovchilar</h1>
+        <h2 id="pinTitle" class="changing-text">PIN Kodni kiriting</h2>
+        <div class="pin-container">
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric">
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric">
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric">
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric">
+            <input type="text" class="pin-input" maxlength="1" inputmode="numeric">
+        </div>
+        <button class="gradient-button" id="submitPin">Tasdiqlash</button>
+        <p id="error-message" class="hidden"></p>
+
+        <div id="tanishuvChatSection">
+            <h2>Tanishuv Chat</h2>
+            <div class="chat-container" id="chatMessages">
+                <div class="chat-paused-overlay">Chat to'xtatildi</div>
+            </div>
+            <div class="input-container">
+                <input type="text" class="chat-input" placeholder="Xabar yozing..." id="messageInput">
+                <button class="send-button" id="sendMessage">Yuborish</button>
+            </div>
+            <div class="image-upload">
+                <button id="announcementButton" class="gradient-button">E'lon berish</button>
             </div>
         </div>
     </div>
 
+    <div class="container hidden" id="linkPage">
+        <h2>Link uzatish</h2>
+        <button class="gradient-button" id="kelingaXabar">Kelinga xabar yozish</button>
+        <div id="warningMessage"></div>
+        <div class="animated-text" id="animatedText"></div>
+        
+        <h2>Spamga Tushmaslik uchun</h2>
+        <div class="chat-container" id="yordamMessages"></div>
+        <div class="input-container">
+            <input type="text" class="chat-input" placeholder="Xabar yozing..." id="yordamInput">
+            <button class="send-button" id="sendYordamMessage">Yuborish</button>
+        </div>
+    </div>
+
+    <div id="countdownWindow" class="hidden"></div>
+
+    <div class="notification" id="notification"></div>
+    <div class="notification-counter" id="notificationCounter"></div>
+
+    <div id="announcementForm" class="announcement-form">
+        <button id="closeAnnouncementForm" class="close-button">&times;</button>
+        <input type="text" id="announcementName" placeholder="Ismingiz">
+        <textarea id="announcementInfo" placeholder="O'zingiz haqida ma'lumot"></textarea>
+        <input type="tel" id="announcementPhone" placeholder="Telefon raqamingiz">
+        <input type="file" id="announcementImage" accept="image/*">
+        <button id="submitAnnouncement">Yuborish</button>
+    </div>
+
+    <button class="back-button" id="backButton">Назад</button>
+
     <script>
-        const validPins = ['760', '769', '6622', '6722']; // Yangi pin kodlar ro'yhati
-        const botMessages = [
-            "Kicha Mazza Qildim, telfonda gaplashdim 🥰",
+        const botData = {
+            botlarMatini: ["Kicha Mazza Qildim, telfonda gaplashdim 🥰",
             "Vay iflos xaromi ekan, lichkamga mani sukib qochib kitibdi",
             "Manga Poxxuy ☺️",
             "Usha erkakni topsam, tashog'ini ayiraman 😏",
@@ -624,7 +862,7 @@
         "Xozir sizga dada dib aytadi🤣",
         "Bolam bir past jim o'tir",
         "So'kmang",
-        "⚠️Диккат Диккат Элон Кабул Бошланди 🟢 Ким Элон Беришни Хохласа Адменга ёзинг https://t.me/Vovo_Admen",
+        "⚠️Диккат Диккат Элон Кабул Бошланди 🟢 Ким Элон Беришни Хохласа Адменга ёзинг https://t.me/Munisa_Admen",
         "Элон Кабули Бошланди https://t.me/Vovo_Admen Хаволани Босинг Адменга ёзинг Муниса исми",
         "Менга эр керак 21 ёш ман гулустондан ман битта фарзандим хам бор",
         "Ёш киз ман 23 фарзандим бор ойла кураман диганла борми",
@@ -887,460 +1125,671 @@
         "Пахлавон кучасида 2005йил чиройли одобли нуткларида сал нуксонлари бор киз бола бор.",
         "Учкуприк тумани Гиждон кишлогида 2003йил Укимишли кизимиз борлар.",
         "Учkupрик туманида 2003йил Укимишли кизимиз борлар оила бамани Врачка беришади.",
-        "Man xam elon joylamoqchiman akalar natija qanday",
-        "♡ man elon berdimku qizlar manga telfon qildi raxmat opa",
-        " opa sizga raxmat manga tel qilshdi",
-        "Гап ю муниса",
-        "ва мазза килдим гаплашиб кизлар билан",
-        "Raxmat munis asalim natija zor ekan",
-        "nima spam berdiz jonim spam bermang manga",
-        "elon bergan man zirikishdan kirdim",
-        "Farxod ismim kicha elon bergandim natijasi zo'r bo'ldi raxmat hammaga",
-        "Hamma Onlinemi",
-        "Munischa sizga raxmat",
-        "шу кизча савобга колди ман бахтимни топдим",
-        "Муниса сингилжоним рахмат якинда туй киламан",
-        "Бугун кайфиятим ало чунки эрга тегябман",
-        "ишончлими акалар ман янги ман",
-        "ха эшончли элон бириб курган ман кизлар скворади телифон килиб",
-        "ха манам элон бирдим ишдан колдирди жуда коп телефон килишар экан",
-        "манам элон бериб килдим хозир",
-        "50 minga arziydi raxmat",
-        "Raxmat",
-        "baraka toping singlim",
-        "Admenka raxmat turmushga chiqyabman xorazimga",
-        "asalim raxmat sizga baxtimni topdim",
-        "telefon raqamizni etvoring manga",
-        "Rustam aka manga telefon qiling megabaytim kam",
-        "Salom xammaga manam keldim",
-        "Guli erga tegdizmi",
-        "Faxriddin aka uylandizmi aka man Anora",
-        "Elon bergan qizga yozdim gaplashdim raxmat",
-        "Man kod sotib olgan man ishladi raxmat",
-        "Manda kod bkr sotaman 30 minga",
-        "Diqqat man 50 minga kod sotib olgan man ushani sotaman 25 mingga kim oladi",
-        "Manda Kod Bor Sotiladi 15 ming paynet qilasiz",
-        "Kod Sotmaylar blok qiladi admen",
-        "код олганлар кодингизни бировга сотсангиз блок буласизлар аник",
-        "Манда хам код бор 1 йиллик сотаман 50 минг ким олади натижаси зор коп кизлар билан гаплашиб танишасиз",
-        "эй ман код бор сотаман хамма кизларга ёщиш учун нархи 100 минг сум",
-        "Код сотилади 150 мнг вип код каналдаги хамма кизларга тугридан тугри хабар ёзиш мумкун",
-        "Элон ман 2004 йил ман эрга тегмокчиман фаргонадан ман",
-        "Мен сизга уйланардим опа ёщиз катта",
-        "код бор манда",
-        "кизларга ёзиш учун код сотаман кимда олиш ният бор",
-        "arzonga kod sotaman 20 minga 1 oylik kim oladi shu kanalda elonga chiqarilgan qizlarga 1 oy yozolasiz",
-        "Qizlarga yozish uchun menda kod bor sotaman kim oladi bolla",
-        "Kod Sotmaylar blokka tushub qolasiz javob",
-        "Chatda uzini kodini sotganlar kodingiz ko'yib qoladi sotmang",
-        "Velik sotaman sport kim oladi narxi 500 ming katta bolonlari",
-        "Elektron skutir sotaman oladigonlar bormi",
-        "Qachon bir piva ichib mazza qilib utiramiz grupa ahli",
-        "pivaga husi borlar bormi",
-        "Toshkentli qizla bomi",
-        "Niyati jiddiy oqila vafodor mehribon ayol bolsa lichkaga yosin niyat jiddilar iltmos",
-        "Samarqand viloyatidan niyati jiddiy ayol bormi",
-        "Жиддий ниятли эркаклар борми личкага ёзинг танишамиз",
-        "kelilar gaplashib ötramiz",
-        "Спам босме йўқ тўғри кемеди дисен ўласанми покиза ўзи ерсираб турган бўсен",
-        "Kod oling admendan qizlarga yozolasiz man olgan man",
-        "Kod olish kerak ekan qizlarga yozish uchun",
-        "Kodni narxini biladigon bormi",
-        "Men tojikistondan Guli man 2005 yil",
-        "Kod oldim natija yaxshi raxmat",
-        " Kod olish kerak ekan qizlarga yozish uchun, bu juda foydali! ",  
-" Yozish uchun kodni qanday qilib olish mumkinligini bilasizmi? ",  
-" Men tojikistondan Guli man, 2005 yil, qizlar bilan gaplashish yaxshi! ",  
-" Kod oldim, natija chindan ham yaxshi, raxmat! ",  
-" Har kimga kerak, kod olish uchun kerakli ma'lumotlar! ",  
-" Kodni narxini biladigon bormi? Bu juda qiziq! ",  
-" Qizlar bilan muloqot qilish uchun kodning ahamiyati juda katta. ",  
-" Murojaat qilish robotiga juda qiziq. ",  
-" Raxmat, kod olgach, qizlar bilan so'zlashish juda oson! ",  
-" Har bir inson uchun qizlarga yozish imkoniyatini yaratadi. ",  
-" Men kod oldim va natijalarni kutmoqdaman! ",  
-" Kodga ega bo'lgach, yangi aloqalarni o'rnatish mumkin. ",  
-" Qizlar bilan tanishish osonlashdi, bu kodni olish kerak edi. ",  
-" Bugun muloqot qildim, juda ko'p qiziqarli qizlar bor! ",  
-" Kod narxini bilmoqchiman, chiroyli qizlar bilan gaplashish qiyin bo'lmasligi kerak. ",  
-" Qizlar bilan yozish uchun o'ziga xos kodlar kerak ekan! ",  
-" Dastlabki tajriba juda yaxshi o'tdi, raxmat sizga! ",  
-" Qizlar bilan muloqot qilish tajribasi juda yoqdi. ",  
-" Barcha qizlar juda samimiy va ochiq! ",  
-" Yana boshqa qizlar bilan gaplashish uchun kod olish kerak. ",  
-" Bu jarayon juda qiziqarli, shunchaki hozir boshlasam ham bo'ladi! ",  
-" Tanlov keng, har xil qizlar bilan suhbatlashish imkoniyati bor! ",  
-" Kod olish juda muhim ekan, xuddi orzudek! ",  
-" Raxmat sizlarga, asosiy narsani berasizlar! ",  
-" Men yana kod olishim kerak, bu juda qiziq! ",  
-" Yozish jarayoni juda qiziqarli, siz bilan faxrlanaman! ",  
-" Har bir suhbat yangi imkoniyatlarni ochadi! ",  
-" Kodni olish jarayoni yaxshi o’tdi, imkoniyatlar shunchaki cheksiz! ",  
-" Qizlar bilan bog'lanish juda muhim! ",  
-" Kodingiz bormi? Agar yo'q bo'lsa, tezda oling! ",  
-" Kenja va chiroyli qizlar bilan bog'lanish juda muhim! ",  
-" Men yangi aloqa o'rnatdim va kodim sharafi bilan! ",  
-" Muloqot qilish yozuvimizdagi kuchli tajriba! ",  
-" Poytaxtda qizlar bilan tanishish uchun bu kod juda samarali! ",  
-" Albatta, o'z shahrimdan qizlar bilan gaplashishni kutyapman. ",  
-" Kod oldim, juda ko'p qizlar bilan oson suhbatlashyapman! ",  
-" Boshqa imkoniyatlardan, narsani qulay dastur bilan ko'rishingiz mumkin! ",  
-" Qizlar bilan suhbatda yanada ko'proq qiziqarli vatanlash! ",  
-" Kod olganimdan berun, juda ko'p qizlar bilan oson suhbatlashdi! ",  
-" Yozish jarayoni juda rahmatli va qiziqarli! ",  
-" Juda yoqimli qizlar bilan o'zaro bog'lanish! ",  
-" Suhbatlarni yangilash uchun kod olish haqida o'ylayman! ",  
-" Bu kod orqali kirgan suhbatlar juda hayajonli! ",  
-" Yozing va qizlar bilan bog'lanishni darhol boshlang! ",  
-" Har bir yangi muloqot yangi tajribalar, yangi naif g'oyalar beradi! ",  
-" Meni kutayotgan qizlar juda sevgi va mehr bilan! ",  
-" Kodni o'zingizdan so'rashga va taklif qilishga harakat qiling! ",  
-" Men muloqotlarim orqali ko'proq qiziqarli qizlar bilan tanishdim! ",  
-" Kitob o'qichilar uchun bir joyda tanishuv juda yoqadi! ",  
-" Maktabdan keyin maydalagan qizlar bilan ortga qaytish! ",  
-" Qizlar uchun kod, bu juda zarur va hayotiy muhim! ",  
-" O'zaro aloqalarni ko'paytirish uchun zarur bo'lsa, yozing! ",  
-" Qizlar bilan tanishish qiyinmas edi, kodim bor! ",  
-" Yana kod olishni va qizlar bilan suhbatda davom etmishni xohlayman! ",  
-" Va'da beraman, kod olish jarayoni osonlik va qulaylik! ",  
-" Kodingizni bilib, qizlar bilan bog'lanish juda ! ",  
-" Bu tajriba har bir qiz bilan o'zaro aloqalar ochadi! ",  
-" Suhbat davomida bir-birimizni yaxshiroq tushunishga harakat qilamiz! ",  
-" Qizlar bilan uchrashish juda qiziq va yangi g'oyalar olib keladi! ",  
-" Qizlar bilan tanishish va yangiliklarni o'rganish ajoyib! ",  
-" Muloqot qilish uchun ovoz berish shunchaki zarurlik! ",  
-" Kodlarni oling va qizlar bilan tezda suhbat boshlang! ",  
-" Raxmat, bu kodga menga yangi imkoniyatlarni berdi! ",  
-" Qizlar bilan qiziqarli suhbatlar har doim yoqimli! ",  
-" Kodli hamkorlikda qizlar bilan yaxshi aloqa o'rganing! ",  
-" Suhbatlarim go'zal bo'ladi, muloqotlarini kutib qolaman! ",  
-" Qizlarni yozish jarayonida yoningda bo'lishni istayman! ",  
-" Kodingizni olishni unutmang, qizlar bilan juda qiziqarli! ",  
-" Tanlovda ochiq ko'ngilni kashf eting, muloqot muhim! ",  
-" Raxmat, muloqot qilish jarayoni bilan ko'rish! ",  
-" Har bir qiz bilan yangi imkoniyatlar kutyapman! ",  
-" Yozish kunga bir oz ko'rsatuvchi bo'lishi kerak! ",  
-" Kechki suhbatlar juda o'ziga xos va chiroyli! ",  
-" Men qizlar bilan suhbatlashishni juda sevaman, kod oldim! ",  
-" Yozish jarayonini kuchaytirish uchun zarur kodni olish! ",  
-" Taqdimot yangi imkoniyatlar sahnasidan chiqadi! ",  
-" Qizlar bilan yaxshi aloqalar o'rnatish har doim muhim! ",  
-" O'zingizni yangilangan kodda his qilmoqdasiz! ",  
-" O'zaro muloqot qilish jarayoni baxtli bo'ling! ",  
-" Borayotgan qizlar barchani sevganlarimni yodda tuting! ",  
-" Har qanday g'oyalar, ushbu kod orqali chiqishi mumkin! ",  
-" Har doim ochiq suhbatlar, qizlar bilan birga eng muhim! ",  
-" Kodlar orqali qizlar bilan xursandchilikni oshiring! ",  
-" Yangi qizlar bilan muloqotda davom etaman! ",  
-" Kod oldim va natijalarni kuta boshladim, sevgi bilan! ",
-" Qizlarga yozish uchun kod olish juda muhim! ",  
-" Kodni qanday qilib olishni bilasizmi, shu haqda o'ylaylik! ",  
-" Men qizlar bilan muloqot qilishni yaxshi ko'raman, barchasi qiziqarli! ",  
-" Kodni olishdan juda xursandman, natijalar ajoyib! ",  
-" Har kimga ma'lum kod kerak bo'lishi mumkin! ",  
-" Qizlar bilan suhbatlashish uchun kodning narxi qanday? ",  
-" Yozish jarayonida qizlar bilan aloqalar juda muhimdir! ",  
-" Murojaat robotlari qiziqarli, ko'p savolga javob beradi! ",  
-" Kodimni olgach, qizlar bilan xushmuomala bo'lishim osonlashdi! ",  
-" Muloqot qilish uchun qizlarga yozish imkoniyatiga ega bo'ladim! ",  
-" Kod oldim, endi yangi tanishuvlar kutyapman! ",  
-" Nima uchun kod olish muhim, bilasizmi? Yangi aloqalar ochiladi! ",  
-" Qizlar bilan tanishishni boshlash uchun zarur kodni olish kerak! ",  
-" Bugun juda ko'p qiziqarli qizlar bilan gaplashdim! ",  
-" Kod narxi haqida bilmayman, kimdir aytishi mumkinmi? ",  
-" Qizlar bilan yozish jarayoni uchun qiziqarli xususiyatlar kerak! ",  
-" O'ylayman, yozuvimda yanada ko'proq qiziqarli bo'laman! ",  
-" Suhbatlar juda ko'p, turli qizlar bilan tanishish imkonim bor! ",  
-" Kod olish – bu orzudek, ushbu imkoniyatni hech qachon yoddan chiqarmayman! ",  
-" Raxmat, sizlar yordam berdingiz! ",  
-" Yana bir marta kod olishni xohlashim haqida o'ylayman, juda qiziqarli! ",  
-" Yozish jarayoni davom etmoqda, va juda qiziq! ",  
-" Bu jarayonda samimiy qizlar bilan tanishganim uchun xursandman! ",  
-" Yana boshqa qizlar bilan aloqalar o'rnatish uchun kod kerak! ",  
-" Suhbat jarayoni juda hayajonli, buni imkoniyat sifatida ko'raman! ",  
-" Tanlov keling, har xil qizlar bilan muloqot qilish imkonini beradi! ",  
-" Kodni olish juda muhim, chunki bu menga kerak edi! ",  
-" Raxmat, sizlarga! Kod ma'lumotlaringiz uchun! ",  
-" Yana kod olishni o'ylayapman, qizlar bilan muloqot juda qiziqarli! ",  
-" Har bir suhbat yangi imkoniyatlarni ochadi! ",  
-" Kod olish jarayoni juda oson va qulay! ",  
-" Qizlar bilan bog'lanish menda juda muhim! ",  
-" Kodingiz yo'qmi? Agar kerak bo'lsa, uni hoziroq oling! ",  
-" Kenja va chiroyli qizlar bilan bog'lanish juda foydali! ",  
-" Yangi aloqa o'rnatib, qizlar bilan yaxshi suhbatlar qilmoqchiman! ",  
-" Muloqot jarayoni davomida qiziqarli narsalarni bilib oldim, rahmat! ",  
-" Poytaxtda qizlar bilan tanishishni o'z umidim deb bilaman! ",  
-" Kod oldim, endi ko'p qizlar bilan suhbatlashishim mumkin! ",  
-" Boshqa imkoniyatlar qiziqarli va muloqot uchun qulay! ",  
-" Qizlar bilan yozish tajribasi, albatta, hayajonli voqea! ",  
-" Kodni olishdan oldin bir oz kutdim, natijalarni ko'rishni kutyapman! ",  
-" Suhbat jarayoni juda hayajonli va foydali! ",  
-" Yana yangi qizlar bilan tanishishga tayyorman! ",  
-" Kod olish qizlar bilan qiziqarli uchrashuvlar imkonini yaratadi! ",  
-" O'zingizni yangi imkoniyatlarda his qilishingiz kerak! ",  
-" Suhbat davomida bir-birimizni yaxshiroq tushunish eng yaxshi narsa! ",  
-" Qizlar bilan uchrashish juda qiziqarli va ko'plab g'oyalar olib keladi! ",  
-" Muloqot qilish jarayoni men uchun muhim! ",  
-" Kodlarni oling va yangi suhbatlarni boshlang! ",  
-" Raxmat, bu kod menga yangi imkoniyatlar berdi! ",  
-" Qizlar bilan qiziqarli suhbatlar har doim kutilgan! ",  
-" Kodli hamkorlikda qizlar bilan muloqot qilish imkoniyatini o'rganing! ",  
-" Suhbatlarim zamonaviy va qiziqarli bo'ladi! ",  
-" Qizlar bilan yozish jarayoni davom etmoqda, bu juda qiziqarli! ",  
-" Kodingizni olishni unutmang, bu qizlar bilan tanishishga yordam beradi! ",  
-" Tanlovda ajoyib imkoniyatlarni kashf eting! ",  
-" Raxmat, bu muloqotda hazil va unutilmas tajribalar berasiz! ",  
-" Har bir yangi tanishuv uchun yangi imkoniyatlar mavjud! ",  
-" Yozish jarayonini yanada yoqimli qilish uchun tayyorman! ",  
-" Kechki suhbatlar doimo ajoyib va qiziqarli! ",  
-" Men qizlar bilan suhbatlarni juda sevaman, kod oldim! ",  
-" Yozish jarayonini kuchaytirish uchun zarur kod olishga tayyorman! ",  
-" Taqdimot yangi imkoniyatlar haqida tushuncha beradi! ",  
-" Qizlar bilan yaxshi aloqalar o'rnatish har doim muhim! ",  
-" O'zingizni yanada yaxshi his qilish uchun qizlar bilan kashf etishingiz mumkin! ",  
-" O'zaro muloqot jarayoni men uchun juda baxtli! ",  
-" Borayotgan qizlar bilan samimiy aloqalar juda yaxshi! ",  
-" Har qanday qiziqarli g'oyalar ushbu kod orqali kelishi mumkin! ",  
-" Ochiq suhbatlar har doim qizlar bilan eng yaxshi xulosalarga olib keladi! ",  
-" Kodlar orqali qizlar bilan muloqotda yanada ko'proq qiziqish ochin! ",  
-" Yangi tajribalar davomida qizlar bilan yaxshi imkoniyatlar o'rnataman! ",  
-" Kod oldim va natijalarni kutmoqdaman! ",
-"Dilnoza",  
-"Aziza",  
-"Shahnoza",  
-"Malika",  
-"Nodira",  
-"Saida",  
-"Muqaddas",  
-"Zilola",  
-"Farida",  
-"Laylo",  
-"Shirin",  
-"Feruza",  
-"Nilufar",  
-"Fatima",  
-"Dilafruz",  
-"Sitora",  
-"Samira",  
-"Diana",  
-"Shahzoda",  
-"Mahnoza",  
-"Gulsara",  
-"Gulbahor",  
-"Umida",  
-"Jamila",  
-"Rayhona",  
-"Yulduz",  
-"Parvina",  
-"Shodigul",  
-"Nargiza",  
-"Dilyara",  
-"Shahida",  
-"Zaynab",  
-"Sanoora",  
-"Asal",  
-"Mahfuza",  
-"Nasiba",  
-"Bahora",  
-"Rano",  
-"Saodat",  
-"Shokhida",  
-"Gulay",  
-"Rabia",  
-"Nilofer",  
-"Nozima",  
-"Oydin",  
-"Lobar",  
-"Nubora",  
-"Shohida",  
-"Zarrina",  
-"Xurshida"
-        ];
-        const bots = ['Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi', 'Foydalanuvchi',];
-        const links = [
-            "https://t.me/Maftuna2001y",
-            "https://t.me/khadid_123",
-            "https://t.me/Muxsji",
-            "https://t.me/RBY008",
-            "https://t.me/RBY008",
-            "https://t.me/khadid_123",
-            "https://t.me/Ice_heart_064",
-            "https://t.me/Tanhoyimsannnn",
-            "https://t.me/Zzzzzzzz_aaaaaaa",
-            "https://t.me/tavhid_ll",
-            "https://t.me/KIA515",
-            "https://t.me/anonim1234567889",
-            "https://t.me/iammusliman",
-            "https://t.me/Shahzo770",
-            "https://t.me/Suyanchiqlarm",
-            "https://t.me/Mustafojon2021",
-            "https://t.me/mmm_e11",
-            "https://t.me/Dizayner57",
-            "https://t.me/Kamila122092",
-            "https://t.me/a13fn",
-            "https://t.me/begubor_2004",
-            "https://t.me/farzonka02",
-            "https://t.me/hayatem22",
-            "https://t.me/OGILOYJONIM",
-            "https://t.me/user60787",
-            "https://t.me/Turgiya",
-            "https://t.me/Yulduzm_11",
-            "https://t.me/MISSSS_777",
-            "https://t.me/Musli_m_m",
-            "https://t.me/gulnoz02_01",
-            "https://t.me/mumtoza77",
-            "https://t.me/Sadiya7888",
-            "https://t.me/Abdulazizxonnn27",
-            "https://t.me/BAXTQASRIOO7",
-            "https://t.me/Osiyo1752",
-            "https://t.me/Dunyosham01",
-            "https://t.me/dili1238",
-            "https://t.me/parishta88",
-            "https://t.me/Xulix09",
-            "https://t.me/Iymon_81",
-            "https://t.me/Jjjhjkg",
-            "https://t.me/Fargona1987m",
-            "https://t.me/fghfgh001",
-            "https://t.me/Solihamqoriyam",
-            "https://t.me/Inshaalloh8888",
-            "https://t.me/bnfhgs",
-            "https://t.me/Flora87o20",
-            "https://t.me/xayotshunaqa1994",
-            "https://t.me/ElnuraSafina",
-            "https://t.me/Muzaayana",
-            "https://t.me/guslu_madam",
-            "https://t.me/oxirinur",
-            "https://t.me/Znzkz11",
-            "https://t.me/Samimiymuhabbat",
-            "https://t.me/island77f",
-            "https://t.me/Sevgi_ferganeskaya",
-            "https://t.me/Yulduzxon09_10",
-            "https://t.me/FDOQM",
-            "https://t.me/yiroqdagiiii",
-            "https://t.me/kobra_1792",
-            "https://t.me/Nozimaxurshid",
-            "https://t.me/gedundii",
-            "https://t.me/Dul569",
-            "https://t.me/tavhid_ll",
-            "https://t.me/Shahzo770",
-            "https://t.me/M5469a",
-            "https://t.me/Sevgimiz95",
-            "https://t.me/Agirl_f",
-            "https://t.me/Samolarrr",
-            "https://t.me/Moviydengiz67",
-            "https://t.me/Kumush0413",
-            "https://t.me/amorfati0502",
-            "https://t.me/gsiwbhft",
-            "https://t.me/ADILOVNA777",
-            "https://t.me/Baxtlilardee",
-            "https://t.me/Hhhgggjd",
-            "https://t.me/jinniqiz0321",
-            "https://t.me/Olloximuzinasira",
-            "https://t.me/Hhayo1",
-            "https://t.me/Alhamdulillah_3204",
-            "https://t.me/cxgg1757",
-            "https://t.me/Baxtiyarovna_dii",
-            "https://t.me/Hasbunallahuvanimal",
-            "https://t.me/Xayotim9008",
-            "https://t.me/Nnbbvvm",
-            "https://t.me/Allohhayirlisinibersin",
-            "https://t.me/Assalom1223",
-            "https://t.me/sabr_054",
-            "https://t.me/Missyoqimtoy",
-            "https://t.me/sheha_010",
-            "https://t.me/Baxtim_5447",
-            "https://t.me/Dilix0717",
-            "https://t.me/mnsmas",
-            "https://t.me/tavhid_lll",
-            "https://t.me/musiilmankaa",
-            "https://t.me/Bonushka2503",
-            "https://t.me/musiilmankaa",
-            "https://t.me/mirtu33",
-            "https://t.me/gul_9_1",
-            "https://t.me/beautifulccc",
-            "https://t.me/Onajonim_siz_mening_bahtim",
-            "https://t.me/uuuu_fg",
-            "https://t.me/Mummy_19950312",
-            "https://t.me/Nurizoda",
-            "https://t.me/Alhamdulilah_678",
-            "https://t.me/Alhamdulillah_makka",
-            "https://t.me/biinafsha",
-            "https://t.me/nilish_n",
-            "https://t.me/Oddygina02",
-            "https://t.me/Fazilat2022",
-            "https://t.me/sssgggttt88",
-        ];
-        let botInterval;
-
-        // Botlardan tasodifiy xabar yuborish
-        function sendRandomBotMessages() {
-            const botName = bots[Math.floor(Math.random() * bots.length)];
-            const messageContent = botMessages[Math.floor(Math.random() * botMessages.length)];
-            const messageElement = document.createElement('div');
-            messageElement.className = 'chat-message bot-message'; // Bot xabari
-            messageElement.innerHTML = `<span class="bot-name">${botName}</span>: ${messageContent}`; // Bot nomini qizil rangda
-            document.getElementById('chatBox').appendChild(messageElement);
-
-            scrollChatToBottom();
-        }
-
-        // Botlardan xabar yuborishni boshlash
-        function startBotMessages() {
-            botInterval = setInterval(sendRandomBotMessages, 2000);
-        }
-
-        // Pinni tekshirish
-        function verifyPin(event) {
-            event.preventDefault();
-            const pin = document.getElementById('pin').value;
-            const errorMessage = document.getElementById('error-message');
-            const buttonContainer = document.getElementById('buttonContainer');
-
-            if (validPins.includes(pin)) {
-                alert('Kirish muvaffaqiyatli!');
-                // Tasodifiy havola ko'rsatish
-                const randomLink = links[Math.floor(Math.random() * links.length)];
-                const girlLink = document.getElementById('girlLink');
-                girlLink.href = randomLink; // Havolani yangilash
-                buttonContainer.style.display = 'block'; // Tugmani ko'rsatish
-
-                // 3 soniyadan so'ng havolaga o'tish
-                setTimeout(() => {
-                    window.location.href = randomLink; // Foydalanuvchini havolaga yo'naltirish
-                }, 3000);
-            } else {
-                errorMessage.style.display = 'block';
-            }
-        }
-
-        // Xabar yuborish
-        function sendMessage() {
-            const chatBox = document.getElementById('chatBox');
-            const chatMessage = document.getElementById('chatMessage');
-            const message = chatMessage.value;
-
-            if (message) {
-                const messageElement = document.createElement('div');
-                messageElement.className = 'chat-message user-message'; // Foydalanuvchi xabari
-                messageElement.textContent = `Siz: ${message}`;
-                chatBox.appendChild(messageElement);
-                chatMessage.value = ''; // Xabar kiritish maydonini tozalash
-
-                // Chat oynasini pastki qismga aylanish
-                scrollChatToBottom();
-            }
-        }
-
-        // Chat oynasini pastki qismga aylantirish
-        function scrollChatToBottom() {
-            const chatBox = document.getElementById('chatBox');
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        // Foydalanuvchi sahifaga yuklanganda bot xabarlarini boshlash
-        window.onload = function() {
-            startBotMessages();
+        "Men gaplashdim qizlar bilan.",
+        "raxmat menam gaplashdim.",
+        "elon berdim qizlar telefon qilishdi 🤣.",
+        "xa qildi 😁.",
+        "Munisa raxmat sizga.",
+        "munis raxmat elon uchun.",
+        "Opa raxmat elonimni uchiring.",
+        "munisa opa raxmat sizga elonimni olib tashlang.",
+        "mani elonimni uchiring opa baxtimni topdim.",
+        "raxmat opalar ishlarizga omad.",
+        "kod sotib olmoqchiman.",
+        "kod kirak manga.",
+        "kodni kim biladi aytvoriyla.",
+        "Diyora ismim 2007 man.",
+        "Shaxlo man 26 yosh ajrashgan.",
+        "Malika ismim oila qurmagan man 2004 yil.",
+        "2005 yil man Odina ismim.",
+        "Nelu ismim toshkent.",
+        "Surxondaryodan yegitlar bormi.",
+        "xush kelib siz yaxshi yegit.",
+        "samarqandliklar bormi.",
+        "man samarqandan.",
+        "navoiydan man.",
+        "jizzaxdan Dildora ismim.",
+        "nichinchi yil siz.",
+        "Guli man buxorolik 2003 yil oila qurmagan man.",
+        "Turmushga chiqmagan man 2001 yil man.",
+        "elon berdim🤣.",
+        "Шахсонам ман 2003 йил бухородан.",
+        "Хоразимдан ман 2002 йил.",
+        "элон бердим рахмат хаммага.",
+        "Элон килдим куёвликка.",
+        "Элон жойлаб беринг опа.",
+        "Элонизни каналга жойладик.",
+        "Мани элонимни олиб ташанг опа бахтимни топдим.",
+        "муниса киз мени элонимни каналдан учиринг бахтимни топдим.",
+        "опа мен мурод ман элонимни учиринг безор килди кизлар телфон килишиб манга.",
+        "опа ха сизга рахмат.",
+        "Муниса синглим рахмат сизга.",
+        "Рахмат манам бахтимни шу каналда топдим.",
+        "Мунис сизга каттакон рахмат.",
+        "опа мени элонимни янгилаб беринг.",
+        "хуш келиб сиз.",
+        "саломат булинг.",
+        "✋️ ёлгон малумот берманглар.",
+        "хакорат килганлар спам ❌️.",
+        "Элон бергандим опа янгилаб бероласизми.",
+        "хоп лечкамга ёзинг элонизни янгилайман.",
+        "Муниса синглим мани элонимни янгилаб беринг кизлар телфон килмай куйдику.",
+        "ноинсоф булманглар элон берганда битта киз блан гаплашинглар эркаклар.",
+        "Elon bergandan sung bitta qizni tanlab usha bilan gaplashinglar 100 qizni ushlab vaxtini olmaylar.",
+        "Elon berdim xammasi rost ekan.",
+        "Baraka toping Munisa elon berdim natija Zo'r.",
+        "Zo'r raxmat.",
+        "Opa raxmat kichagi elonimni uchirvorsagizam buladi.",
+        "apa raxmat sizga manga qizlar telfon qilishayabdi.",
+        "opa manga erdan ajrashgan ayollar telfon qilib bezor qildi.",
+        "Munisa singlim man ajrashgan erkak man nega manga qiz bollar ham telfon qilayabdi.",
+        "Opa manga ham qiz bollar telfon qilayabdi ayting faqat ajrashganlar telfon qilsin manga.",
+        "Ajrashgan ayollar telfon qilsin.",
+        "Telfon nomer tarqatmayla.",
+        "Manam elon beraman bugun.",
+        "Kuyovlikka nomzodimni quyib keldim hozir.",
+        "Munisa lichkamga karta tashang tulov qilib elon joylamoqchiman.",
+        "Синглим карта беринг.",
+        "Элон жойлаш кирак муниса.",
+        "карта беринг.",
+        "Мен муниса элон беришни хохласангиз личкамга ёзинг.",
+        "Элон бериш учун тулов киласиз личкамга ёзинг.",
+        "Кандай элон беришни билмаябман.",
+        "элон жойлаб бераман личкамга ёзинг.",
+        "мани личкам бу @Munisa_Admen.",
+        "Elon Joylayab man kanalga kim Uz nomzodini quymoqchi lichkamga yoziyal.",
+        "Diqqat diqqat elon qabul boshlandi.",
+        "kimda elon bor lichkamga yozvoriyla.",
+        "Elon qabul qilaman lichkamga yoziyla.",
+        "Kimda elon bor qabul boshlandi.",
+        "Manga yozing elon joylaymiz.",
+        "Elon berish uchun admenga yozing.",
+        "Kuyovlik uchun nomzodini qoymoqchi buganlar yozinglar elon qilib beramiz.",
+        "Barno man 2008 yil.",
+        "Kirgiziyadan man 2006 yil.",
+        "Man andijondan Muxlisa 2006.",
+        "Lola man erga tegib ajrashgan man 21 yosh.",
+        "22 yosh man hilola.",
+        "Hilola 23 yosh man vodiydan.",
+        "Xurshida man ajrashgan 20 yosh.",
+        "Elon beraman diganlar lichkamga yozing.",
+        "Dildora 2005 ajrashgan.",
+        "Man ajrashgan man aka.",
+        "Xa qiz bola man.",
+        "Gulustondan man Sevara ismim.",
+        "2001 yil man Farangiz.",
+        "Фарангиз ман 1999 йил.",
+        "Латофат исмим 1987 йил.",
+        "Лола ман ажрашган 1980 йил.",
+        "Farida ismim ajrashgan man 19 yoshda man.",
+        "Negina sizga gapim bor.",
+        "zirikkan qizla lichkamga yoziyla tanishamiz.",
+        "elon berib keldim.",
+        "Voy munisa raxmat sizga xamma telfon qilaybdi elon berganimga."],
+            httpsManzillar: [
+                "https://t.me/hghgf65yt65",
+"https://t.me/Solixa_777",
+"https://t.me/hgh6vbhgu76yt",
+"https://t.me/Jojo_96",
+"https://t.me/Dtfgujb",
+"https://t.me/MADINAXON8",
+"https://t.me/parishta88",
+"https://t.me/uzbekprokuz",
+"https://t.me/Anta_Fi_Qolbiy111",
+"https://t.me/Nodira095",
+"https://t.me/Tinchlik677",
+"https://t.me/Allohning_uyi_mominni_qalbi",
+"https://t.me/hghgf667y65",
+"https://t.me/Guldil95",
+"https://t.me/xayotshunaqa1994",
+"https://t.me/sadiya_050",
+"https://t.me/Benamozlaryozmeng",
+"https://t.me/gulim_2022",
+"https://t.me/nurnoma29",
+"https://t.me/Mariyam1234567v",
+"https://t.me/Bnjjhyjjuh",
+"https://t.me/komilovaaaaaaaaa",
+"https://t.me/Soliha100000",
+"https://t.me/huhgklgvgg",
+"https://t.me/Oyyuzlig1m",
+"https://t.me/hghghgyt656yt",
+"https://t.me/uzbekprokuz",
+"https://t.me/Gozal_55",
+"https://t.me/ofiyat_112",
+"https://t.me/hghgf667y65",
+"https://t.me/hghg6yt56yt54r",
+"https://t.me/QorMalikasi_22",
+"https://t.me/Dil_199509",
+"https://t.me/Iymon_81",
+"https://t.me/Safya89",
+"https://t.me/Sabrinaa88",
+"https://t.me/Uybekasi72183",
+"https://t.me/QALBIMSAN888",
+"https://t.me/hhhjgpx",
+"https://t.me/nurnoma29",
+"https://t.me/muslimanka_97",
+"https://t.me/maybetrueor",
+"https://t.me/assi1984",
+"https://t.me/maxliyo0606",
+"https://t.me/hghg6y5tr5",
+"https://t.me/zhuk40",
+"https://t.me/parishta88",
+"https://t.me/gulbahor_gulbahor_gul",
+"https://t.me/Flora87o20",
+"https://t.me/Guli2002_06_22",
+"https://t.me/hghgf676rer4",
+"https://t.me/QorMalikasi_22",
+"https://t.me/Baxt12367",
+"https://t.me/hghgyt656yt",
+"https://t.me/Taqvodorim_001",
+"https://t.me/azmalika2000",
+"https://t.me/hghg6yt56yt54r",
+"https://t.me/xayotshunaqa1994",
+"https://t.me/Bintu_Soliih",
+"https://t.me/ShaKhrezade",
+"https://t.me/jayrona1718",
+"https://t.me/Qalb_chashmasi1",
+"https://t.me/Dilna4446",
+"https://t.me/prinsessa0123",
+"https://t.me/Flower_9199",
+"https://t.me/Zamira2017",
+"https://t.me/deo_0102",
+"https://t.me/feyam1_0"
+            ],
+            yordamMatinlar: ["Bu men yordam bot", "sizga yordam beraman", "qanday yordam kirak"]
         };
+
+        localStorage.setItem('botData', JSON.stringify(botData));
+
+        const validPins = ['760', '769', '6622', '6287'];
+        const pinInputs = document.querySelectorAll('.pin-input');
+        const errorMessage = document.getElementById('error-message');
+        const sovchilarPage = document.getElementById('sovchilarPage');
+        const linkPage = document.getElementById('linkPage');
+        const mainTitle = document.getElementById('mainTitle');
+        const pinTitle = document.getElementById('pinTitle');
+
+        function changeText() {
+            if (mainTitle.textContent === "Sovchilar") {
+                mainTitle.textContent = "BAXT OILA";
+            } else {
+                mainTitle.textContent = "Sovchilar";
+            }
+
+            if (pinTitle.textContent === "PIN Kodni kiriting") {
+                pinTitle.textContent = "Sotib Olingan Pin Kodni kiriting";
+            } else {
+                pinTitle.textContent = "PIN Kodni kiriting";
+            }
+        }
+
+        setInterval(changeText, 7000);
+
+        pinInputs.forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length === 1) {
+                    if (index < pinInputs.length - 1) {
+                        pinInputs[index + 1].focus();
+                    }
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    pinInputs[index - 1].focus();
+                }
+            });
+        });
+
+        document.getElementById('submitPin').addEventListener('click', () => {
+            const pin = Array.from(pinInputs).map(input => input.value).join('');
+            if (validPins.includes(pin)) {
+                sovchilarPage.classList.add('hidden');
+                linkPage.classList.remove('hidden');
+                startBots();
+            } else {
+                errorMessage.textContent = "Kod xato terildi, qayta urinib ko'ring.";
+                errorMessage.classList.remove('hidden');
+            }
+        });
+
+        let isScrollPaused = false;
+        let scrollTimeout;
+        let longPressTimer;
+
+        function addMessage(container, text, isUser = false, botName = '', imageUrl = '') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'bot'} ${botName}`;
+            
+            if (!isUser) {
+                const avatar = document.createElement('div');
+                avatar.className = 'avatar';
+                avatar.textContent = botName ? botName.charAt(0) : 'B';
+                messageDiv.appendChild(avatar);
+            }
+
+            const content = document.createElement('div');
+            content.className = 'message-content';
+            
+            if (imageUrl) {
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                img.alt = "Sent image";
+                img.style.maxWidth = '140px';
+                img.style.borderRadius = '10px';
+                img.style.marginBottom = '5px';
+                content.appendChild(img);
+            }
+            
+            const textNode = document.createElement('p');
+            textNode.textContent = text;
+            content.appendChild(textNode);
+            
+            messageDiv.appendChild(content);
+            container.appendChild(messageDiv);
+            
+            if (!isScrollPaused) {
+                container.scrollTop = container.scrollHeight;
+            }
+
+            if (!isUser) {
+                showNotification("Yangi foydalanuvchi keldi");
+            }
+        }
+
+        let notificationCount = 0;
+        const notificationElement = document.getElementById('notification');
+        const notificationCounterElement = document.getElementById('notificationCounter');
+
+        function showNotification(message) {
+            notificationElement.textContent = message;
+            notificationElement.classList.add('show');
+            notificationCount++;
+            updateNotificationCounter();
+
+            setTimeout(() => {
+                notificationElement.classList.remove('show');
+                setTimeout(() => {
+                    notificationCount--;
+                    updateNotificationCounter();
+                }, 1500);
+            }, 2000);
+        }
+
+        function updateNotificationCounter() {
+            notificationCounterElement.textContent = notificationCount;
+            if (notificationCount > 0) {
+                notificationCounterElement.classList.add('show');
+            } else {
+                notificationCounterElement.classList.remove('show');
+            }
+        }
+
+        class Bot {
+            constructor(messages, container, interval) {
+                this.messages = messages;
+                this.container = container;
+                this.interval = interval;
+            }
+
+            start() {
+                setInterval(() => {
+                    const randomMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
+                    addMessage(this.container, randomMessage, false, this.constructor.name);
+                }, this.interval);
+            }
+        }
+
+        class ResponseBot {
+            constructor(container) {
+                this.container = container;
+                this.responses = {
+                    'salom': 'Salom xush kelib siz',
+                    'assalomu aliykum': 'Va aliykum salom',
+                    'qizlar bormi': 'Qizlar yoq',
+                    'kim bor': 'Kim kirak sizga',
+                    'qalaysiz': 'Yaxshi, o\'zingiz qalaysiz?',
+                    'nima gap': 'Tinchlik, o\'zingizda nima gaplar?',
+                    'rahmat': 'Arzimaydi, xizmatingizga tayyormiz',
+                    'xayr': 'Xayr, yaxshi qoling',
+                };
+            }
+
+            respond(message) {
+                const lowercaseMessage = message.toLowerCase();
+                for (const [key, value] of Object.entries(this.responses)) {
+                    if (lowercaseMessage.includes(key)) {
+                        setTimeout(() => {
+                            addMessage(this.container, value, false, this.constructor.name);
+                        }, 2500);
+                        return;
+                    }
+                }
+                setTimeout(() => {
+                    addMessage(this.container, "Kechirasiz, tushunmadim. Iltimos, boshqacha ifoda eting.", false, this.constructor.name);
+                }, 10000);
+            }
+        }
+
+        class NazoratchiBot {
+            constructor(container) {
+                this.container = container;
+                this.warnings = [
+                    "Kichrasiz telefon raqam yozmang spam bo'lasiz",
+                    "Men chatni nazorat qilaman shaxsiy ma'lumotlar uzatish taqiqlanadi",
+                    "Iltimos foydalanuvchi chatga shaxsiy ma'lumotlarni tarqatmang"
+                ];
+            }
+
+            checkMessage(message) {
+                const phoneRegex = /\b\d{9,12}\b/;
+                if (phoneRegex.test(message)) {
+                    const warning = this.warnings[Math.floor(Math.random() * this.warnings.length)];
+                    setTimeout(() => {
+                        addMessage(this.container, warning, false, this.constructor.name);
+                    }, 3000);
+                }
+            }
+        }
+
+        class RasmBot {
+            constructor(container) {
+                this.container = container;
+                this.responses = [
+                    "Voy buncha chiroyli siz",
+                    "Bu sizning rasmingizmi",
+                    "Rostan bu sizmi",
+                    "Bu sizmi yaxshi yigit"
+                ];
+            }
+
+            respond() {
+                const randomResponse = this.responses[Math.floor(Math.random() * this.responses.length)];
+                setTimeout(() => {
+                    addMessage(this.container, randomResponse, false, this.constructor.name);
+                }, 1500);
+            }
+        }
+
+        class RasmlinkBot {
+            constructor(container) {
+                this.container = container;
+                this.images = [
+                    "https://i.postimg.cc/TwHjJPNN/Picsart-24-12-02-20-55-41-932.jpg",
+                    "https://i.postimg.cc/yYTDKV2r/Screenshot-20241202-102124-Instagram.jpg",
+                    "https://i.postimg.cc/JnhfsQhk/Screenshot-20241202-094051-Instagram.jpg", 
+                    "https://i.postimg.cc/XvgpLsLD/Picsart-24-12-02-20-58-15-497.jpg",
+"https://i.postimg.cc/90QnfPcn/Screenshot-20241121-212953-Instagram.jpg",
+"https://i.postimg.cc/7ZX6jwfM/Picsart-24-12-02-21-24-41-339.png",
+"https://i.postimg.cc/DypjybJS/Picsart-24-12-02-21-28-55-006.png",
+"https://i.postimg.cc/hPN6g35J/Picsart-24-12-02-21-32-25-674.jpg",
+"https://i.postimg.cc/MKGfx9Q8/Picsart-24-12-02-21-34-25-815.png",
+"https://i.postimg.cc/yYW59zZp/Picsart-24-12-02-21-38-13-594.jpg",
+"https://i.postimg.cc/hvMNbDDh/Screenshot-20240914-111447-Threads.jpg",
+"https://i.postimg.cc/DZxcx8GV/Screenshot-20240816-022402-Threads.jpg",
+"https://i.postimg.cc/YSCc0mMZ/Picsart-24-12-02-21-50-37-995.jpg",
+"https://i.postimg.cc/mryDf9Vn/Picsart-24-12-02-21-55-35-581.jpg",
+"https://i.postimg.cc/bwXFDVfK/Picsart-24-12-02-21-58-28-522.jpg",
+"https://i.postimg.cc/7hNHjJ4V/Picsart-24-12-02-22-01-45-364.jpg",
+"https://i.postimg.cc/L4kjmy6y/7fa956fa-5172-4cf6-b0a1-128ced3685f3-image.png",
+"https://i.postimg.cc/xd4Gwq5L/3666943c-a729-44a5-aac5-2d13edffc269-image.png",
+"https://i.postimg.cc/j5CTj3yG/513f1022-2678-45ea-bbf0-4d420a859b88-image.png",
+"https://i.postimg.cc/VL5w1kjD/90f46990-a0a0-4566-a6f9-63b73a14b472-image.png",
+"https://i.postimg.cc/WtR6z4fx/2519de76-e6c3-4fd6-b68f-512dab2bd5a5-image.png",
+"https://i.postimg.cc/3NP5wgh7/3a0b85c7-6a9d-4c8e-97d3-4ba8064fedf1-image.png",
+"https://i.postimg.cc/JnwV5NgF/52a09d8f-ce2c-4192-91ed-a25dfe46acec-image.png",
+"https://i.postimg.cc/3RW9SN4D/7a55f045-7efc-4a0d-b8e7-538f906ca689-image.png",
+"https://i.postimg.cc/4yhXTxH5/d85ed8b0-765d-42be-af74-58a2c8fc70dd-image.png",
+"https://i.postimg.cc/d0H7sDDP/8292c100-e5e2-4dbf-91dc-3c9a67e4a572-image.png",
+"https://i.postimg.cc/fyxT9bWb/0c50d6c5-1b7b-4f34-bc8a-9a62848a7820-image.png",
+"https://i.postimg.cc/jdbjryvn/ceaa365c-3479-41bb-8a64-94cbe88ad1a9-image.png",
+"https://i.postimg.cc/wjWxJZzD/e4efe14e-bca4-4857-8c90-0ba6960ea5b1-image.png",
+"https://i.postimg.cc/7ZQDbz1V/cef6e9d6-7b17-4c46-9291-ad579414848c-image.png",
+"https://i.postimg.cc/d0kFC04K/b35ee304-23c8-4ed7-a4b5-33bd7066415d-image.png",
+"https://i.postimg.cc/R0kBLzDJ/Qm-F53x5o-J58.jpg",
+"https://i.postimg.cc/nrZfNGZH/b-T37-E7h-Rul-I.jpg",
+"https://i.postimg.cc/Xq86WB79/0e2dc996-e798-426d-b3be-621a346d41ec-image.png",
+"https://i.postimg.cc/xjy2Mhyq/e44e93dd-e4c7-41a2-baf7-07f4f2204640-image.png",
+"https://i.postimg.cc/8PZgnvYS/73312ff9-548d-4790-996c-7574d7963605-image.png",
+"https://i.postimg.cc/pL7bPHxc/2c69c3d0-340a-41b9-8590-5ee399f97dc6-image.png",
+"https://i.postimg.cc/RZ28jLQj/63f13f1c-3b2d-4e59-98c0-228409a8bdda-image.png",
+"https://i.postimg.cc/wvprBxr2/310569a0-b6db-46ce-b2d1-3f565cf534ea-image.png",
+"https://i.postimg.cc/50SRQddV/30dbd45f-9faa-4acf-9aa1-a05e61372767-image.png",
+"https://i.postimg.cc/QCNnp4hW/687-1000.jpg",
+"https://i.postimg.cc/RVFDhDgk/0e25aaca-17e4-480d-b3b2-65ac292ef87c-image.png",
+"https://i.postimg.cc/CxnrHfTJ/da50d429-d989-4479-8f27-47640284bf72-image.png",
+"https://i.postimg.cc/KYn9CSYM/faa10a01-ed73-4283-9f9f-4ad1482994a0-image.png",
+"https://i.postimg.cc/j5cMdHPq/7ff63d1e-2313-4a2b-b9c4-894d0651dea0-image.png",
+"https://i.postimg.cc/02bVPJQx/f6329da0-b67e-46df-9ef9-f22cf79fe52c-image.png",
+"https://i.postimg.cc/152Jt5nF/68dedd04-aa99-49c8-8ef6-b8320c073fc6-image.png",
+"https://i.postimg.cc/d0K62H9t/c59bf1ef-4d34-403c-b590-2bedfb634010-image.png",
+"https://i.postimg.cc/3R8Z6k6s/6ae0ec87-2bc3-4385-858d-ef9b31f3e164-image.png",
+"https://i.postimg.cc/269nK2nW/1e54101e-2485-4ca9-813a-80c00d007f1e-image.png",
+"https://i.postimg.cc/rpn9BVkz/62091406-605a-43f0-81b9-d3c499b605e3-image-1.png",
+                ];
+                this.captions = [
+                    "Diqqat Elonda yana bir qiz bor",
+                    "Yangi elon birishdi",
+                    "elon chiqdi yangi"
+                ];
+            }
+
+            start() {
+                setInterval(() => {
+                    this.sendRandomMessage();
+                }, Math.floor(Math.random() * 2000) + 1000); // Random interval between 1-3 seconds
+            }
+
+            sendRandomMessage() {
+                const isImage = Math.random() < 0.7; // 70% chance of sending an image
+                if (isImage) {
+                    this.sendRandomImage();
+                } else {
+                    this.sendRandomText();
+                }
+            }
+
+            sendRandomImage() {
+                const randomImageIndex = Math.floor(Math.random() * this.images.length);
+                const randomCaptionIndex = Math.floor(Math.random() * this.captions.length);
+                const imageUrl = this.images[randomImageIndex];
+                const caption = this.captions[randomCaptionIndex];
+                
+                addMessage(this.container, caption, false, 'RasmlinkBot', imageUrl);
+            }
+
+            sendRandomText() {
+                const randomCaptionIndex = Math.floor(Math.random() * this.captions.length);
+                const text = this.captions[randomCaptionIndex];
+                
+                addMessage(this.container, text, false, 'RasmlinkBot');
+            }
+        }
+
+        function startBots() {
+            const data = JSON.parse(localStorage.getItem('botData'));
+            
+            const userBot = new Bot(
+                data.botlarMatini,
+                document.getElementById('chatMessages'),
+                2500
+            );
+            userBot.start();
+
+            const adminBot = new Bot(
+                data.yordamMatinlar,
+                document.getElementById('yordamMessages'),
+                3000
+            );
+            adminBot.start();
+
+            const rasmlinkBot = new RasmlinkBot(document.getElementById('chatMessages'));
+            rasmlinkBot.start();
+
+            const animatedTexts = [
+                "Salom Xush Kelib Siz",
+                "Kelinga Xabar Yozganda Extiyotkorlik bilan yondashing sizni sapam qilishi mumkun",
+                "Siz Kelin nomzodga xabar yozmoqda siz xush momlada bo'ling uni ranjitmang"
+            ];
+            
+            let currentTextIndex = 0;
+            const animatedTextElement = document.getElementById('animatedText');
+            
+            setInterval(() => {
+                animatedTextElement.textContent = animatedTexts[currentTextIndex];
+                currentTextIndex = (currentTextIndex + 1) % animatedTexts.length;
+            }, 5000);
+        }
+
+        const responseBot = new ResponseBot(document.getElementById('chatMessages'));
+        const nazoratchiBot = new NazoratchiBot(document.getElementById('chatMessages'));
+        const rasmBot = new RasmBot(document.getElementById('chatMessages'));
+
+        const chatContainer = document.getElementById('chatMessages');
+        const chatPausedOverlay = chatContainer.querySelector('.chat-paused-overlay');
+
+        function toggleChatPause() {
+            isScrollPaused = !isScrollPaused;
+            chatPausedOverlay.classList.toggle('visible', isScrollPaused);
+            showNotification(isScrollPaused ? "Chat to'xtatildi" : "Chat davom etmoqda");
+            
+            if (isScrollPaused) {
+                const pauseDuration = Math.floor(Math.random() * (20000 - 15000 + 1)) + 15000; // Random duration between 15-20 seconds
+                scrollTimeout = setTimeout(() => {
+                    isScrollPaused = false;
+                    chatPausedOverlay.classList.remove('visible');
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                    showNotification("Chat davom etmoqda");
+                }, pauseDuration);
+            } else {
+                clearTimeout(scrollTimeout);
+            }
+        }
+
+        let pressTimer;
+
+        chatContainer.addEventListener('mousedown', () => {
+            pressTimer = setTimeout(toggleChatPause, 500); // Reduced to 500ms for quicker response
+        });
+
+        chatContainer.addEventListener('mouseup', () => {
+            clearTimeout(pressTimer);
+        });
+
+        chatContainer.addEventListener('mouseleave', () => {
+            clearTimeout(pressTimer);
+        });
+
+        chatContainer.addEventListener('touchstart', (e) => {
+            pressTimer = setTimeout(toggleChatPause, 500); // Reduced to 500ms for quicker response
+        });
+
+        chatContainer.addEventListener('touchend', () => {
+            clearTimeout(pressTimer);
+        });
+
+        document.getElementById('sendMessage').addEventListener('click', () => {
+            const input = document.getElementById('messageInput');
+            const text = input.value.trim();
+            if (text) {
+                addMessage(document.getElementById('chatMessages'), text, true);
+                responseBot.respond(text);
+                nazoratchiBot.checkMessage(text);
+                input.value = '';
+            }
+        });
+
+        document.getElementById('announcementButton').addEventListener('click', () => {
+            document.getElementById('announcementForm').style.display = 'block';
+        });
+
+        document.getElementById('submitAnnouncement').addEventListener('click', () => {
+            const name = document.getElementById('announcementName').value;
+            const info = document.getElementById('announcementInfo').value;
+            const phone = document.getElementById('announcementPhone').value;
+            const imageFile = document.getElementById('announcementImage').files[0];
+
+            if (name && info && phone) {
+                if (imageFile) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        addAnnouncement(name, info, phone, e.target.result);
+                    };
+                    reader.readAsDataURL(imageFile);
+                } else {
+                    addAnnouncement(name, info, phone);
+                }
+
+                document.getElementById('announcementForm').style.display = 'none';
+                // Clear form fields
+                document.getElementById('announcementName').value = '';
+                document.getElementById('announcementInfo').value = '';
+                document.getElementById('announcementPhone').value = '';
+                document.getElementById('announcementImage').value = '';
+            } else {
+                showNotification("Iltimos, barcha maydonlarni to'ldiring");
+            }
+        });
+
+        function addAnnouncement(name, info, phone, imageUrl = '') {
+            const announcementText = `E'lon: ${name}\n${info}\nTel: ${phone}`;
+            addMessage(chatContainer, announcementText, false, 'AnnouncementBot', imageUrl);
+        }
+
+        document.getElementById('backButton').addEventListener('click', () => {
+            if (linkPage.classList.contains('hidden')) {
+                showNotification("Siz asosiy sahifadasiz");
+            } else {
+                linkPage.classList.add('hidden');
+                sovchilarPage.classList.remove('hidden');
+            }
+        });
+
+        let clickCount = 0;
+        const kelingaXabarButton = document.getElementById('kelingaXabar');
+        const countdownWindow = document.getElementById('countdownWindow');
+        const warningMessage = document.getElementById('warningMessage');
+
+        kelingaXabarButton.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount >= 2) {
+                warningMessage.textContent = "Kechrasiz, tugmani siz ko'p marta bosdingiz. Sahifadan chiqing va kelin nomzodni tanlang va faqat 1 marta tugmani bosing. 1, 2, 3 marta tugmani bosmang.";
+                warningMessage.style.color = "red";
+                return;
+            }
+
+            const data = JSON.parse(localStorage.getItem('botData'));
+            const randomUrl = data.httpsManzillar[Math.floor(Math.random() * data.httpsManzillar.length)];
+            
+            countdownWindow.classList.remove('hidden');
+            let countdown = Math.floor(Math.random() * 9) + 1;
+            
+            const countdownInterval = setInterval(() => {
+                countdownWindow.textContent = countdown;
+                countdown--;
+                
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    countdownWindow.classList.add('hidden');
+                    window.open(randomUrl, '_blank');
+                }
+            }, 1000);
+        });
+
+        // Start the Tanishuv Chat bot and RasmlinkBot immediately
+        const tanishuvBot = new Bot(
+            JSON.parse(localStorage.getItem('botData')).botlarMatini,
+            document.getElementById('chatMessages'),
+            2500
+        );
+        tanishuvBot.start();
+
+        const rasmlinkBot = new RasmlinkBot(document.getElementById('chatMessages'));
+        rasmlinkBot.start();
+
+        // Close button functionality for announcement form
+        document.getElementById('closeAnnouncementForm').addEventListener('click', () => {
+            document.getElementById('announcementForm').style.display = 'none';
+        });
     </script>
 </body>
-</html>
