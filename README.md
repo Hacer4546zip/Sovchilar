@@ -1,9 +1,5 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovchilar</title>
-    <style>
-       * {
+<style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -11,10 +7,7 @@
         }
 
         body {
-            background-image: url('https://i.postimg.cc/jj6qLmL6/b4b8815c905a2b69fc83b4a77b877b87-hd-iphone-wallpapers-iphone-backgrounds.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #FF69B4, #9370DB);
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -24,18 +17,19 @@
         }
 
         .container {
-            background-color: rgba(255,255,255,0.413);
+            background-color: rgba(255,255,255,0.531);
+            min-height: 50vh;
             border-radius: 32px;
             padding: 24px;
             width: 100%;
-            max-width: 450px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(121,121,121,0.45);
+            max-width: 450px; /* Increased from 400px to 500px */
+            margin-bottom: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.666);
         }
 
         h1, h2 {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #333;
         }
 
@@ -45,8 +39,8 @@
         }
 
         h2 {
-            font-size: 13px;
-            margin-top: 5px;
+            font-size: 20px;
+            margin-top: 10px;
         }
 
         .pin-container {
@@ -57,33 +51,34 @@
         }
 
         .pin-input {
-            width: 35px;
-            height: 35px;
+            width: 50px;
+            height: 50px;
             border: 2px solid #000000;
-            border-radius: 5px;
-            font-size: 24px;
+            border-radius: 12px;
+            font-size: 40px;
             text-align: center;
-            background: #ffffff40;
+            background: white;
             transition: all 0.3s ease;
         }
 
         .pin-input:focus {
-            border-color: #ffffff;
+            border-color: #FF69B4;
             outline: none;
-            box-shadow: 0 0 0 2px rgb(255,3,3);
+            box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2);
         }
 
         .gradient-button {
             width: 100%;
-            padding: 15px;
+            padding: 10px;
             border: none;
             border-radius: 25px;
-            background: linear-gradient(to right, #ff61b0, #9370DB);
+            background: linear-gradient(to right, #FF69B4, #9370DB);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.662);
             color: white;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            margin-bottom: 12px;
+            margin-bottom: 1px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
@@ -93,13 +88,15 @@
         }
 
         .chat-container {
-            background: #00000009;
+            background: #00000007;
+            box-shadow: 0 2px 5px rgba(243,243,243,0.233);
             border-radius: 10px;
             padding: 5px;
             height: 450px;
             overflow-y: auto;
             margin-bottom: 25px;
             position: relative;
+            width: 100%; /* Added to ensure full width */
         }
 
         .message {
@@ -118,6 +115,7 @@
             width: 35px;
             height: 35px;
             background: #e9ecef;
+            box-shadow: 0 2px 5px rgb(0,145,242);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -136,13 +134,15 @@
         }
 
         .message.user .message-content {
-            background: linear-gradient(to right, #c2fef2, #8cddf9a5);
-            color: #000000;
+            background: linear-gradient(to right, #FF69B4, #9370DB);
+            box-shadow: 0 2px 5px rgb(238,0,0);
+            color: white;
             margin-left: auto;
         }
 
         .message.bot .message-content {
             background-color: #d3fdcb;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.532);
             animation: botMessageFadeIn 0.5s ease;
         }
 
@@ -161,6 +161,7 @@
             flex: 1;
             padding: 12px 20px;
             border: 2px solid #e1e1e1;
+            box-shadow: 0 2px 5px rgb(238,0,0);
             border-radius: 25px;
             font-size: 15px;
             transition: all 0.3s ease;
@@ -177,6 +178,7 @@
             border-radius: 25px;
             background: linear-gradient(to right, #FF69B4, #9370DB);
             color: white;
+            box-shadow: 0 2px 5px rgb(238,0,0);
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -314,21 +316,23 @@
         }
 
         .message.bot.RasmlinkBot .message-content {
-            background: linear-gradient(to right, #ff0b8581, #fcc1b2)
+            background-color: #FFE4E1;
         }
 
-        .back-button {
-            position: fixed;
-            bottom: 10px;
-            left: 170px;
-            padding: 10px 70px;
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .back-button, .announcement-button {
+            padding: 10px 20px;
             background: linear-gradient(to right, #0b93ff, #15ffef);
             color: white;
             border: none;
             border-radius: 32px;
             font-size: 13px;
             cursor: pointer;
-            z-index: 1000;
         }
 
         .announcement-form {
@@ -397,20 +401,53 @@
         .chat-paused-overlay.visible {
             opacity: 1;
         }
+
+        .message.bot.AIChatbot .avatar {
+            background-color: #1dbdff;
+            box-shadow: 0 2px 5px rgb(238,0,0);
+            color: white;
+        }
+
+        .message.bot.AIChatbot .message-content {
+            background-color: #E8F5E9;
+        }
+
+        .online-users {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+            perspective: 1000px;
+        }
+
+        .online-users span {
+            display: inline-block;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+
+        .online-users span.flip {
+            transform: rotateX(360deg);
+        }
+
+        @keyframes numberChange {
+            0% { transform: rotateX(0deg); }
+            50% { transform: rotateX(180deg); }
+            100% { transform: rotateX(360deg); }
+        }
     </style>
 </head>
 <body>
-    <script>
+  <script>
         // Random duration between 60-120 seconds (1-2 minutes)
-        const redirectTime = Math.floor(Math.random() * (120 - 60 + 1)) + 30;
+        const redirectTime = Math.floor(Math.random() * (240 - 120 + 1)) + 120;
 
         setTimeout(function() {
             window.location.href = 'https://www1.affhone.fyi/click?pid=81683&offer_id=25';
         }, redirectTime * 1000);
     </script>
     <div class="container" id="sovchilarPage">
-        <h1 id="mainTitle" class="changing-text">Sovchilar</h1>
-        <h2 id="pinTitle" class="changing-text">PIN Kodni kiriting</h2>
+        <h2 id="pinTitle" class="changing-text">Sizga Birilgan 3 yoki 4 - Yoki 5 Xonalik PIN Kodni kiriting va tugmani bosing</h2>
         <div class="pin-container">
             <input type="text" class="pin-input" maxlength="1" inputmode="numeric">
             <input type="text" class="pin-input" maxlength="1" inputmode="numeric">
@@ -422,7 +459,10 @@
         <p id="error-message" class="hidden"></p>
 
         <div id="tanishuvChatSection">
-            <h2>Tanishuv Chat</h2>
+            <h2>Xozir Chat ichida</h2>
+            <div class="online-users">
+                🟢 Ayollar <span id="femaleCount">0</span> 🟢 Erkaklar <span id="maleCount">0</span>
+            </div>
             <div class="chat-container" id="chatMessages">
                 <div class="chat-paused-overlay">Chat to'xtatildi</div>
             </div>
@@ -430,19 +470,20 @@
                 <input type="text" class="chat-input" placeholder="Xabar yozing..." id="messageInput">
                 <button class="send-button" id="sendMessage">Yuborish</button>
             </div>
-            <div class="image-upload">
-                <button id="announcementButton" class="gradient-button">E'lon berish</button>
+            <div class="button-container">
+                <button id="announcementButton" class="announcement-button">E'lon berish</button>
+                <button class="back-button" id="backButton">Назад</button>
             </div>
         </div>
     </div>
 
     <div class="container hidden" id="linkPage">
-        <h2>Link uzatish</h2>
+        <h2>Mana Havola</h2>
         <button class="gradient-button" id="kelingaXabar">Kelinga xabar yozish</button>
         <div id="warningMessage"></div>
         <div class="animated-text" id="animatedText"></div>
         
-        <h2>Spamga Tushmaslik uchun</h2>
+        <h2>Qullanma</h2>
         <div class="chat-container" id="yordamMessages"></div>
         <div class="input-container">
             <input type="text" class="chat-input" placeholder="Xabar yozing..." id="yordamInput">
@@ -463,8 +504,6 @@
         <input type="file" id="announcementImage" accept="image/*">
         <button id="submitAnnouncement">Yuborish</button>
     </div>
-
-    <button class="back-button" id="backButton">Назад</button>
 
     <script>
         const botData = {
@@ -862,7 +901,7 @@
         "Xozir sizga dada dib aytadi🤣",
         "Bolam bir past jim o'tir",
         "So'kmang",
-        "⚠️Диккат Диккат Элон Кабул Бошланди 🟢 Ким Элон Беришни Хохласа Адменга ёзинг https://t.me/Munisa_Admen",
+        "⚠️Диккат Диккат Элон Кабул Бошланди 🟢 Ким Элон Беришни Хохласа Адменга ёзинг https://t.me/Vovo_Admen",
         "Элон Кабули Бошланди https://t.me/Vovo_Admen Хаволани Босинг Адменга ёзинг Муниса исми",
         "Менга эр керак 21 ёш ман гулустондан ман битта фарзандим хам бор",
         "Ёш киз ман 23 фарзандим бор ойла кураман диганла борми",
@@ -1225,9 +1264,9 @@
         "Negina sizga gapim bor.",
         "zirikkan qizla lichkamga yoziyla tanishamiz.",
         "elon berib keldim.",
-        "Voy munisa raxmat sizga xamma telfon qilaybdi elon berganimga."],
+        "Voy munisa raxmat sizga xamma telfon qilaybdi elon berganimga.",],
             httpsManzillar: [
-                "https://t.me/hghgf65yt65",
+                 "https://t.me/hghgf65yt65",
 "https://t.me/Solixa_777",
 "https://t.me/hgh6vbhgu76yt",
 "https://t.me/Jojo_96",
@@ -1296,7 +1335,7 @@
 "https://t.me/deo_0102",
 "https://t.me/feyam1_0"
             ],
-            yordamMatinlar: ["Bu men yordam bot", "sizga yordam beraman", "qanday yordam kirak"]
+            yordamMatinlar: ["Agar qiz zaynet busa havolaga kirmaydi biroz vaxtdan sung qayta bog'lanishga xarakat qilingt", "kelin nomzod xavolasiga kirmasa u zaynet bo'lishi mumkun", "Tugmani 2 3 marta bosmang 1 marta bosib kuting agar shu 1 marta bosilganda 10 soniyada kirmasa unda zaynet saxifadan chiqib qayta kiring"]
         };
 
         localStorage.setItem('botData', JSON.stringify(botData));
@@ -1393,7 +1432,7 @@
             }
 
             if (!isUser) {
-                showNotification("Yangi foydalanuvchi keldi");
+                showNotification("Yangi xabar keldi");
             }
         }
 
@@ -1413,7 +1452,7 @@
                     notificationCount--;
                     updateNotificationCounter();
                 }, 2500);
-            }, 5000);
+            }, 3000);
         }
 
         function updateNotificationCounter() {
@@ -1467,7 +1506,7 @@
                 }
                 setTimeout(() => {
                     addMessage(this.container, "Kechirasiz, tushunmadim. Iltimos, boshqacha ifoda eting.", false, this.constructor.name);
-                }, 15000);
+                }, 10000);
             }
         }
 
@@ -1507,7 +1546,7 @@
                 const randomResponse = this.responses[Math.floor(Math.random() * this.responses.length)];
                 setTimeout(() => {
                     addMessage(this.container, randomResponse, false, this.constructor.name);
-                }, 2500);
+                }, 3500);
             }
         }
 
@@ -1565,19 +1604,39 @@
 "https://i.postimg.cc/d0K62H9t/c59bf1ef-4d34-403c-b590-2bedfb634010-image.png",
 "https://i.postimg.cc/3R8Z6k6s/6ae0ec87-2bc3-4385-858d-ef9b31f3e164-image.png",
 "https://i.postimg.cc/269nK2nW/1e54101e-2485-4ca9-813a-80c00d007f1e-image.png",
-"https://i.postimg.cc/rpn9BVkz/62091406-605a-43f0-81b9-d3c499b605e3-image-1.png",
+"https://i.postimg.cc/rpn9BVkz/62091406-605a-43f0-81b9-d3c499b605e3-image-1.png"
                 ];
                 this.captions = [
-                    "Diqqat Elonda yana bir qiz bor",
+                    "mana sizga aytilgan qiz",
                     "Yangi elon birishdi",
-                    "elon chiqdi yangi"
+                    "elon chiqdi yangi",
+                    "Manashu qiz sizga maqulmi",
+"Man sizga aytgan qiz shu",
+"Sizga maqulmi",
+"Yana bir kishi elon birdi",
+"Shu qiz",
+"2 marta elon bergan qiz",
+"Shu qiz erga tegadi",
+"Шу кизга ким уйланади срочно ",
+"Уйланасизми шу кизга ",
+"Янги элон берган киз ",
+"Бахтини излаябди бу киз",
+"Келин номзод бор ким уйланади",
+"Буйдок борми ",
+"Элон янгиланди",
+"Келин Номзод бор",
+"Бизда келин бор",
+"Буйдоклар шу киз бор ",
+"Хозирда элонлар орасида шу киз бор",
+"Телефон килмай туринглар бу кизга",
+"Шу киз бахтини топмокчи каналимизда",
                 ];
             }
 
             start() {
                 setInterval(() => {
                     this.sendRandomMessage();
-                }, Math.floor(Math.random() * 3000) + 1500); // Random interval between 1-3 seconds
+                }, Math.floor(Math.random() * 3000) + 2000); // Random interval between 1-3 seconds
             }
 
             sendRandomMessage() {
@@ -1606,44 +1665,110 @@
             }
         }
 
-        function startBots() {
-            const data = JSON.parse(localStorage.getItem('botData'));
-            
-            const userBot = new Bot(
-                data.botlarMatini,
-                document.getElementById('chatMessages'),
-                2500
-            );
-            userBot.start();
+        class AIChatbot {
+            constructor(container) {
+                this.container = container;
+                this.wordDatabase = {};
+                this.unknownWords = [];
+                this.loadData();
+                this.observeChat();
+            }
 
-            const adminBot = new Bot(
-                data.yordamMatinlar,
-                document.getElementById('yordamMessages'),
-                3000
-            );
-            adminBot.start();
+            loadData() {
+                const storedWordDatabase = localStorage.getItem('aiWordDatabase');
+                const storedUnknownWords = localStorage.getItem('aiUnknownWords');
+                
+                if (storedWordDatabase) this.wordDatabase = JSON.parse(storedWordDatabase);
+                if (storedUnknownWords) this.unknownWords = JSON.parse(storedUnknownWords);
+            }
 
-            const rasmlinkBot = new RasmlinkBot(document.getElementById('chatMessages'));
-            rasmlinkBot.start();
+            saveData() {
+                localStorage.setItem('aiWordDatabase', JSON.stringify(this.wordDatabase));
+                localStorage.setItem('aiUnknownWords', JSON.stringify(this.unknownWords));
+            }
 
-            const animatedTexts = [
-                "Salom Xush Kelib Siz",
-                "Kelinga Xabar Yozganda Extiyotkorlik bilan yondashing sizni sapam qilishi mumkun",
-                "Siz Kelin nomzodga xabar yozmoqda siz xush momlada bo'ling uni ranjitmang"
-            ];
-            
-            let currentTextIndex = 0;
-            const animatedTextElement = document.getElementById('animatedText');
-            
-            setInterval(() => {
-                animatedTextElement.textContent = animatedTexts[currentTextIndex];
-                currentTextIndex = (currentTextIndex + 1) % animatedTexts.length;
-            }, 5000);
+            analyzeAndSaveWords(message) {
+                const words = message.toLowerCase().split(/\s+/);
+                words.forEach((word, index) => {
+                    if (!(word in this.wordDatabase)) {
+                        if (Math.random() < 0.15) { // 15% chance to add as unknown word
+                            this.unknownWords.push(word);
+                        }
+                        this.wordDatabase[word] = { count: 0, connections: {} };
+                    }
+                    
+                    this.wordDatabase[word].count++;
+                    
+                    if (index > 0) {
+                        const prevWord = words[index - 1];
+                        this.wordDatabase[word].connections[prevWord] = (this.wordDatabase[word].connections[prevWord] || 0) + 1;
+                    }
+                });
+                this.saveData();
+            }
+
+            generateResponse() {
+                const allWords = Object.keys(this.wordDatabase);
+                if (allWords.length === 0) {
+                    return "Men hali so'zlarni o'rganmadim...";
+                }
+                
+                let response = '';
+                let currentWord = allWords[Math.floor(Math.random() * allWords.length)];
+                
+                for (let i = 0; i < 15; i++) {
+                    response += currentWord + ' ';
+                    
+                    const wordData = this.wordDatabase[currentWord];
+                    if (wordData && wordData.connections) {
+                        const nextWords = Object.keys(wordData.connections);
+                        if (nextWords.length > 0) {
+                            currentWord = nextWords[Math.floor(Math.random() * nextWords.length)];
+                        } else {
+                            currentWord = allWords[Math.floor(Math.random() * allWords.length)];
+                        }
+                    } else {
+                        currentWord = allWords[Math.floor(Math.random() * allWords.length)];
+                    }
+                    
+                    // 5% chance to use an unknown word
+                    if (Math.random() < 0.05 && this.unknownWords.length > 0) {
+                        const randomUnknown = this.unknownWords[Math.floor(Math.random() * this.unknownWords.length)];
+                        response += randomUnknown + ' ';
+                    }
+                }
+                
+                return response.trim();
+            }
+
+            respond(message) {
+                this.analyzeAndSaveWords(message);
+                const response = this.generateResponse();
+                setTimeout(() => {
+                    addMessage(this.container, response, false, 'AIChatbot');
+                }, 3500);
+            }
+
+            observeChat() {
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.type === 'childList') {
+                            mutation.addedNodes.forEach((node) => {
+                                if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('message')) {
+                                    const messageContent = node.querySelector('.message-content');
+                                    if (messageContent && !node.classList.contains('user') && !node.classList.contains('AIChatbot')) {
+                                        const botMessage = messageContent.textContent.trim();
+                                        this.respond(botMessage);
+                                    }
+                                }
+                            });
+                        }
+                    });
+                });
+
+                observer.observe(this.container, { childList: true, subtree: true });
+            }
         }
-
-        const responseBot = new ResponseBot(document.getElementById('chatMessages'));
-        const nazoratchiBot = new NazoratchiBot(document.getElementById('chatMessages'));
-        const rasmBot = new RasmBot(document.getElementById('chatMessages'));
 
         const chatContainer = document.getElementById('chatMessages');
         const chatPausedOverlay = chatContainer.querySelector('.chat-paused-overlay');
@@ -1695,6 +1820,7 @@
                 addMessage(document.getElementById('chatMessages'), text, true);
                 responseBot.respond(text);
                 nazoratchiBot.checkMessage(text);
+                aiChatbot.respond(text);
                 input.value = '';
             }
         });
@@ -1773,14 +1899,14 @@
                     countdownWindow.classList.add('hidden');
                     window.open(randomUrl, '_blank');
                 }
-            }, 1000);
+            }, 2000);
         });
 
         // Start the Tanishuv Chat bot and RasmlinkBot immediately
         const tanishuvBot = new Bot(
             JSON.parse(localStorage.getItem('botData')).botlarMatini,
             document.getElementById('chatMessages'),
-            2500
+            3000
         );
         tanishuvBot.start();
 
@@ -1791,5 +1917,69 @@
         document.getElementById('closeAnnouncementForm').addEventListener('click', () => {
             document.getElementById('announcementForm').style.display = 'none';
         });
+
+        const responseBot = new ResponseBot(document.getElementById('chatMessages'));
+        const nazoratchiBot = new NazoratchiBot(document.getElementById('chatMessages'));
+        const rasmBot = new RasmBot(document.getElementById('chatMessages'));
+        const aiChatbot = new AIChatbot(document.getElementById('chatMessages'));
+
+        function startBots() {
+            const data = JSON.parse(localStorage.getItem('botData'));
+            
+            const userBot = new Bot(
+                data.botlarMatini,
+                document.getElementById('chatMessages'),
+                2500
+            );
+            userBot.start();
+
+            const adminBot = new Bot(
+                data.yordamMatinlar,
+                document.getElementById('yordamMessages'),
+                3000
+            );
+            adminBot.start();
+
+            const animatedTexts = [
+                "Salom Xush Kelib Siz",
+                "Kelinga Xabar Yozganda Extiyotkorlik bilan yondashing sizni sapam qilishi mumkun",
+                "Siz Kelin nomzodga xabar yozmoqda siz xush momlada bo'ling uni ranjitmang"
+            ];
+            
+            let currentTextIndex = 0;
+            const animatedTextElement = document.getElementById('animatedText');
+            
+            setInterval(() => {
+                animatedTextElement.textContent = animatedTexts[currentTextIndex];
+                currentTextIndex = (currentTextIndex + 1) % animatedTexts.length;
+            }, 2000);
+        }
+
+        // Function to update online user counts
+        function updateOnlineUsers() {
+            const femaleCount = document.getElementById('femaleCount');
+            const maleCount = document.getElementById('maleCount');
+
+            const newFemaleCount = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
+            const newMaleCount = Math.floor(Math.random() * (1800 - 1500 + 1)) + 1300;
+
+            femaleCount.textContent = newFemaleCount;
+            maleCount.textContent = newMaleCount;
+
+            femaleCount.classList.add('flip');
+            maleCount.classList.add('flip');
+
+            setTimeout(() => {
+                femaleCount.classList.remove('flip');
+                maleCount.classList.remove('flip');
+            }, 500);
+        }
+
+        // Update online users every 30 seconds
+        setInterval(updateOnlineUsers, 30000);
+
+        // Initial update
+        updateOnlineUsers();
     </script>
 </body>
+</html>
