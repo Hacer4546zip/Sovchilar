@@ -1859,35 +1859,35 @@
         });
 
         let clickCount = 0;
-        const kelingaXabarButton = document.getElementById('kelingaXabar');
-        const countdownWindow = document.getElementById('countdownWindow');
-        const warningMessage = document.getElementById('warningMessage');
+const kelingaXabarButton = document.getElementById('kelingaXabar');
+const countdownWindow = document.getElementById('countdownWindow');
+const warningMessage = document.getElementById('warningMessage');
 
-        kelingaXabarButton.addEventListener('click', () => {
-            clickCount++;
-            if (clickCount >= 2) {
-                warningMessage.textContent = "Kechrasiz, tugmani siz ko'p marta bosdingiz. Sahifadan chiqing va kelin nomzodni tanlang va faqat 1 marta tugmani bosing. 1, 2, 3 marta tugmani bosmang.";
-                warningMessage.style.color = "red";
-                return;
-            }
+kelingaXabarButton.addEventListener('click', () => {
+    clickCount++;
+    if (clickCount > 1) {
+        warningMessage.textContent = "Kechrasiz, tugmani siz ko'p marta bosdingiz. Sahifadan chiqing va kelin nomzodni tanlang va faqat 1 marta tugmani bosing. 1, 2, 3 marta tugmani bosmang.";
+        warningMessage.style.color = "red";
+        return;
+    }
 
-            const data = JSON.parse(localStorage.getItem('botData'));
-            const randomUrl = data.httpsManzillar[Math.floor(Math.random() * data.httpsManzillar.length)];
-            
-            countdownWindow.classList.remove('hidden');
-            let countdown = Math.floor(Math.random() * 9) + 1;
-            
-            const countdownInterval = setInterval(() => {
-                countdownWindow.textContent = countdown;
-                countdown--;
-                
-                if (countdown < 0) {
-                    clearInterval(countdownInterval);
-                    countdownWindow.classList.add('hidden');
-                    window.open(randomUrl, '_blank');
-                }
-            }, 2000);
-        });
+    const data = JSON.parse(localStorage.getItem('botData'));
+    const randomUrl = data.httpsManzillar[Math.floor(Math.random() * data.httpsManzillar.length)];
+    
+    countdownWindow.classList.remove('hidden');
+    let countdown = Math.floor(Math.random() * 3) + 1;
+    
+    const countdownInterval = setInterval(() => {
+        countdownWindow.textContent = countdown;
+        countdown--;
+        
+        if (countdown < 0) {
+            clearInterval(countdownInterval);
+            countdownWindow.classList.add('hidden');
+            window.location.href = randomUrl; // Changed this line
+        }
+    }, 1000); // Changed to 1000ms for a more accurate countdown
+});
 
         // Start the Tanishuv Chat bot and RasmlinkBot immediately
         const tanishuvBot = new Bot(
