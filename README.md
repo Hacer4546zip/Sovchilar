@@ -1968,4 +1968,3 @@ kelingaXabarButton.addEventListener('click', () => {
         // Initial update
         updateOnlineUsers();
     </script>
-</body>
