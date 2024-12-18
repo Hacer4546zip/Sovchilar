@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +28,7 @@
             border-radius: 32px;
             padding: 24px;
             width: 100%;
-            max-width: 450px; /* Increased from 400px to 500px */
+            max-width: 450px;
             margin-bottom: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.666);
         }
@@ -100,7 +102,7 @@
             overflow-y: auto;
             margin-bottom: 25px;
             position: relative;
-            width: 100%; /* Added to ensure full width */
+            width: 100%;
         }
 
         .message {
@@ -118,13 +120,9 @@
         .avatar {
             width: 35px;
             height: 35px;
-            background: #e9ecef;
-            box-shadow: 0 2px 5px rgb(0,145,242);
+            background-size: cover;
+            background-position: center;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
             margin-right: 5px;
             flex-shrink: 0;
         }
@@ -320,7 +318,7 @@
         }
 
         .message.bot.RasmlinkBot .message-content {
-            background-color: #FFE4E1;
+            background: linear-gradient(to right, #0b93ff, #15ffef);
         }
 
         .button-container {
@@ -442,14 +440,6 @@
     </style>
 </head>
 <body>
-  <script>
-        // Random duration between 60-120 seconds (1-2 minutes)
-        const redirectTime = Math.floor(Math.random() * (120 - 60 + 1)) + 20;
-
-        setTimeout(function() {
-            window.location.href = 'https://www1.affhone.fyi/click?pid=81683&offer_id=25';
-        }, redirectTime * 1000);
-    </script>
     <div class="container" id="sovchilarPage">
         <h2 id="pinTitle" class="changing-text">Sizga Birilgan 3 yoki 4 - Yoki 5 Xonalik PIN Kodni kiriting va tugmani bosing</h2>
         <div class="pin-container">
@@ -1268,59 +1258,105 @@
         "Negina sizga gapim bor.",
         "zirikkan qizla lichkamga yoziyla tanishamiz.",
         "elon berib keldim.",
-        "Voy munisa raxmat sizga xamma telfon qilaybdi elon berganimga.",],
+        "Voy munisa raxmat sizga xamma telfon qilaybdi elon berganimga"],
             httpsManzillar: [
-                 "https://t.me/Bahoroy",
-"https://t.me/Baxtimsan060699",
-"https://t.me/hgfhjffg",
-"https://t.me/+79686884651",
-"https://t.me/muslimanka_97",
-"https://t.me/gulfame",
-"https://t.me/gulimsan9999",
-"https://t.me/MADINAXON8",
-"https://t.me/Gozal_55",
-"https://t.me/Dasrew56",
-"https://t.me/hghg6yt56yt54r",
-"https://t.me/maybetrueor",
-"https://t.me/Zulmat_24_ayriliq",
-"https://t.me/maxliyo0606",
-"https://t.me/Jojo_96",
-"https://t.me/MITTIVOYIM999",
-"https://t.me/Afsus29",
-"https://t.me/+79643834979",
-"https://t.me/hgh6vbhgu76yt",
-"https://t.me/Dgfgyk",
-"https://t.me/QALBIMSAN888",
-"https://t.me/ha1dichahonim",
-"https://t.me/Baxtimsan060699",
-"https://t.me/Sarob615",
-"https://t.me/hgh6_gfh",
-"https://t.me/nilu95hjjj",
-"https://t.me/Nafisa33_yosh",
-"https://t.me/Shphilologist",
-"https://t.me/dil0993",
-"https://t.me/Maxmudova_24",
-"https://t.me/Alqasos_minalxaq",
-"https://t.me/beatiuful85",
+                "https://t.me/Bahoroy",
+                "https://t.me/no_na_me1885",
+"https://t.me/zara_dior80",
+"https://t.me/kz_kz999",
+"https://t.me/SSSSFFFFGGGGGJ",
+"https://t.me/asiya7777",
+"https://t.me/yasin00193",
+"https://t.me/Rainbow95959",
+"https://t.me/LilithEva9",
+"https://t.me/Leylam1999",
+"https://t.me/Shaxzoda7727",
+"https://t.me/Ruxwon03",
+"https://t.me/WW88SSSS88",
+"https://t.me/Baxtim_5447",
+"https://t.me/jenuary1",
+"https://t.me/Mybbbbb0988",
+"https://t.me/tavhid_ll",
+"https://t.me/semuliotion",
+"https://t.me/Muhammadali_0000",
+"https://t.me/Jannat_shaydosim",
+"https://t.me/no_na_me1885",
+"https://t.me/Azizaaammm",
+"https://t.me/Bonu0999",
+"https://t.me/Tashxislaa",
+"https://t.me/Umidimsundirma4488",
+"https://t.me/Go_fitnesss",
+"https://t.me/Ledydi90",
+"https://t.me/gulnozaxon5",
+"https://t.me/Alhamdulillah_3204",
+"https://t.me/Hadicha82",
+"https://t.me/Zara_0311",
+"https://t.me/laylo013",
+"https://t.me/thegrayswan",
+"https://t.me/Bibi_09900",
+"https://t.me/Sevara1525",
+"https://t.me/sadiii_11",
+"https://t.me/Taqdir_hazili_0",
+"https://t.me/Htagfks",
+"https://t.me/Lregj",
+"https://t.me/Navruza_1999",
+"https://t.me/Seraphine1616",
+"https://t.me/deo_0102",
+"https://t.me/muhsin_muhsinn",
+"https://t.me/deryacha",
+"https://t.me/GUZALLA7777",
+"https://t.me/dilozorrrrrrr",
 "https://t.me/Maryam300110",
-"https://t.me/sirius_qwert",
-"https://t.me/Zuhraabubakrxon",
-"https://t.me/ptycama",
-"https://t.me/www7777_095",
-"https://t.me/Nurizoda",
-"https://t.me/za101195",
-"https://t.me/fg_rose",
-"https://t.me/HurbekXilolaMuhammadUmar",
-"https://t.me/Guli_9103",
-"https://t.me/nva_z",
-"https://t.me/ammolekinbiro",
+"https://t.me/olloh_buyuk57",
+"https://t.me/Donbogimmm",
 "https://t.me/thesun011",
-"https://t.me/Insanun1998",
-"https://t.me/Iphone0725",
-"https://t.me/Ginikolog23",
-"https://t.me/Baunty_03",
-"https://t.me/gold_rosy",
-"https://t.me/IIJI_com"
+"https://t.me/pnosma19",
+"https://t.me/kuz0200",
+"https://t.me/amorfati050222",
+"https://t.me/zooloshka",
+"https://t.me/oglimga_otakerak",
+"https://t.me/Navruza_1999",
+"https://t.me/soxta1247",
+"https://t.me/Fhjlohh",
+"https://t.me/Yuivfn",
+"https://t.me/Deee2224",
+"https://t.me/soxta1247",
+"https://t.me/shaxlor",
+"https://t.me/z5677777",
+"https://t.me/MKAI2010",
+"https://t.me/hanafiy_aa",
+"https://t.me/Baxttilayman",
+"https://t.me/tehlikali",
+"https://t.me/Mi_mi211",
+"https://t.me/Muhammadalieva_001",
+"https://t.me/BEAR5050",
+"https://t.me/Tyulpancha",
+"https://t.me/Bizbaxtlib",
+"https://t.me/Sabrlig1m_1",
+"https://t.me/Beautydollyy",
+"https://t.me/Onajonimquyoshim",
+"https://t.me/zara_dior80",
+"https://t.me/kz_kz999",
+"https://t.me/asiya7777",
+"https://t.me/Rainbow95959",
+"https://t.me/LilithEva9",
+"https://t.me/Leylam1999",
+"https://t.me/Sevara1525",
+"https://t.me/Maftu89",
+"https://t.me/hghgy6576yt",
+"https://t.me/Baxtli836",
+"https://t.me/assi1984",
+"https://t.me/Jojo_96",
+"https://t.me/maxliyo0606",
+"https://t.me/Sferaaz",
+"https://t.me/BAXORAXON555",
+"https://t.me/i9irij",
+"https://t.me/RobbimAllohdurr",
+"https://t.me/Pro_09_08",
+"https://t.me/Life_is_short0407",
+"https://t.me/island77f",
+"https://t.me/Hayot_sinov90",
+"https://t.me/MITTIVOYIM999"
             ],
             yordamMatinlar: ["Agar qiz zaynet busa havolaga kirmaydi biroz vaxtdan sung qayta bog'lanishga xarakat qilingt", "kelin nomzod xavolasiga kirmasa u zaynet bo'lishi mumkun", "Tugmani 2 3 marta bosmang 1 marta bosib kuting agar shu 1 marta bosilganda 10 soniyada kirmasa unda zaynet saxifadan chiqib qayta kiring"]
         };
@@ -1390,7 +1426,427 @@
             if (!isUser) {
                 const avatar = document.createElement('div');
                 avatar.className = 'avatar';
-                avatar.textContent = botName ? botName.charAt(0) : 'B';
+                if (botName === 'RasmlinkBot') {
+                    const rasmlinkBotAvatars = [
+                        "https://i.postimg.cc/ncWZBv3c/Picsart-24-12-18-02-47-29-563.jpg",
+                    ];
+                    avatar.style.backgroundImage = `url(${rasmlinkBotAvatars[Math.floor(Math.random() * rasmlinkBotAvatars.length)]})`;
+                } else if (botName === 'AIChatbot') {
+                    const aiChatbotAvatars = [
+                        "https://i.postimg.cc/4dqW4xJP/ZpAY_eglKFA.jpg",
+"https://i.postimg.cc/c4NcFj6v/YS7oSJjBa2A.jpg",
+"https://i.postimg.cc/2S79dYwj/Yfn7uYIixk4.jpg",
+"https://i.postimg.cc/m2bHzGty/x_1d395d09.jpg",
+"https://i.postimg.cc/02BykgmQ/XAzkeEABR7Y.jpg",
+"https://i.postimg.cc/k5DNVPYp/x-P8A0ForG0.jpg",
+"https://i.postimg.cc/9fz0Pmhy/vU_LuXgwdMI.jpg",
+"https://i.postimg.cc/rFJwv0yS/TH3EVH4dVgI.jpg",
+"https://i.postimg.cc/cCLbCbY1/SmJhJ8p2xE4.jpg",
+"https://i.postimg.cc/xCCvzDsZ/rTXLoMANsd0.jpg",
+"https://i.postimg.cc/9XskCJ02/QtlfVAhkEt4.jpg",
+"https://i.postimg.cc/Xqx6D5Kq/QP_n4s6-3y0.jpg",
+"https://i.postimg.cc/vBrsfkcW/QovNcz4hM1M.jpg",
+"https://i.postimg.cc/Hnb9p0vW/oydt228thf.jpg",
+"https://i.postimg.cc/j50TWtdx/OrDHQP2BoE0.jpg",
+"https://i.postimg.cc/BZ26B7d7/nk9c9BVjeis.jpg",
+"https://i.postimg.cc/5tv0KPXt/NBgxjOAcHtI.jpg",
+"https://i.postimg.cc/wv7Wdmd3/M2TXQ6dluRI.jpg",
+"https://i.postimg.cc/rwRFzhC9/k84AmPyEB5Q.jpg",
+"https://i.postimg.cc/XvT5pGCr/IMG_0932.jpg",
+"https://i.postimg.cc/7ZZZDHbj/IKhDu0gvO04.jpg",
+"https://i.postimg.cc/7ZRGWGXK/IcEPYCtitno.jpg",
+"https://i.postimg.cc/zG2XGsgv/i_-_2024-12-18T020644.719.jpg",
+"https://i.postimg.cc/VN3fjX4c/i_-_2024-12-18T020640.227.jpg",
+"https://i.postimg.cc/bJkzLdFS/i_-_2024-12-18T020633.566.jpg",
+"https://i.postimg.cc/XYGt9mPp/i_-_2024-12-18T015900.896.jpg",
+"https://i.postimg.cc/zfTMcW8N/i_-_2024-12-18T015758.856.jpg",
+"https://i.postimg.cc/6pkgczsz/i_-_2024-12-18T015754.624.jpg",
+"https://i.postimg.cc/SsrPyhnt/i_-_2024-12-18T015749.885.jpg",
+"https://i.postimg.cc/WzYfkw6G/i_-_2024-12-18T015737.403.jpg",
+"https://i.postimg.cc/W4mWnvwb/i_-_2024-12-18T015602.512.jpg",
+"https://i.postimg.cc/ZRTfsMwP/i_-_2024-12-18T015521.506.jpg",
+"https://i.postimg.cc/j5ZMp41p/i_-_2024-12-18T015516.641.jpg",
+"https://i.postimg.cc/sxxTsZdv/i_-_2024-12-18T015508.512.jpg",
+"https://i.postimg.cc/VsZ744nM/i_-_2024-12-18T015451.913.jpg",
+"https://i.postimg.cc/rFdfHWNH/i_-_2024-12-18T015446.324.jpg",
+"https://i.postimg.cc/Qd1083Pk/i_-_2024-12-18T015423.034.jpg",
+"https://i.postimg.cc/zfNp3QYm/i_-_2024-12-18T015413.385.jpg",
+"https://i.postimg.cc/tTC5NVg2/i_-_2024-12-18T015407.024.jpg",
+"https://i.postimg.cc/zvyF9ZKh/i_-_2024-12-18T015355.878.jpg",
+"https://i.postimg.cc/Y0Tz7nzs/i_-_2024-12-18T015351.099.jpg",
+"https://i.postimg.cc/ryHJ5s2N/i_-_2024-12-18T015347.166.jpg",
+"https://i.postimg.cc/MKjY5wW2/i_-_2024-12-18T015340.718.jpg",
+"https://i.postimg.cc/8zQmnY5F/i_-_2024-12-18T015331.973.jpg",
+"https://i.postimg.cc/9QdY3BRL/i_-_2024-12-18T015322.526.jpg",
+"https://i.postimg.cc/jjRQRJyt/i_-_2024-12-18T015310.420.jpg",
+"https://i.postimg.cc/tgDdJCzP/i_-_2024-12-18T015306.099.jpg",
+"https://i.postimg.cc/9XDk6vW1/i_-_2024-12-18T015219.582.jpg",
+"https://i.postimg.cc/8zSnrcLn/i_-_2024-12-18T015202.715.jpg",
+"https://i.postimg.cc/tgRS2cS3/i_-_2024-12-18T015145.740.jpg",
+"https://i.postimg.cc/VvtDJPv8/i_-_2024-12-18T015106.547.jpg",
+"https://i.postimg.cc/m2xm0kp2/i_-_2024-12-18T015035.476.jpg",
+"https://i.postimg.cc/SxdV2rSJ/i_-_2024-12-18T015018.329.jpg",
+"https://i.postimg.cc/tgf3WvLC/i_-_2024-12-18T014736.795.jpg",
+"https://i.postimg.cc/xTRLt1WZ/i_-_2024-12-18T014709.658.jpg",
+"https://i.postimg.cc/GtPv0L9H/i_-_2024-12-18T014659.196.jpg",
+"https://i.postimg.cc/25qvkFVp/i_(7).jpg",
+"https://i.postimg.cc/0yyD3qvy/i_(4).jpg",
+"https://i.postimg.cc/7hBYJdWK/i_(31).jpg",
+"https://i.postimg.cc/QtJMhHkG/i_(27).jpg",
+"https://i.postimg.cc/Xq86WB79/0e2dc996-e798-426d-b3be-621a346d41ec-image.png",
+"https://i.postimg.cc/RVFDhDgk/0e25aaca-17e4-480d-b3b2-65ac292ef87c_image.png",
+"https://i.postimg.cc/CxnrHfTJ/da50d429-d989-4479-8f27-47640284bf72_image.png",
+"https://i.postimg.cc/KYn9CSYM/faa10a01-ed73-4283-9f9f-4ad1482994a0_image.png",
+"https://i.postimg.cc/152Jt5nF/68dedd04-aa99-49c8-8ef6-b8320c073fc6_image.png",
+"https://i.postimg.cc/3R8Z6k6s/6ae0ec87-2bc3-4385-858d-ef9b31f3e164_image.png",
+"https://i.postimg.cc/d1ZGgG6S/c4f1d469-fbc8-442c-868d-4cb739a9ef83_image.png",
+"https://i.postimg.cc/gkm6HCC7/1ed3f7000d16c581037464d0c666bdde.jpg",
+"https://i.postimg.cc/bYHZr6Z9/9d066084-383b-4daa-9062-b158f7054b34_image.png",
+"https://i.postimg.cc/HL4qX7XR/062c0617-cc65-4f2e-97fb-88e994de940e_image.png",
+"https://i.postimg.cc/pX0mK2NX/Screenshot_20241215_084412_Telegraph.jpg",
+"https://i.postimg.cc/LsD3Jrwg/5ee8e958-0af0-456f-9cb7-7baf3619d3a8_image.png",
+"https://i.postimg.cc/Y2Rwn2VL/42d38c0d-ca75-4295-ba7d-80494a524ee5_image.png",
+"https://i.postimg.cc/Ls5TpD6M/d8d0e86e-07e1-427e-8ba6-3c5ac65f3fbe_image.png",
+"https://i.postimg.cc/hjgtmyJk/0e6436b1-35e0-4ed4-8469-00d4457c2b57_image.png",
+"https://i.postimg.cc/CxghXr7z/b75b4c83-a219-4ecf-9a37-31910293d058_image.png",
+"https://i.postimg.cc/sD08ZMQy/c333892d-c532-43ec-8fe6-b04cc15ffca3_image.png",
+"https://i.postimg.cc/13qWnJ1c/7ac0b14a-6b45-419c-991a-523b7d25dd33_image.png",
+"https://i.postimg.cc/JzVNg8SZ/689b5846-cdfd-4f97-8f3e-7e89f23ade37_image.png",
+"https://i.postimg.cc/63vRz1zY/ef4b4604-7518-42dd-8adb-60d97a74d6ad_image.png",
+"https://i.postimg.cc/Wbjr68Zw/af88b22c-62f4-4e53-9182-3f2ad8f73117_image.png",
+"https://i.postimg.cc/L5SqD4J8/8a424c6f-b30e-4db2-9af0-837f483508ed_image.png",
+"https://i.postimg.cc/wT6ysvKW/b985ffc2-b613-467f-b802-b2d80be782bc_image.png",
+"https://i.postimg.cc/PJfXNCLY/906aa0a3-57f7-4883-8dd2-7db89643c387_image.png",
+"https://i.postimg.cc/xC6CvGVt/Screenshot_20240821_110804_Threads.jpg",
+"https://i.postimg.cc/TYLwbW7J/Screenshot_20240904_111955_Threads.jpg",
+"https://i.postimg.cc/wBT374S7/Screenshot_20240901_091754_Threads.jpg",
+"https://i.postimg.cc/d0xQDs2x/Screenshot_20240818_130340_Threads.jpg",
+"https://i.postimg.cc/kGx7jWk0/Screenshot_20240819_145653_Threads.jpg",
+"https://i.postimg.cc/yYvM7fXf/d92f542a-1368-4232-8ab8-a00e66986d70_image.png",
+"https://i.postimg.cc/9fjtK2Rs/Screenshot_20240816_132041_Threads.jpg",
+"https://i.postimg.cc/pTsfmnGt/Screenshot_20240817_053138_Threads.jpg",
+"https://i.postimg.cc/fTmvKkkY/Screenshot_20240814_110338_Threads.jpg",
+"https://i.postimg.cc/kGrb6FQz/0405daa9-780a-4d0f-ab1a-fe37f41c01df_image.png",
+"https://i.postimg.cc/GprgYGQB/6f96372a-f875-42ee-bcd4-89bf115149ba-image.png",
+"https://i.postimg.cc/FKZWxzWT/Screenshot-20240821-185911-Threads.jpg",
+"https://i.postimg.cc/wvjW4zng/Screenshot-20240827-125954-Threads.jpg",
+"https://i.postimg.cc/GtZqpytm/Screenshot-20240822-070602-Threads.jpg",
+"https://i.postimg.cc/rp8gzcVx/Screenshot-20240819-114043-Threads.jpg",
+"https://i.postimg.cc/t7QNbGv1/cb378dab-86f7-4b40-adaf-e84bfbd62f00-image.png",
+"https://i.postimg.cc/44rDyKrc/93917ca8-e3c3-49e6-afae-c25a74f3e676-image.png",
+"https://i.postimg.cc/LsC7phtn/8813e81b-7d8d-4eff-a607-7ee1f9a045b0-image.png",
+"https://i.postimg.cc/5yvkL3ZC/Screenshot-20240906-213925-Threads.jpg",
+"https://i.postimg.cc/66GPkWyp/Screenshot-20241001-131235-Threads.jpg",
+"https://i.postimg.cc/SxmtYcVn/Screenshot-20240905-034541-Threads.jpg",
+"https://i.postimg.cc/15rvSfPs/c62b6dea-540d-4143-a636-fffe31040a91-image.png",
+"https://i.postimg.cc/hGfsVsmt/eba09edd-c1d4-4e1a-86e5-52a910703d03-image.png",
+"https://i.postimg.cc/prtBbt6m/7bf49cfa-b6ef-4038-a238-b919aab5edb7-image.png",
+"https://i.postimg.cc/kg5vdsfv/17e65cde-2459-4b74-a6ef-f636d103bdd8-image.png",
+"https://i.postimg.cc/LsctLpRx/bfaae242-1bea-4eb4-99ce-20980445deed-image.png",
+"https://i.postimg.cc/LXPr32P5/fed6a9d2-5333-4406-8297-f972a2c1805f_image.png",
+"https://i.postimg.cc/L8NRJ9kM/fd3e4dbd-0e31-4a10-bce7-b3aac0bad885_image.png",
+"https://i.postimg.cc/65qfkzHL/f14b6f64-06dc-4717-818a-17a3eedc83d2_image.png",
+"https://i.postimg.cc/W4vpkWCM/eb265036-27bd-4d57-8b19-9e7f04d4676c_image.png",
+"https://i.postimg.cc/cJSYLccz/ea6caa9b-ed75-4030-9632-b84553873e41_image.png",
+"https://i.postimg.cc/rsKqkvRL/e91ec9d6-bb0c-43ba-ba3f-aad2442a976f_image.png",
+"https://i.postimg.cc/wTrQgJZK/e5fe4ab3-c428-4772-976a-b9c26c62ee58_image.png",
+"https://i.postimg.cc/rmg5btxP/e5ce4602-5557-48b9-ad31-4e7a70729ea6_image.png",
+"https://i.postimg.cc/Xvd82JsR/e0d93014-19e6-4175-9511-e7f7d840e80d_image.png",
+"https://i.postimg.cc/j5ThBb9L/ded52d4e-fdfb-4b8b-bea9-76accb712914_image.png",
+"https://i.postimg.cc/DfX2xKhq/ddee6225-3e9a-46b1-8496-403fd8526983_image.png",
+"https://i.postimg.cc/SxK3tW9w/da152d64-3d24-4a18-95da-c19c18571c5f_image.png",
+"https://i.postimg.cc/pXs18pSk/d926cac1-6e05-4784-b282-0c5dd630c092_image.png",
+"https://i.postimg.cc/XYwGmC0k/d380ca88-11e6-4ff4-8eeb-8915beab70e2_image.png",
+"https://i.postimg.cc/XYwGmC0k/d380ca88-11e6-4ff4-8eeb-8915beab70e2_image.png",
+"https://i.postimg.cc/Z51HF3xP/d20a6254-ea13-4fb3-95ce-197a89dba8e9_image.png",
+"https://i.postimg.cc/B6JxMCLF/d1053e12-46f8-4bda-a036-227b97a61d90_image.png",
+"https://i.postimg.cc/7h6SyYNY/d0bcde7f-80a8-4b1f-ad2d-4e1521a990e0_image.png",
+"https://i.postimg.cc/t40nBz8g/d0aa2129-6421-4e86-8513-355acbbb549b_image.png",
+"https://i.postimg.cc/SKPhGgtT/ce09e161-0ad2-4af6-9a21-1a2baf6a67c4_image.png",
+"https://i.postimg.cc/SKPhGgtT/ce09e161-0ad2-4af6-9a21-1a2baf6a67c4_image.png",
+"https://i.postimg.cc/V63zzKqr/c512105c-d41d-46a5-bedc-7e0d50404787_image.png",
+"https://i.postimg.cc/J4xSqTsN/c298d597-a51a-42df-9e23-6b34e08956bb_image.png",
+"https://i.postimg.cc/T1FfYCn5/c0d690ba-bb6b-4f82-bfbc-749ff9f56529_image.png",
+"https://i.postimg.cc/JhzrxD7n/bfe3564a-53b8-4ffd-b241-9a23fa6d2887_image.png",
+"https://i.postimg.cc/sxqGdPXw/be030da4-70a2-465e-b9e8-3ebf16d3075d_image.png",
+"https://i.postimg.cc/hPcHVFt4/bc7e3183-3392-440a-a7ab-6b8815046546_image.png",
+"https://i.postimg.cc/htgPJZHV/bb4c5f24-83bc-4379-99ab-a0412b0a25a0_image.png",
+"https://i.postimg.cc/59RCCJ3L/ba261a6a-f88d-4c11-baa6-521364a582ea_image.png",
+"https://i.postimg.cc/NfCpFZyz/b4babdd9-0490-490f-9662-6fe21114f992_image.png",
+"https://i.postimg.cc/XJNCw7mc/af7550b9-f493-4dc2-b9e9-a081ec0c20e9_image.png",
+"https://i.postimg.cc/kGtLw9tD/a83de5d0-6d29-4f26-b154-cb6357565598_image.png",
+"https://i.postimg.cc/yYh7zXkx/a6fea91b-cc24-4e0e-a0ca-99d64c6c6bd9_image.png",
+"https://i.postimg.cc/tgkbVXhj/a6ce71dd-6a67-45fe-888d-47636ad32af9_image.png",
+"https://i.postimg.cc/nLSHPFM1/a13c7be0-b90d-4a35-8932-89d0e50fed2c_image.png",
+"https://i.postimg.cc/4xNRkDD2/9e43925f-75aa-4b04-ab09-cbe03743794e_image.png",
+"https://i.postimg.cc/NM8d0MT6/9e282350-f73c-44f2-89ea-b7935bb40349_image.png",
+"https://i.postimg.cc/rmhq78mJ/9802567a-2779-49a7-a7fc-753a34777d12_image.png",
+"https://i.postimg.cc/9FmnrGLr/9605b7ef-869d-467f-81f4-141bd6ee99a1_image.png",
+"https://i.postimg.cc/6pjJ9HwW/92b97406-aeb8-4743-bd62-402f8b348298_image.png",
+"https://i.postimg.cc/RZbyrNQq/8a8c49be-6951-462c-85d2-cc8168d4f2d6_image.png",
+"https://i.postimg.cc/RVwZZxbM/87c7abaa-703b-41d7-8720-b2410bafcc8e_image.png",
+"https://i.postimg.cc/BvS93dRw/86658ba2-1f0b-41e2-a261-9678b5268c15_image.png",
+"https://i.postimg.cc/Xv4GbYjS/86656fe8-d082-4ef8-abe2-d27cdd560657_image.png",
+"https://i.postimg.cc/y8WpT74K/7e20ca80-fc08-4c57-9b35-1ee7258ee60b_image.png",
+"https://i.postimg.cc/Gh6GZRTd/7a7de9e6-292d-4a46-aa54-455806ed8013_image.png",
+"https://i.postimg.cc/tTRXr1XJ/79b82f9f-6839-4086-b07e-959d1c33c13d_image.png",
+"https://i.postimg.cc/FKYt1jsj/767f6485-1dad-4956-bf35-f423af87bbf4_image.png",
+"https://i.postimg.cc/htr4VbB6/7529667d-c306-45a0-ab4f-b891179ba324_image.png",
+"https://i.postimg.cc/fR3595mT/6d77ccfc-7a42-49a4-8091-8a1ccb0815e2_image.png",
+"https://i.postimg.cc/HsMC90Q3/6a3e37bb-3f6d-4c4a-ae77-3d369eb5793c_image.png",
+"https://i.postimg.cc/bwQpp0rd/68b3b09c-9133-49cf-a0f6-220ad95a1bc0-image.png",
+"https://i.postimg.cc/XJvbfT8y/68ae74e3-d7dd-474e-aa95-11bb65e1e0d3-image.png",
+"https://i.postimg.cc/sXZRH5kV/650b4e09-3ff9-4bd3-ab97-9f2666eebbb6-image.png",
+"https://i.postimg.cc/mkGKdJ3w/63ed3e83-b991-421b-b2fd-de4ad54da29a-image.png",
+"https://i.postimg.cc/j52pwyxH/63cfc56f-44c1-46a1-bc0e-c2c9a270a2fa-image.png",
+"https://i.postimg.cc/kgtF4GP2/63b26158-e97b-4340-8d8e-1bfdd0ecfefb-image.png",
+"https://i.postimg.cc/NMPwppJC/63ac7722-09db-450e-9e71-5707add448a6-image.png",
+"https://i.postimg.cc/Znp4n6Hf/60b70996-f621-4cdc-8e35-4e9e0b7baea6-image.png",
+"https://i.postimg.cc/zDtnFKJL/5f6c7e5b-3bd0-4ecd-8822-28bbe8bbfe88-image.png",
+"https://i.postimg.cc/257WbBcS/5ed0e403-c0ab-4367-b3a2-9c02eaab4bf5-image.png",
+"https://i.postimg.cc/90WJwhtv/586d212d-4eba-4653-87b5-917a167d37b3-image.png",
+"https://i.postimg.cc/4dpShwCh/57138345-4a41-4036-9bca-28b4449c57a1-image.png",
+"https://i.postimg.cc/vT3XWN0D/5660bb77-c08d-4650-b44a-34e0c211e7d8-image.png",
+"https://i.postimg.cc/wTRs5rfP/53da4348-f26e-401c-b94b-f5782a71f977-image.png",
+"https://i.postimg.cc/Y23XKvtk/4f6c5bd4-b1c6-45ff-a4b4-ecbc8ebe740e-image.png",
+"https://i.postimg.cc/3wvLP9xb/4a3dbb6a-16ca-4738-8575-9ad08394b791-image.png",
+"https://i.postimg.cc/QxFc4Ctf/48e1c0c3-a0eb-4a72-8dec-1f3963c6c788-image.png",
+"https://i.postimg.cc/yxYyYT7K/48b9f95d-d1e3-45a1-9e76-171681bd8b34-image.png",
+"https://i.postimg.cc/tJZGfW8q/4445d1db-89e3-4a5b-bcbe-00535577ecc5-image.png",
+"https://i.postimg.cc/Kc6Yb8fq/41856986-0847-4c72-bc55-75a54c3cd7b6-image.png",
+"https://i.postimg.cc/Bb9frX32/40ac1175-9194-43d6-abe9-08db4db42b7a-image.png",
+"https://i.postimg.cc/3NSCyDwv/3eae55b3-4cf7-4dfd-9f80-f068e7b27c1b-image.png",
+"https://i.postimg.cc/jj06JTRZ/3e5eabdc-0b64-4c9a-84d8-fea8fb99862b-image.png",
+"https://i.postimg.cc/yNLq8LH6/396dcdf5-4cec-4134-82a5-1d1f7a13ac70-image.png",
+"https://i.postimg.cc/wxhCtxHb/3199904b-144c-4a0b-985d-f4e29f5bfa82-image.png",
+"https://i.postimg.cc/2SFRPz9Z/2f955612-c2c5-4b6a-986e-471a091a0f04-image.png",
+"https://i.postimg.cc/qM6pZHds/2b03e0b7-a8d1-4a62-9106-bc0aea280504-image.png",
+"https://i.postimg.cc/L8H24Y1T/2a2f30e5-c5a7-46e4-b782-a51d7fc55345-image.png",
+"https://i.postimg.cc/52vLJr8v/243107f4-d4a9-4619-89db-23ccc1aa4197-image.png",
+"https://i.postimg.cc/PxMMj7sK/225b0238-abb7-4024-a6ab-732d2a78f3eb-image.png",
+"https://i.postimg.cc/0y3WWhPw/1f32b24a-99f1-4ecd-98f8-de8cf1071ce8-image.png",
+"https://i.postimg.cc/k50H4zHm/1bef5703-7515-4a8f-8d45-80a8bf6e8b52-image.png",
+"https://i.postimg.cc/ncxtTj0J/1627e08b-5e9f-4376-bbed-76cff23bda44-image.png",
+"https://i.postimg.cc/tgJbPKDn/149f552d-d6e4-40e8-9aae-d680902cf89b-image.png",
+"https://i.postimg.cc/VsVYRL2s/13b61638-5146-41ee-9e18-c49cee4d65aa-image.png",
+"https://i.postimg.cc/fWmNxj7C/12184fd4-8edf-4833-929d-e919952dec43-image.png",
+"https://i.postimg.cc/2jFtkHFs/0ae385d9-2040-41fe-8f95-60187034f006-image.png",
+"https://i.postimg.cc/gcX01ZVL/0760c982-788e-478c-b778-d65f37e99575-image.png",
+"https://i.postimg.cc/bNRf5yB2/06976094-cf55-43e0-9f4b-3df6efec44e9-image.png",
+"https://i.postimg.cc/6qrxtt6g/05bdf0a0-fe81-4940-96d1-3bfd8b468237-image.png",
+"https://i.postimg.cc/rwWFzXnV/04e3ac0b-cf98-41c0-82b0-0e08d9fa567a-image.png",
+"https://i.postimg.cc/HWRgMv7V/044945bd-11f1-43cf-ab02-dd7669dd1036-image.png",
+"https://i.postimg.cc/Pxn6hZLf/02428035-2cf5-42cf-9cce-9144ee54545f-image.png",
+"https://i.postimg.cc/mDdFVWGx/02213c74-c1bc-4579-9b43-0a5c45f95d5c-image.png",
+"https://i.postimg.cc/Zq2GNCCX/00c4de2f-57f4-40aa-adf6-84017d5dbe38-image.png",
+"https://i.postimg.cc/JzVNg8SZ/689b5846-cdfd-4f97-8f3e-7e89f23ade37-image.png",
+"https://i.postimg.cc/cCCgK92s/8a609859-14e2-43a9-8726-cf6a200f6a89-image.png"
+                    ];
+                    avatar.style.backgroundImage = `url(${aiChatbotAvatars[Math.floor(Math.random() * aiChatbotAvatars.length)]})`;
+                } else if (botName === 'ResponseBot') {
+                    const responseBotAvatars = [
+                        "https://i.postimg.cc/RVFDhDgk/0e25aaca-17e4-480d-b3b2-65ac292ef87c_image.png",
+                        "https://i.postimg.cc/KYn9CSYM/faa10a01-ed73-4283-9f9f-4ad1482994a0_image.png",
+                        "https://i.postimg.cc/3R8Z6k6s/6ae0ec87-2bc3-4385-858d-ef9b31f3e164_image.png"
+                    ];
+                    avatar.style.backgroundImage = `url(${responseBotAvatars[Math.floor(Math.random() * responseBotAvatars.length)]})`;
+                } else {
+                    const botlarMatiniAvatars = [
+                        "https://i.postimg.cc/269nK2nW/1e54101e-2485-4ca9-813a-80c00d007f1e_image.png",
+                        "https://i.postimg.cc/vZP9B0SN/6f96372a-f875-42ee-bcd4-89bf115149ba_image.png",
+                        "https://i.postimg.cc/j53k465g/2837d0fb-cf0a-41cf-a0e6-7e4c40478e17_image.png",
+                        "https://i.postimg.cc/fTSC8qt1/4904af16-943d-4ea4-a9f7-4069639a49fb-image.png",
+"https://i.postimg.cc/LsD3Jrwg/5ee8e958-0af0-456f-9cb7-7baf3619d3a8-image.png",
+"https://i.postimg.cc/bwHQ57zV/d0efae69-bdba-4790-8123-826771800042-image.png",
+"https://i.postimg.cc/NFHXkVJ4/c27ae0e5-480c-4016-8489-43cd650ce0c1-image.png",
+"https://i.postimg.cc/Y2Rwn2VL/42d38c0d-ca75-4295-ba7d-80494a524ee5-image.png",
+"https://i.postimg.cc/RhKdY0C6/851ca287-7a07-4143-bcf3-662c4a011225-image.png",
+"https://i.postimg.cc/Ls5TpD6M/d8d0e86e-07e1-427e-8ba6-3c5ac65f3fbe-image.png",
+"https://i.postimg.cc/pTNn6JmC/fb977b8c-f178-4799-80ca-57909b193793-image.png",
+"https://i.postimg.cc/hjgtmyJk/0e6436b1-35e0-4ed4-8469-00d4457c2b57-image.png",
+"https://i.postimg.cc/CxghXr7z/b75b4c83-a219-4ecf-9a37-31910293d058-image.png",
+"https://i.postimg.cc/CKRQNS8D/728f8bb9-1444-4efc-8a4b-ed575d824e1a-image.png",
+"https://i.postimg.cc/cCCgK92s/8a609859-14e2-43a9-8726-cf6a200f6a89-image.png",
+"https://i.postimg.cc/yYP6qXbj/2ef3ea4b-0389-401c-9704-c87d2e53ffae-image.png",
+"https://i.postimg.cc/Bbmzp6mT/824521ca-0c8f-46df-a735-a33cc1b58e14-image.png",
+"https://i.postimg.cc/sD08ZMQy/c333892d-c532-43ec-8fe6-b04cc15ffca3-image.png",
+"https://i.postimg.cc/V61HcMT9/5abc0aef-8bed-42c1-ac80-e8b647f306bc-image.png",
+"https://i.postimg.cc/13qWnJ1c/7ac0b14a-6b45-419c-991a-523b7d25dd33-image.png",
+"https://i.postimg.cc/s2PwKxXM/08b8bdb1-fab9-4aa0-951b-b37e2ce09a91-image.png",
+"https://i.postimg.cc/HsJzRBnD/9b2a6b42-052d-481a-b691-2a513a938484-image.png",
+"https://i.postimg.cc/JzVNg8SZ/689b5846-cdfd-4f97-8f3e-7e89f23ade37-image.png",
+"https://i.postimg.cc/W33gr1JL/022e1b0e-8d9d-4270-a0f2-2c09e37f762d-image.png",
+"https://i.postimg.cc/vZsPn5YJ/6ba27739-40f8-4108-b555-e082175a6c68-image.png",
+"https://i.postimg.cc/5y8B9kC6/43b79420-ae12-4fd2-9c52-79c22b79b9e5-image.png",
+"https://i.postimg.cc/R0qwJ0tr/20b09d31-31d4-47cb-bf01-14539e0291d8-image.png",
+"https://i.postimg.cc/Wbjr68Zw/af88b22c-62f4-4e53-9182-3f2ad8f73117-image.png",
+"https://i.postimg.cc/vZZVCm31/db7929bf-b34f-4db5-962f-f28127261829-image.png",
+"https://i.postimg.cc/L5SqD4J8/8a424c6f-b30e-4db2-9af0-837f483508ed-image.png",
+"https://i.postimg.cc/wT6ysvKW/b985ffc2-b613-467f-b802-b2d80be782bc-image.png",
+"https://i.postimg.cc/RZYN8LW8/Screenshot-20241214-141609-Instagram.jpg",
+"https://i.postimg.cc/QxxCdy5w/Screenshot-20240906-104759-Threads.jpg",
+"https://i.postimg.cc/PJfXNCLY/906aa0a3-57f7-4883-8dd2-7db89643c387-image.png",
+"https://i.postimg.cc/bNJYh2fj/e67ac9ed-ad74-4e0d-a6ef-897bff3c7642-image.png",
+"https://i.postimg.cc/cCJW0Pjc/i-2024-12-16-T185201-766.jpg",
+"https://i.postimg.cc/dtpFcH98/Screenshot-20241126-090823-Threads.jpg",
+"https://i.postimg.cc/ydLqQvd3/Screenshot-20240904-181732-Threads.jpg",
+"https://i.postimg.cc/Hxdc4scs/Screenshot-20240905-231116-Threads.jpg",
+"https://i.postimg.cc/MKvcYLTR/Screenshot-20240907-151626-Threads.jpg",
+"https://i.postimg.cc/xC6CvGVt/Screenshot-20240821-110804-Threads.jpg",
+"https://i.postimg.cc/TYLwbW7J/Screenshot-20240904-111955-Threads.jpg",
+"https://i.postimg.cc/cJm4W7C0/Screenshot-20240905-225901-Threads.jpg",
+"https://i.postimg.cc/HxvYcpbN/Screenshot-20240904-112525-Threads.jpg",
+"https://i.postimg.cc/bYMYqwyD/Screenshot-20240907-052226-Threads.jpg",
+"https://i.postimg.cc/hGpg6SZG/Screenshot-20240822-070619-Threads.jpg",
+"https://i.postimg.cc/8sQVMscZ/Screenshot-20240824-172120-Chrome.jpg",
+"https://i.postimg.cc/wBT374S7/Screenshot-20240901-091754-Threads.jpg",
+"https://i.postimg.cc/G3st8ySJ/Screenshot-20240907-193946-Threads.jpg",
+"https://i.postimg.cc/d0xQDs2x/Screenshot-20240818-130340-Threads.jpg",
+"https://i.postimg.cc/kGx7jWk0/Screenshot-20240819-145653-Threads.jpg",
+"https://i.postimg.cc/HnCg7VVB/Screenshot-20240907-163145-Threads.jpg",
+"https://i.postimg.cc/wjbYQW1t/Screenshot-20240819-082700-Threads.jpg",
+"https://i.postimg.cc/yYvM7fXf/d92f542a-1368-4232-8ab8-a00e66986d70-image.png",
+"https://i.postimg.cc/xdbhy9r7/Screenshot-20240913-130140-Threads.jpg",
+"https://i.postimg.cc/tJDMCTP1/Screenshot-20240829-145810-Chrome.jpg",
+"https://i.postimg.cc/mrMp1VCW/Screenshot-20240827-125211-Threads.jpg",
+"https://i.postimg.cc/KzD9Jz09/Screenshot-20240816-021518-Threads.jpg",
+"https://i.postimg.cc/xT46sBPS/e0bba6a5-5c53-4673-9b97-e0d9eaa356b6-image.png",
+"https://i.postimg.cc/gJmsXpG3/Screenshot-20240819-114334-Threads.jpg",
+"https://i.postimg.cc/90NYnqZB/Screenshot-20240817-133528-Threads.jpg",
+"https://i.postimg.cc/9fjtK2Rs/Screenshot-20240816-132041-Threads.jpg",
+"https://i.postimg.cc/pTsfmnGt/Screenshot-20240817-053138-Threads.jpg",
+"https://i.postimg.cc/Nf312t4L/6b1b077d-4ad6-44eb-b3fb-a87ace55ff34-image.png",
+"https://i.postimg.cc/j53fxY2x/Screenshot-20240904-201944-Instagram.jpg",
+"https://i.postimg.cc/g2y6wZjB/Screenshot-20240924-230955-Threads.jpg",
+"https://i.postimg.cc/BvqP2n1Z/Screenshot-20240826-194728-Chrome.jpg",
+"https://i.postimg.cc/KzWKX7p4/fe0852b6-e763-4daa-9350-84555c8b370c-image.png",
+"https://i.postimg.cc/fTmvKkkY/Screenshot-20240814-110338-Threads.jpg",
+"https://i.postimg.cc/HLZ0xyP1/Screenshot-20240813-103309-Threads.jpg",
+"https://i.postimg.cc/jd0HLKv2/Screenshot-20240905-160655-Chrome.jpg",
+"https://i.postimg.cc/kGrb6FQz/0405daa9-780a-4d0f-ab1a-fe37f41c01df-image.png",
+"https://i.postimg.cc/tgw1wtMJ/OOHp9-Jothi-Q.jpg",
+"https://i.postimg.cc/4dqW4xJP/ZpAY_eglKFA.jpg",
+"https://i.postimg.cc/c4NcFj6v/YS7oSJjBa2A.jpg",
+"https://i.postimg.cc/2S79dYwj/Yfn7uYIixk4.jpg",
+"https://i.postimg.cc/m2bHzGty/x_1d395d09.jpg",
+"https://i.postimg.cc/02BykgmQ/XAzkeEABR7Y.jpg",
+"https://i.postimg.cc/k5DNVPYp/x-P8A0ForG0.jpg",
+"https://i.postimg.cc/9fz0Pmhy/vU_LuXgwdMI.jpg",
+"https://i.postimg.cc/rFJwv0yS/TH3EVH4dVgI.jpg",
+"https://i.postimg.cc/cCLbCbY1/SmJhJ8p2xE4.jpg",
+"https://i.postimg.cc/xCCvzDsZ/rTXLoMANsd0.jpg",
+"https://i.postimg.cc/9XskCJ02/QtlfVAhkEt4.jpg",
+"https://i.postimg.cc/Xqx6D5Kq/QP_n4s6-3y0.jpg",
+"https://i.postimg.cc/vBrsfkcW/QovNcz4hM1M.jpg",
+"https://i.postimg.cc/Hnb9p0vW/oydt228thf.jpg",
+"https://i.postimg.cc/j50TWtdx/OrDHQP2BoE0.jpg",
+"https://i.postimg.cc/BZ26B7d7/nk9c9BVjeis.jpg",
+"https://i.postimg.cc/5tv0KPXt/NBgxjOAcHtI.jpg",
+"https://i.postimg.cc/wv7Wdmd3/M2TXQ6dluRI.jpg",
+"https://i.postimg.cc/rwRFzhC9/k84AmPyEB5Q.jpg",
+"https://i.postimg.cc/XvT5pGCr/IMG_0932.jpg",
+"https://i.postimg.cc/7ZZZDHbj/IKhDu0gvO04.jpg",
+"https://i.postimg.cc/7ZRGWGXK/IcEPYCtitno.jpg",
+"https://i.postimg.cc/zG2XGsgv/i_-_2024-12-18T020644.719.jpg",
+"https://i.postimg.cc/VN3fjX4c/i_-_2024-12-18T020640.227.jpg",
+"https://i.postimg.cc/bJkzLdFS/i_-_2024-12-18T020633.566.jpg",
+"https://i.postimg.cc/XYGt9mPp/i_-_2024-12-18T015900.896.jpg",
+"https://i.postimg.cc/zfTMcW8N/i_-_2024-12-18T015758.856.jpg",
+"https://i.postimg.cc/6pkgczsz/i_-_2024-12-18T015754.624.jpg",
+"https://i.postimg.cc/SsrPyhnt/i_-_2024-12-18T015749.885.jpg",
+"https://i.postimg.cc/WzYfkw6G/i_-_2024-12-18T015737.403.jpg",
+"https://i.postimg.cc/W4mWnvwb/i_-_2024-12-18T015602.512.jpg",
+"https://i.postimg.cc/ZRTfsMwP/i_-_2024-12-18T015521.506.jpg",
+"https://i.postimg.cc/j5ZMp41p/i_-_2024-12-18T015516.641.jpg",
+"https://i.postimg.cc/sxxTsZdv/i_-_2024-12-18T015508.512.jpg",
+"https://i.postimg.cc/VsZ744nM/i_-_2024-12-18T015451.913.jpg",
+"https://i.postimg.cc/rFdfHWNH/i_-_2024-12-18T015446.324.jpg",
+"https://i.postimg.cc/Qd1083Pk/i_-_2024-12-18T015423.034.jpg",
+"https://i.postimg.cc/zfNp3QYm/i_-_2024-12-18T015413.385.jpg",
+"https://i.postimg.cc/tTC5NVg2/i_-_2024-12-18T015407.024.jpg",
+"https://i.postimg.cc/zvyF9ZKh/i_-_2024-12-18T015355.878.jpg",
+"https://i.postimg.cc/Y0Tz7nzs/i_-_2024-12-18T015351.099.jpg",
+"https://i.postimg.cc/ryHJ5s2N/i_-_2024-12-18T015347.166.jpg",
+"https://i.postimg.cc/MKjY5wW2/i_-_2024-12-18T015340.718.jpg",
+"https://i.postimg.cc/8zQmnY5F/i_-_2024-12-18T015331.973.jpg",
+"https://i.postimg.cc/9QdY3BRL/i_-_2024-12-18T015322.526.jpg",
+"https://i.postimg.cc/jjRQRJyt/i_-_2024-12-18T015310.420.jpg",
+"https://i.postimg.cc/tgDdJCzP/i_-_2024-12-18T015306.099.jpg",
+"https://i.postimg.cc/9XDk6vW1/i_-_2024-12-18T015219.582.jpg",
+"https://i.postimg.cc/8zSnrcLn/i_-_2024-12-18T015202.715.jpg",
+"https://i.postimg.cc/tgRS2cS3/i_-_2024-12-18T015145.740.jpg",
+"https://i.postimg.cc/VvtDJPv8/i_-_2024-12-18T015106.547.jpg",
+"https://i.postimg.cc/m2xm0kp2/i_-_2024-12-18T015035.476.jpg",
+"https://i.postimg.cc/SxdV2rSJ/i_-_2024-12-18T015018.329.jpg",
+"https://i.postimg.cc/tgf3WvLC/i_-_2024-12-18T014736.795.jpg",
+"https://i.postimg.cc/xTRLt1WZ/i_-_2024-12-18T014709.658.jpg",
+"https://i.postimg.cc/GtPv0L9H/i_-_2024-12-18T014659.196.jpg",
+"https://i.postimg.cc/25qvkFVp/i_(7).jpg",
+"https://i.postimg.cc/0yyD3qvy/i_(4).jpg",
+"https://i.postimg.cc/7hBYJdWK/i_(31).jpg",
+"https://i.postimg.cc/QtJMhHkG/i_(27).jpg",
+"https://i.postimg.cc/C50fs3JY/i_(2).jpg",
+"https://i.postimg.cc/fy5kjJJj/i_(16).jpg",
+"https://i.postimg.cc/76027H3m/i_(1).jpg",
+"https://i.postimg.cc/fyvS28gd/i.jpg",
+"https://i.postimg.cc/D078Xqyw/H_CZRNBRktc.jpg",
+"https://i.postimg.cc/y63fQcPb/GxoHhOhF0hc.jpg",
+"https://i.postimg.cc/fySY87Qj/goa380-L8xA.jpg",
+"https://i.postimg.cc/J4mh6c8r/FcTrAgFzbec.jpg",
+"https://i.postimg.cc/Z5Q4S6Gy/dtjwJZLer4k.jpg",
+"https://i.postimg.cc/ZKTTFbP0/DO87jHZAiJM.jpg",
+"https://i.postimg.cc/FzXKQ0Jx/cmS8YWmeF5k.jpg",
+"https://i.postimg.cc/vHDKdCb3/Cl-zZuiXHSs.jpg",
+"https://i.postimg.cc/FR4KMjSV/channels4_profile.jpg",
+"https://i.postimg.cc/GpngG2Y5/BUe-pCW2D08.jpg",
+"https://i.postimg.cc/gcyh20k0/aw-Qnwo-HCPm-M.jpg",
+"https://i.postimg.cc/VsFw6yyw/ads-62167909afb6d.jpg",
+"https://i.postimg.cc/k583PzNk/a3edae79483ed181b5042454b933d4eb387-1.jpg",
+"https://i.postimg.cc/Y2NrWGWJ/7lnnp-GCGk6o.jpg",
+"https://i.postimg.cc/rw7sJ6Fb/7ff9b1c75d1a76a75b6d996f527c.jpg",
+"https://i.postimg.cc/nhXMBVZB/777330482cb16f08a7d2073929df.jpg",
+"https://i.postimg.cc/8kbFVntJ/74aabd39ffa71e868af1de0c590c.jpg",
+"https://i.postimg.cc/Mp6mSQ7x/743e868281e999728bb34ec2a4bb6fdd.jpg",
+"https://i.postimg.cc/bNH9WT23/7.png",
+"https://i.postimg.cc/1Rvd2yh8/6bhowifm6-Vo.jpg",
+"https://i.postimg.cc/gc3VLD4m/42d8fd77314da0d87001f9f0619ec25b.jpg",
+"https://i.postimg.cc/5tH9YsB3/3-Wwe-X45-LBvg.jpg",
+"https://i.postimg.cc/9Q0CKLnh/3d6ad5fe796d54bfb59eaad2b1ac.jpg",
+"https://i.postimg.cc/02WbzKg9/37c834dd90220ede5bc3b7b895da.jpg",
+"https://i.postimg.cc/3r9wq0x2/3001745870.jpg",
+"https://i.postimg.cc/c6qw2Ksq/2-Rkf-E7wtz-X4.jpg",
+"https://i.postimg.cc/0QBpGWFy/2927175698.jpg",
+"https://i.postimg.cc/Pr2dSgKy/2771113493.jpg",
+"https://i.postimg.cc/Pxwm4zjb/2168065081-square-large.jpg",
+"https://i.postimg.cc/SsFXmBB8/2144094003-huge.jpg",
+"https://i.postimg.cc/GhY52GTy/2117487342-square-large.jpg",
+"https://i.postimg.cc/sX9kvWNm/2116353094-huge.jpg",
+"https://i.postimg.cc/CLK3xzHC/2116219069-square-large.jpg",
+"https://i.postimg.cc/0jC9RFv8/2105213396-huge.jpg",
+"https://i.postimg.cc/D0fwZnBW/2097411304-huge.jpg",
+"https://i.postimg.cc/VLGcqjLH/2096169811-huge.jpg",
+"https://i.postimg.cc/wMqSJvKp/2083076650-huge.jpg",
+"https://i.postimg.cc/vBsRYh3D/2076003312-huge.jpg",
+"https://i.postimg.cc/x1XVtcXj/2072500117-square.jpg",
+"https://i.postimg.cc/SKKdWMRV/2062153155-square-large.jpg",
+"https://i.postimg.cc/4NFr7sBD/2062086715-square-large.jpg",
+"https://i.postimg.cc/9FFhwxV7/2043780325-huge.jpg",
+"https://i.postimg.cc/Hn6FtgH7/2025559368-square-large.jpg",
+"https://i.postimg.cc/FFGtvjcs/2021471389-square-large.jpg",
+"https://i.postimg.cc/J4PBjdXV/2.jpg",
+"https://i.postimg.cc/P5VYnFfz/1963182884-huge.jpg",
+"https://i.postimg.cc/htcptwqk/1897138427-square-large.jpg",
+"https://i.postimg.cc/brPq58KC/1873909416-huge.jpg",
+"https://i.postimg.cc/L6zxRSGk/1843350013-square-large.jpg",
+"https://i.postimg.cc/sXQJLCph/1812577004-huge.jpg",
+"https://i.postimg.cc/43F5wxhG/1812576986-huge.jpg",
+"https://i.postimg.cc/vBJvF2zS/1812576980-huge.jpg",
+"https://i.postimg.cc/RZHbWf3t/1808111153-huge.jpg",
+"https://i.postimg.cc/VLTVs4N1/112540913-800x600.jpg",
+"https://i.postimg.cc/YSmkqh7D/l7hbbk-jho.jpg"
+                    ];
+                    avatar.style.backgroundImage = `url(${botlarMatiniAvatars[Math.floor(Math.random() * botlarMatiniAvatars.length)]})`;
+                }
                 messageDiv.appendChild(avatar);
             }
 
@@ -1492,7 +1948,7 @@
                     }
                 }
                 setTimeout(() => {
-                    addMessage(this.container, "Kechirasiz, tushunmadim. Iltimos, boshqacha ifoda eting.", false, this.constructor.name);
+                    addMessage(this.container, "Hop", false, this.constructor.name);
                 }, 10000);
             }
         }
@@ -1513,7 +1969,7 @@
                     const warning = this.warnings[Math.floor(Math.random() * this.warnings.length)];
                     setTimeout(() => {
                         addMessage(this.container, warning, false, this.constructor.name);
-                    }, 3000);
+                    }, 6000);
                 }
             }
         }
@@ -1541,93 +1997,359 @@
             constructor(container) {
                 this.container = container;
                 this.images = [
-                    "https://i.postimg.cc/TwHjJPNN/Picsart-24-12-02-20-55-41-932.jpg",
-                    "https://i.postimg.cc/yYTDKV2r/Screenshot-20241202-102124-Instagram.jpg",
-                    "https://i.postimg.cc/JnhfsQhk/Screenshot-20241202-094051-Instagram.jpg", 
-                    "https://i.postimg.cc/XvgpLsLD/Picsart-24-12-02-20-58-15-497.jpg",
-"https://i.postimg.cc/90QnfPcn/Screenshot-20241121-212953-Instagram.jpg",
-"https://i.postimg.cc/7ZX6jwfM/Picsart-24-12-02-21-24-41-339.png",
-"https://i.postimg.cc/DypjybJS/Picsart-24-12-02-21-28-55-006.png",
-"https://i.postimg.cc/hPN6g35J/Picsart-24-12-02-21-32-25-674.jpg",
-"https://i.postimg.cc/MKGfx9Q8/Picsart-24-12-02-21-34-25-815.png",
-"https://i.postimg.cc/yYW59zZp/Picsart-24-12-02-21-38-13-594.jpg",
-"https://i.postimg.cc/hvMNbDDh/Screenshot-20240914-111447-Threads.jpg",
-"https://i.postimg.cc/DZxcx8GV/Screenshot-20240816-022402-Threads.jpg",
-"https://i.postimg.cc/YSCc0mMZ/Picsart-24-12-02-21-50-37-995.jpg",
-"https://i.postimg.cc/mryDf9Vn/Picsart-24-12-02-21-55-35-581.jpg",
-"https://i.postimg.cc/bwXFDVfK/Picsart-24-12-02-21-58-28-522.jpg",
-"https://i.postimg.cc/7hNHjJ4V/Picsart-24-12-02-22-01-45-364.jpg",
-"https://i.postimg.cc/L4kjmy6y/7fa956fa-5172-4cf6-b0a1-128ced3685f3-image.png",
-"https://i.postimg.cc/xd4Gwq5L/3666943c-a729-44a5-aac5-2d13edffc269-image.png",
-"https://i.postimg.cc/j5CTj3yG/513f1022-2678-45ea-bbf0-4d420a859b88-image.png",
-"https://i.postimg.cc/VL5w1kjD/90f46990-a0a0-4566-a6f9-63b73a14b472-image.png",
-"https://i.postimg.cc/WtR6z4fx/2519de76-e6c3-4fd6-b68f-512dab2bd5a5-image.png",
-"https://i.postimg.cc/3NP5wgh7/3a0b85c7-6a9d-4c8e-97d3-4ba8064fedf1-image.png",
-"https://i.postimg.cc/JnwV5NgF/52a09d8f-ce2c-4192-91ed-a25dfe46acec-image.png",
-"https://i.postimg.cc/3RW9SN4D/7a55f045-7efc-4a0d-b8e7-538f906ca689-image.png",
-"https://i.postimg.cc/4yhXTxH5/d85ed8b0-765d-42be-af74-58a2c8fc70dd-image.png",
-"https://i.postimg.cc/d0H7sDDP/8292c100-e5e2-4dbf-91dc-3c9a67e4a572-image.png",
-"https://i.postimg.cc/fyxT9bWb/0c50d6c5-1b7b-4f34-bc8a-9a62848a7820-image.png",
-"https://i.postimg.cc/jdbjryvn/ceaa365c-3479-41bb-8a64-94cbe88ad1a9-image.png",
-"https://i.postimg.cc/wjWxJZzD/e4efe14e-bca4-4857-8c90-0ba6960ea5b1-image.png",
-"https://i.postimg.cc/7ZQDbz1V/cef6e9d6-7b17-4c46-9291-ad579414848c-image.png",
-"https://i.postimg.cc/d0kFC04K/b35ee304-23c8-4ed7-a4b5-33bd7066415d-image.png",
-"https://i.postimg.cc/R0kBLzDJ/Qm-F53x5o-J58.jpg",
-"https://i.postimg.cc/nrZfNGZH/b-T37-E7h-Rul-I.jpg",
+                    "https://i.postimg.cc/4dqW4xJP/ZpAY_eglKFA.jpg",
+"https://i.postimg.cc/c4NcFj6v/YS7oSJjBa2A.jpg",
+"https://i.postimg.cc/2S79dYwj/Yfn7uYIixk4.jpg",
+"https://i.postimg.cc/m2bHzGty/x_1d395d09.jpg",
+"https://i.postimg.cc/02BykgmQ/XAzkeEABR7Y.jpg",
+"https://i.postimg.cc/k5DNVPYp/x-P8A0ForG0.jpg",
+"https://i.postimg.cc/9fz0Pmhy/vU_LuXgwdMI.jpg",
+"https://i.postimg.cc/rFJwv0yS/TH3EVH4dVgI.jpg",
+"https://i.postimg.cc/cCLbCbY1/SmJhJ8p2xE4.jpg",
+"https://i.postimg.cc/xCCvzDsZ/rTXLoMANsd0.jpg",
+"https://i.postimg.cc/9XskCJ02/QtlfVAhkEt4.jpg",
+"https://i.postimg.cc/Xqx6D5Kq/QP_n4s6-3y0.jpg",
+"https://i.postimg.cc/vBrsfkcW/QovNcz4hM1M.jpg",
+"https://i.postimg.cc/Hnb9p0vW/oydt228thf.jpg",
+"https://i.postimg.cc/j50TWtdx/OrDHQP2BoE0.jpg",
+"https://i.postimg.cc/BZ26B7d7/nk9c9BVjeis.jpg",
+"https://i.postimg.cc/5tv0KPXt/NBgxjOAcHtI.jpg",
+"https://i.postimg.cc/wv7Wdmd3/M2TXQ6dluRI.jpg",
+"https://i.postimg.cc/rwRFzhC9/k84AmPyEB5Q.jpg",
+"https://i.postimg.cc/XvT5pGCr/IMG_0932.jpg",
+"https://i.postimg.cc/7ZZZDHbj/IKhDu0gvO04.jpg",
+"https://i.postimg.cc/7ZRGWGXK/IcEPYCtitno.jpg",
+"https://i.postimg.cc/zG2XGsgv/i_-_2024-12-18T020644.719.jpg",
+"https://i.postimg.cc/VN3fjX4c/i_-_2024-12-18T020640.227.jpg",
+"https://i.postimg.cc/bJkzLdFS/i_-_2024-12-18T020633.566.jpg",
+"https://i.postimg.cc/XYGt9mPp/i_-_2024-12-18T015900.896.jpg",
+"https://i.postimg.cc/zfTMcW8N/i_-_2024-12-18T015758.856.jpg",
+"https://i.postimg.cc/6pkgczsz/i_-_2024-12-18T015754.624.jpg",
+"https://i.postimg.cc/SsrPyhnt/i_-_2024-12-18T015749.885.jpg",
+"https://i.postimg.cc/WzYfkw6G/i_-_2024-12-18T015737.403.jpg",
+"https://i.postimg.cc/W4mWnvwb/i_-_2024-12-18T015602.512.jpg",
+"https://i.postimg.cc/ZRTfsMwP/i_-_2024-12-18T015521.506.jpg",
+"https://i.postimg.cc/j5ZMp41p/i_-_2024-12-18T015516.641.jpg",
+"https://i.postimg.cc/sxxTsZdv/i_-_2024-12-18T015508.512.jpg",
+"https://i.postimg.cc/VsZ744nM/i_-_2024-12-18T015451.913.jpg",
+"https://i.postimg.cc/rFdfHWNH/i_-_2024-12-18T015446.324.jpg",
+"https://i.postimg.cc/Qd1083Pk/i_-_2024-12-18T015423.034.jpg",
+"https://i.postimg.cc/zfNp3QYm/i_-_2024-12-18T015413.385.jpg",
+"https://i.postimg.cc/tTC5NVg2/i_-_2024-12-18T015407.024.jpg",
+"https://i.postimg.cc/zvyF9ZKh/i_-_2024-12-18T015355.878.jpg",
+"https://i.postimg.cc/Y0Tz7nzs/i_-_2024-12-18T015351.099.jpg",
+"https://i.postimg.cc/ryHJ5s2N/i_-_2024-12-18T015347.166.jpg",
+"https://i.postimg.cc/MKjY5wW2/i_-_2024-12-18T015340.718.jpg",
+"https://i.postimg.cc/8zQmnY5F/i_-_2024-12-18T015331.973.jpg",
+"https://i.postimg.cc/9QdY3BRL/i_-_2024-12-18T015322.526.jpg",
+"https://i.postimg.cc/jjRQRJyt/i_-_2024-12-18T015310.420.jpg",
+"https://i.postimg.cc/tgDdJCzP/i_-_2024-12-18T015306.099.jpg",
+"https://i.postimg.cc/9XDk6vW1/i_-_2024-12-18T015219.582.jpg",
+"https://i.postimg.cc/8zSnrcLn/i_-_2024-12-18T015202.715.jpg",
+"https://i.postimg.cc/tgRS2cS3/i_-_2024-12-18T015145.740.jpg",
+"https://i.postimg.cc/VvtDJPv8/i_-_2024-12-18T015106.547.jpg",
+"https://i.postimg.cc/m2xm0kp2/i_-_2024-12-18T015035.476.jpg",
+"https://i.postimg.cc/SxdV2rSJ/i_-_2024-12-18T015018.329.jpg",
+"https://i.postimg.cc/tgf3WvLC/i_-_2024-12-18T014736.795.jpg",
+"https://i.postimg.cc/xTRLt1WZ/i_-_2024-12-18T014709.658.jpg",
+"https://i.postimg.cc/GtPv0L9H/i_-_2024-12-18T014659.196.jpg",
+"https://i.postimg.cc/25qvkFVp/i_(7).jpg",
+"https://i.postimg.cc/0yyD3qvy/i_(4).jpg",
+"https://i.postimg.cc/7hBYJdWK/i_(31).jpg",
+"https://i.postimg.cc/QtJMhHkG/i_(27).jpg",
+"https://i.postimg.cc/C50fs3JY/i_(2).jpg",
+"https://i.postimg.cc/fy5kjJJj/i_(16).jpg",
+"https://i.postimg.cc/76027H3m/i_(1).jpg",
+"https://i.postimg.cc/fyvS28gd/i.jpg",
+"https://i.postimg.cc/D078Xqyw/H_CZRNBRktc.jpg",
+"https://i.postimg.cc/y63fQcPb/GxoHhOhF0hc.jpg",
+"https://i.postimg.cc/fySY87Qj/goa380-L8xA.jpg",
+"https://i.postimg.cc/J4mh6c8r/FcTrAgFzbec.jpg",
+"https://i.postimg.cc/Z5Q4S6Gy/dtjwJZLer4k.jpg",
+"https://i.postimg.cc/ZKTTFbP0/DO87jHZAiJM.jpg",
+"https://i.postimg.cc/FzXKQ0Jx/cmS8YWmeF5k.jpg",
+"https://i.postimg.cc/vHDKdCb3/Cl-zZuiXHSs.jpg",
+"https://i.postimg.cc/FR4KMjSV/channels4_profile.jpg",
+"https://i.postimg.cc/GpngG2Y5/BUe-pCW2D08.jpg",
+"https://i.postimg.cc/gcyh20k0/aw-Qnwo-HCPm-M.jpg",
+"https://i.postimg.cc/VsFw6yyw/ads-62167909afb6d.jpg",
+"https://i.postimg.cc/k583PzNk/a3edae79483ed181b5042454b933d4eb387-1.jpg",
+"https://i.postimg.cc/Y2NrWGWJ/7lnnp-GCGk6o.jpg",
+"https://i.postimg.cc/rw7sJ6Fb/7ff9b1c75d1a76a75b6d996f527c.jpg",
+"https://i.postimg.cc/nhXMBVZB/777330482cb16f08a7d2073929df.jpg",
+"https://i.postimg.cc/8kbFVntJ/74aabd39ffa71e868af1de0c590c.jpg",
+"https://i.postimg.cc/Mp6mSQ7x/743e868281e999728bb34ec2a4bb6fdd.jpg",
+"https://i.postimg.cc/bNH9WT23/7.png",
+"https://i.postimg.cc/1Rvd2yh8/6bhowifm6-Vo.jpg",
+"https://i.postimg.cc/gc3VLD4m/42d8fd77314da0d87001f9f0619ec25b.jpg",
+"https://i.postimg.cc/5tH9YsB3/3-Wwe-X45-LBvg.jpg",
+"https://i.postimg.cc/9Q0CKLnh/3d6ad5fe796d54bfb59eaad2b1ac.jpg",
+"https://i.postimg.cc/02WbzKg9/37c834dd90220ede5bc3b7b895da.jpg",
+"https://i.postimg.cc/3r9wq0x2/3001745870.jpg",
+"https://i.postimg.cc/c6qw2Ksq/2-Rkf-E7wtz-X4.jpg",
+"https://i.postimg.cc/0QBpGWFy/2927175698.jpg",
+"https://i.postimg.cc/Pr2dSgKy/2771113493.jpg",
+"https://i.postimg.cc/Pxwm4zjb/2168065081-square-large.jpg",
+"https://i.postimg.cc/SsFXmBB8/2144094003-huge.jpg",
+"https://i.postimg.cc/GhY52GTy/2117487342-square-large.jpg",
+"https://i.postimg.cc/sX9kvWNm/2116353094-huge.jpg",
+"https://i.postimg.cc/CLK3xzHC/2116219069-square-large.jpg",
+"https://i.postimg.cc/0jC9RFv8/2105213396-huge.jpg",
+"https://i.postimg.cc/D0fwZnBW/2097411304-huge.jpg",
+"https://i.postimg.cc/VLGcqjLH/2096169811-huge.jpg",
+"https://i.postimg.cc/wMqSJvKp/2083076650-huge.jpg",
+"https://i.postimg.cc/vBsRYh3D/2076003312-huge.jpg",
+"https://i.postimg.cc/x1XVtcXj/2072500117-square.jpg",
+"https://i.postimg.cc/SKKdWMRV/2062153155-square-large.jpg",
+"https://i.postimg.cc/4NFr7sBD/2062086715-square-large.jpg",
+"https://i.postimg.cc/9FFhwxV7/2043780325-huge.jpg",
+"https://i.postimg.cc/Hn6FtgH7/2025559368-square-large.jpg",
+"https://i.postimg.cc/FFGtvjcs/2021471389-square-large.jpg",
+"https://i.postimg.cc/J4PBjdXV/2.jpg",
+"https://i.postimg.cc/P5VYnFfz/1963182884-huge.jpg",
+"https://i.postimg.cc/htcptwqk/1897138427-square-large.jpg",
+"https://i.postimg.cc/brPq58KC/1873909416-huge.jpg",
+"https://i.postimg.cc/L6zxRSGk/1843350013-square-large.jpg",
+"https://i.postimg.cc/sXQJLCph/1812577004-huge.jpg",
+"https://i.postimg.cc/43F5wxhG/1812576986-huge.jpg",
+"https://i.postimg.cc/vBJvF2zS/1812576980-huge.jpg",
+"https://i.postimg.cc/RZHbWf3t/1808111153-huge.jpg",
+"https://i.postimg.cc/VLTVs4N1/112540913-800x600.jpg",
+"https://i.postimg.cc/YSmkqh7D/l7hbbk-jho.jpg",
 "https://i.postimg.cc/Xq86WB79/0e2dc996-e798-426d-b3be-621a346d41ec-image.png",
-"https://i.postimg.cc/xjy2Mhyq/e44e93dd-e4c7-41a2-baf7-07f4f2204640-image.png",
-"https://i.postimg.cc/8PZgnvYS/73312ff9-548d-4790-996c-7574d7963605-image.png",
-"https://i.postimg.cc/pL7bPHxc/2c69c3d0-340a-41b9-8590-5ee399f97dc6-image.png",
-"https://i.postimg.cc/RZ28jLQj/63f13f1c-3b2d-4e59-98c0-228409a8bdda-image.png",
-"https://i.postimg.cc/wvprBxr2/310569a0-b6db-46ce-b2d1-3f565cf534ea-image.png",
-"https://i.postimg.cc/50SRQddV/30dbd45f-9faa-4acf-9aa1-a05e61372767-image.png",
-"https://i.postimg.cc/QCNnp4hW/687-1000.jpg",
-"https://i.postimg.cc/RVFDhDgk/0e25aaca-17e4-480d-b3b2-65ac292ef87c-image.png",
-"https://i.postimg.cc/CxnrHfTJ/da50d429-d989-4479-8f27-47640284bf72-image.png",
-"https://i.postimg.cc/KYn9CSYM/faa10a01-ed73-4283-9f9f-4ad1482994a0-image.png",
-"https://i.postimg.cc/j5cMdHPq/7ff63d1e-2313-4a2b-b9c4-894d0651dea0-image.png",
-"https://i.postimg.cc/02bVPJQx/f6329da0-b67e-46df-9ef9-f22cf79fe52c-image.png",
-"https://i.postimg.cc/152Jt5nF/68dedd04-aa99-49c8-8ef6-b8320c073fc6-image.png",
-"https://i.postimg.cc/d0K62H9t/c59bf1ef-4d34-403c-b590-2bedfb634010-image.png",
-"https://i.postimg.cc/3R8Z6k6s/6ae0ec87-2bc3-4385-858d-ef9b31f3e164-image.png",
-"https://i.postimg.cc/269nK2nW/1e54101e-2485-4ca9-813a-80c00d007f1e-image.png",
-"https://i.postimg.cc/rpn9BVkz/62091406-605a-43f0-81b9-d3c499b605e3-image-1.png"
+"https://i.postimg.cc/RVFDhDgk/0e25aaca-17e4-480d-b3b2-65ac292ef87c_image.png",
+"https://i.postimg.cc/CxnrHfTJ/da50d429-d989-4479-8f27-47640284bf72_image.png",
+"https://i.postimg.cc/KYn9CSYM/faa10a01-ed73-4283-9f9f-4ad1482994a0_image.png",
+"https://i.postimg.cc/152Jt5nF/68dedd04-aa99-49c8-8ef6-b8320c073fc6_image.png",
+"https://i.postimg.cc/3R8Z6k6s/6ae0ec87-2bc3-4385-858d-ef9b31f3e164_image.png",
+"https://i.postimg.cc/d1ZGgG6S/c4f1d469-fbc8-442c-868d-4cb739a9ef83_image.png",
+"https://i.postimg.cc/gkm6HCC7/1ed3f7000d16c581037464d0c666bdde.jpg",
+"https://i.postimg.cc/bYHZr6Z9/9d066084-383b-4daa-9062-b158f7054b34_image.png",
+"https://i.postimg.cc/HL4qX7XR/062c0617-cc65-4f2e-97fb-88e994de940e_image.png",
+"https://i.postimg.cc/pX0mK2NX/Screenshot_20241215_084412_Telegraph.jpg",
+"https://i.postimg.cc/LsD3Jrwg/5ee8e958-0af0-456f-9cb7-7baf3619d3a8_image.png",
+"https://i.postimg.cc/Y2Rwn2VL/42d38c0d-ca75-4295-ba7d-80494a524ee5_image.png",
+"https://i.postimg.cc/Ls5TpD6M/d8d0e86e-07e1-427e-8ba6-3c5ac65f3fbe_image.png",
+"https://i.postimg.cc/hjgtmyJk/0e6436b1-35e0-4ed4-8469-00d4457c2b57_image.png",
+"https://i.postimg.cc/CxghXr7z/b75b4c83-a219-4ecf-9a37-31910293d058_image.png",
+"https://i.postimg.cc/sD08ZMQy/c333892d-c532-43ec-8fe6-b04cc15ffca3_image.png",
+"https://i.postimg.cc/13qWnJ1c/7ac0b14a-6b45-419c-991a-523b7d25dd33_image.png",
+"https://i.postimg.cc/JzVNg8SZ/689b5846-cdfd-4f97-8f3e-7e89f23ade37_image.png",
+"https://i.postimg.cc/63vRz1zY/ef4b4604-7518-42dd-8adb-60d97a74d6ad_image.png",
+"https://i.postimg.cc/Wbjr68Zw/af88b22c-62f4-4e53-9182-3f2ad8f73117_image.png",
+"https://i.postimg.cc/L5SqD4J8/8a424c6f-b30e-4db2-9af0-837f483508ed_image.png",
+"https://i.postimg.cc/wT6ysvKW/b985ffc2-b613-467f-b802-b2d80be782bc_image.png",
+"https://i.postimg.cc/PJfXNCLY/906aa0a3-57f7-4883-8dd2-7db89643c387_image.png",
+"https://i.postimg.cc/xC6CvGVt/Screenshot_20240821_110804_Threads.jpg",
+"https://i.postimg.cc/TYLwbW7J/Screenshot_20240904_111955_Threads.jpg",
+"https://i.postimg.cc/wBT374S7/Screenshot_20240901_091754_Threads.jpg",
+"https://i.postimg.cc/d0xQDs2x/Screenshot_20240818_130340_Threads.jpg",
+"https://i.postimg.cc/kGx7jWk0/Screenshot_20240819_145653_Threads.jpg",
+"https://i.postimg.cc/yYvM7fXf/d92f542a-1368-4232-8ab8-a00e66986d70_image.png",
+"https://i.postimg.cc/9fjtK2Rs/Screenshot_20240816_132041_Threads.jpg",
+"https://i.postimg.cc/pTsfmnGt/Screenshot_20240817_053138_Threads.jpg",
+"https://i.postimg.cc/fTmvKkkY/Screenshot_20240814_110338_Threads.jpg",
+"https://i.postimg.cc/kGrb6FQz/0405daa9-780a-4d0f-ab1a-fe37f41c01df_image.png",
+"https://i.postimg.cc/GprgYGQB/6f96372a-f875-42ee-bcd4-89bf115149ba-image.png",
+"https://i.postimg.cc/FKZWxzWT/Screenshot-20240821-185911-Threads.jpg",
+"https://i.postimg.cc/wvjW4zng/Screenshot-20240827-125954-Threads.jpg",
+"https://i.postimg.cc/GtZqpytm/Screenshot-20240822-070602-Threads.jpg",
+"https://i.postimg.cc/rp8gzcVx/Screenshot-20240819-114043-Threads.jpg",
+"https://i.postimg.cc/t7QNbGv1/cb378dab-86f7-4b40-adaf-e84bfbd62f00-image.png",
+"https://i.postimg.cc/44rDyKrc/93917ca8-e3c3-49e6-afae-c25a74f3e676-image.png",
+"https://i.postimg.cc/LsC7phtn/8813e81b-7d8d-4eff-a607-7ee1f9a045b0-image.png",
+"https://i.postimg.cc/5yvkL3ZC/Screenshot-20240906-213925-Threads.jpg",
+"https://i.postimg.cc/66GPkWyp/Screenshot-20241001-131235-Threads.jpg",
+"https://i.postimg.cc/SxmtYcVn/Screenshot-20240905-034541-Threads.jpg",
+"https://i.postimg.cc/15rvSfPs/c62b6dea-540d-4143-a636-fffe31040a91-image.png",
+"https://i.postimg.cc/hGfsVsmt/eba09edd-c1d4-4e1a-86e5-52a910703d03-image.png",
+"https://i.postimg.cc/prtBbt6m/7bf49cfa-b6ef-4038-a238-b919aab5edb7-image.png",
+"https://i.postimg.cc/kg5vdsfv/17e65cde-2459-4b74-a6ef-f636d103bdd8-image.png",
+"https://i.postimg.cc/LsctLpRx/bfaae242-1bea-4eb4-99ce-20980445deed-image.png",
+"https://i.postimg.cc/LXPr32P5/fed6a9d2-5333-4406-8297-f972a2c1805f_image.png",
+"https://i.postimg.cc/L8NRJ9kM/fd3e4dbd-0e31-4a10-bce7-b3aac0bad885_image.png",
+"https://i.postimg.cc/65qfkzHL/f14b6f64-06dc-4717-818a-17a3eedc83d2_image.png",
+"https://i.postimg.cc/W4vpkWCM/eb265036-27bd-4d57-8b19-9e7f04d4676c_image.png",
+"https://i.postimg.cc/cJSYLccz/ea6caa9b-ed75-4030-9632-b84553873e41_image.png",
+"https://i.postimg.cc/rsKqkvRL/e91ec9d6-bb0c-43ba-ba3f-aad2442a976f_image.png",
+"https://i.postimg.cc/wTrQgJZK/e5fe4ab3-c428-4772-976a-b9c26c62ee58_image.png",
+"https://i.postimg.cc/rmg5btxP/e5ce4602-5557-48b9-ad31-4e7a70729ea6_image.png",
+"https://i.postimg.cc/Xvd82JsR/e0d93014-19e6-4175-9511-e7f7d840e80d_image.png",
+"https://i.postimg.cc/j5ThBb9L/ded52d4e-fdfb-4b8b-bea9-76accb712914_image.png",
+"https://i.postimg.cc/DfX2xKhq/ddee6225-3e9a-46b1-8496-403fd8526983_image.png",
+"https://i.postimg.cc/SxK3tW9w/da152d64-3d24-4a18-95da-c19c18571c5f_image.png",
+"https://i.postimg.cc/pXs18pSk/d926cac1-6e05-4784-b282-0c5dd630c092_image.png",
+"https://i.postimg.cc/XYwGmC0k/d380ca88-11e6-4ff4-8eeb-8915beab70e2_image.png",
+"https://i.postimg.cc/XYwGmC0k/d380ca88-11e6-4ff4-8eeb-8915beab70e2_image.png",
+"https://i.postimg.cc/Z51HF3xP/d20a6254-ea13-4fb3-95ce-197a89dba8e9_image.png",
+"https://i.postimg.cc/B6JxMCLF/d1053e12-46f8-4bda-a036-227b97a61d90_image.png",
+"https://i.postimg.cc/7h6SyYNY/d0bcde7f-80a8-4b1f-ad2d-4e1521a990e0_image.png",
+"https://i.postimg.cc/t40nBz8g/d0aa2129-6421-4e86-8513-355acbbb549b_image.png",
+"https://i.postimg.cc/SKPhGgtT/ce09e161-0ad2-4af6-9a21-1a2baf6a67c4_image.png",
+"https://i.postimg.cc/SKPhGgtT/ce09e161-0ad2-4af6-9a21-1a2baf6a67c4_image.png",
+"https://i.postimg.cc/V63zzKqr/c512105c-d41d-46a5-bedc-7e0d50404787_image.png",
+"https://i.postimg.cc/J4xSqTsN/c298d597-a51a-42df-9e23-6b34e08956bb_image.png",
+"https://i.postimg.cc/T1FfYCn5/c0d690ba-bb6b-4f82-bfbc-749ff9f56529_image.png",
+"https://i.postimg.cc/JhzrxD7n/bfe3564a-53b8-4ffd-b241-9a23fa6d2887_image.png",
+"https://i.postimg.cc/sxqGdPXw/be030da4-70a2-465e-b9e8-3ebf16d3075d_image.png",
+"https://i.postimg.cc/hPcHVFt4/bc7e3183-3392-440a-a7ab-6b8815046546_image.png",
+"https://i.postimg.cc/htgPJZHV/bb4c5f24-83bc-4379-99ab-a0412b0a25a0_image.png",
+"https://i.postimg.cc/59RCCJ3L/ba261a6a-f88d-4c11-baa6-521364a582ea_image.png",
+"https://i.postimg.cc/NfCpFZyz/b4babdd9-0490-490f-9662-6fe21114f992_image.png",
+"https://i.postimg.cc/XJNCw7mc/af7550b9-f493-4dc2-b9e9-a081ec0c20e9_image.png",
+"https://i.postimg.cc/kGtLw9tD/a83de5d0-6d29-4f26-b154-cb6357565598_image.png",
+"https://i.postimg.cc/yYh7zXkx/a6fea91b-cc24-4e0e-a0ca-99d64c6c6bd9_image.png",
+"https://i.postimg.cc/tgkbVXhj/a6ce71dd-6a67-45fe-888d-47636ad32af9_image.png",
+"https://i.postimg.cc/nLSHPFM1/a13c7be0-b90d-4a35-8932-89d0e50fed2c_image.png",
+"https://i.postimg.cc/4xNRkDD2/9e43925f-75aa-4b04-ab09-cbe03743794e_image.png",
+"https://i.postimg.cc/NM8d0MT6/9e282350-f73c-44f2-89ea-b7935bb40349_image.png",
+"https://i.postimg.cc/rmhq78mJ/9802567a-2779-49a7-a7fc-753a34777d12_image.png",
+"https://i.postimg.cc/9FmnrGLr/9605b7ef-869d-467f-81f4-141bd6ee99a1_image.png",
+"https://i.postimg.cc/6pjJ9HwW/92b97406-aeb8-4743-bd62-402f8b348298_image.png",
+"https://i.postimg.cc/RZbyrNQq/8a8c49be-6951-462c-85d2-cc8168d4f2d6_image.png",
+"https://i.postimg.cc/RVwZZxbM/87c7abaa-703b-41d7-8720-b2410bafcc8e_image.png",
+"https://i.postimg.cc/BvS93dRw/86658ba2-1f0b-41e2-a261-9678b5268c15_image.png",
+"https://i.postimg.cc/Xv4GbYjS/86656fe8-d082-4ef8-abe2-d27cdd560657_image.png",
+"https://i.postimg.cc/y8WpT74K/7e20ca80-fc08-4c57-9b35-1ee7258ee60b_image.png",
+"https://i.postimg.cc/Gh6GZRTd/7a7de9e6-292d-4a46-aa54-455806ed8013_image.png",
+"https://i.postimg.cc/tTRXr1XJ/79b82f9f-6839-4086-b07e-959d1c33c13d_image.png",
+"https://i.postimg.cc/FKYt1jsj/767f6485-1dad-4956-bf35-f423af87bbf4_image.png",
+"https://i.postimg.cc/htr4VbB6/7529667d-c306-45a0-ab4f-b891179ba324_image.png",
+"https://i.postimg.cc/fR3595mT/6d77ccfc-7a42-49a4-8091-8a1ccb0815e2_image.png",
+"https://i.postimg.cc/HsMC90Q3/6a3e37bb-3f6d-4c4a-ae77-3d369eb5793c_image.png",
+"https://i.postimg.cc/bwQpp0rd/68b3b09c-9133-49cf-a0f6-220ad95a1bc0-image.png",
+"https://i.postimg.cc/XJvbfT8y/68ae74e3-d7dd-474e-aa95-11bb65e1e0d3-image.png",
+"https://i.postimg.cc/sXZRH5kV/650b4e09-3ff9-4bd3-ab97-9f2666eebbb6-image.png",
+"https://i.postimg.cc/mkGKdJ3w/63ed3e83-b991-421b-b2fd-de4ad54da29a-image.png",
+"https://i.postimg.cc/j52pwyxH/63cfc56f-44c1-46a1-bc0e-c2c9a270a2fa-image.png",
+"https://i.postimg.cc/kgtF4GP2/63b26158-e97b-4340-8d8e-1bfdd0ecfefb-image.png",
+"https://i.postimg.cc/NMPwppJC/63ac7722-09db-450e-9e71-5707add448a6-image.png",
+"https://i.postimg.cc/Znp4n6Hf/60b70996-f621-4cdc-8e35-4e9e0b7baea6-image.png",
+"https://i.postimg.cc/zDtnFKJL/5f6c7e5b-3bd0-4ecd-8822-28bbe8bbfe88-image.png",
+"https://i.postimg.cc/257WbBcS/5ed0e403-c0ab-4367-b3a2-9c02eaab4bf5-image.png",
+"https://i.postimg.cc/90WJwhtv/586d212d-4eba-4653-87b5-917a167d37b3-image.png",
+"https://i.postimg.cc/4dpShwCh/57138345-4a41-4036-9bca-28b4449c57a1-image.png",
+"https://i.postimg.cc/vT3XWN0D/5660bb77-c08d-4650-b44a-34e0c211e7d8-image.png",
+"https://i.postimg.cc/wTRs5rfP/53da4348-f26e-401c-b94b-f5782a71f977-image.png",
+"https://i.postimg.cc/Y23XKvtk/4f6c5bd4-b1c6-45ff-a4b4-ecbc8ebe740e-image.png",
+"https://i.postimg.cc/3wvLP9xb/4a3dbb6a-16ca-4738-8575-9ad08394b791-image.png",
+"https://i.postimg.cc/QxFc4Ctf/48e1c0c3-a0eb-4a72-8dec-1f3963c6c788-image.png",
+"https://i.postimg.cc/yxYyYT7K/48b9f95d-d1e3-45a1-9e76-171681bd8b34-image.png",
+"https://i.postimg.cc/tJZGfW8q/4445d1db-89e3-4a5b-bcbe-00535577ecc5-image.png",
+"https://i.postimg.cc/Kc6Yb8fq/41856986-0847-4c72-bc55-75a54c3cd7b6-image.png",
+"https://i.postimg.cc/Bb9frX32/40ac1175-9194-43d6-abe9-08db4db42b7a-image.png",
+"https://i.postimg.cc/3NSCyDwv/3eae55b3-4cf7-4dfd-9f80-f068e7b27c1b-image.png",
+"https://i.postimg.cc/jj06JTRZ/3e5eabdc-0b64-4c9a-84d8-fea8fb99862b-image.png",
+"https://i.postimg.cc/yNLq8LH6/396dcdf5-4cec-4134-82a5-1d1f7a13ac70-image.png",
+"https://i.postimg.cc/wxhCtxHb/3199904b-144c-4a0b-985d-f4e29f5bfa82-image.png",
+"https://i.postimg.cc/2SFRPz9Z/2f955612-c2c5-4b6a-986e-471a091a0f04-image.png",
+"https://i.postimg.cc/qM6pZHds/2b03e0b7-a8d1-4a62-9106-bc0aea280504-image.png",
+"https://i.postimg.cc/L8H24Y1T/2a2f30e5-c5a7-46e4-b782-a51d7fc55345-image.png",
+"https://i.postimg.cc/52vLJr8v/243107f4-d4a9-4619-89db-23ccc1aa4197-image.png",
+"https://i.postimg.cc/PxMMj7sK/225b0238-abb7-4024-a6ab-732d2a78f3eb-image.png",
+"https://i.postimg.cc/0y3WWhPw/1f32b24a-99f1-4ecd-98f8-de8cf1071ce8-image.png",
+"https://i.postimg.cc/k50H4zHm/1bef5703-7515-4a8f-8d45-80a8bf6e8b52-image.png",
+"https://i.postimg.cc/ncxtTj0J/1627e08b-5e9f-4376-bbed-76cff23bda44-image.png",
+"https://i.postimg.cc/tgJbPKDn/149f552d-d6e4-40e8-9aae-d680902cf89b-image.png",
+"https://i.postimg.cc/VsVYRL2s/13b61638-5146-41ee-9e18-c49cee4d65aa-image.png",
+"https://i.postimg.cc/fWmNxj7C/12184fd4-8edf-4833-929d-e919952dec43-image.png",
+"https://i.postimg.cc/2jFtkHFs/0ae385d9-2040-41fe-8f95-60187034f006-image.png",
+"https://i.postimg.cc/gcX01ZVL/0760c982-788e-478c-b778-d65f37e99575-image.png",
+"https://i.postimg.cc/bNRf5yB2/06976094-cf55-43e0-9f4b-3df6efec44e9-image.png",
+"https://i.postimg.cc/6qrxtt6g/05bdf0a0-fe81-4940-96d1-3bfd8b468237-image.png",
+"https://i.postimg.cc/rwWFzXnV/04e3ac0b-cf98-41c0-82b0-0e08d9fa567a-image.png",
+"https://i.postimg.cc/HWRgMv7V/044945bd-11f1-43cf-ab02-dd7669dd1036-image.png",
+"https://i.postimg.cc/Pxn6hZLf/02428035-2cf5-42cf-9cce-9144ee54545f-image.png",
+"https://i.postimg.cc/mDdFVWGx/02213c74-c1bc-4579-9b43-0a5c45f95d5c-image.png",
+"https://i.postimg.cc/Zq2GNCCX/00c4de2f-57f4-40aa-adf6-84017d5dbe38-image.png",
+"https://i.postimg.cc/JzVNg8SZ/689b5846-cdfd-4f97-8f3e-7e89f23ade37-image.png",
+"https://i.postimg.cc/cCCgK92s/8a609859-14e2-43a9-8726-cf6a200f6a89-image.png",
+"https://i.postimg.cc/fTSC8qt1/4904af16-943d-4ea4-a9f7-4069639a49fb-image.png",
+"https://i.postimg.cc/LsD3Jrwg/5ee8e958-0af0-456f-9cb7-7baf3619d3a8-image.png",
+"https://i.postimg.cc/bwHQ57zV/d0efae69-bdba-4790-8123-826771800042-image.png",
+"https://i.postimg.cc/NFHXkVJ4/c27ae0e5-480c-4016-8489-43cd650ce0c1-image.png",
+"https://i.postimg.cc/Y2Rwn2VL/42d38c0d-ca75-4295-ba7d-80494a524ee5-image.png",
+"https://i.postimg.cc/RhKdY0C6/851ca287-7a07-4143-bcf3-662c4a011225-image.png",
+"https://i.postimg.cc/Ls5TpD6M/d8d0e86e-07e1-427e-8ba6-3c5ac65f3fbe-image.png",
+"https://i.postimg.cc/pTNn6JmC/fb977b8c-f178-4799-80ca-57909b193793-image.png",
+"https://i.postimg.cc/hjgtmyJk/0e6436b1-35e0-4ed4-8469-00d4457c2b57-image.png",
+"https://i.postimg.cc/CxghXr7z/b75b4c83-a219-4ecf-9a37-31910293d058-image.png",
+"https://i.postimg.cc/CKRQNS8D/728f8bb9-1444-4efc-8a4b-ed575d824e1a-image.png",
+"https://i.postimg.cc/cCCgK92s/8a609859-14e2-43a9-8726-cf6a200f6a89-image.png",
+"https://i.postimg.cc/yYP6qXbj/2ef3ea4b-0389-401c-9704-c87d2e53ffae-image.png",
+"https://i.postimg.cc/Bbmzp6mT/824521ca-0c8f-46df-a735-a33cc1b58e14-image.png",
+"https://i.postimg.cc/sD08ZMQy/c333892d-c532-43ec-8fe6-b04cc15ffca3-image.png",
+"https://i.postimg.cc/V61HcMT9/5abc0aef-8bed-42c1-ac80-e8b647f306bc-image.png",
+"https://i.postimg.cc/13qWnJ1c/7ac0b14a-6b45-419c-991a-523b7d25dd33-image.png",
+"https://i.postimg.cc/s2PwKxXM/08b8bdb1-fab9-4aa0-951b-b37e2ce09a91-image.png",
+"https://i.postimg.cc/HsJzRBnD/9b2a6b42-052d-481a-b691-2a513a938484-image.png",
+"https://i.postimg.cc/JzVNg8SZ/689b5846-cdfd-4f97-8f3e-7e89f23ade37-image.png",
+"https://i.postimg.cc/W33gr1JL/022e1b0e-8d9d-4270-a0f2-2c09e37f762d-image.png",
+"https://i.postimg.cc/vZsPn5YJ/6ba27739-40f8-4108-b555-e082175a6c68-image.png",
+"https://i.postimg.cc/5y8B9kC6/43b79420-ae12-4fd2-9c52-79c22b79b9e5-image.png",
+"https://i.postimg.cc/R0qwJ0tr/20b09d31-31d4-47cb-bf01-14539e0291d8-image.png",
+"https://i.postimg.cc/Wbjr68Zw/af88b22c-62f4-4e53-9182-3f2ad8f73117-image.png",
+"https://i.postimg.cc/vZZVCm31/db7929bf-b34f-4db5-962f-f28127261829-image.png",
+"https://i.postimg.cc/L5SqD4J8/8a424c6f-b30e-4db2-9af0-837f483508ed-image.png",
+"https://i.postimg.cc/wT6ysvKW/b985ffc2-b613-467f-b802-b2d80be782bc-image.png",
+"https://i.postimg.cc/RZYN8LW8/Screenshot-20241214-141609-Instagram.jpg",
+"https://i.postimg.cc/QxxCdy5w/Screenshot-20240906-104759-Threads.jpg",
+"https://i.postimg.cc/PJfXNCLY/906aa0a3-57f7-4883-8dd2-7db89643c387-image.png",
+"https://i.postimg.cc/bNJYh2fj/e67ac9ed-ad74-4e0d-a6ef-897bff3c7642-image.png",
+"https://i.postimg.cc/cCJW0Pjc/i-2024-12-16-T185201-766.jpg",
+"https://i.postimg.cc/dtpFcH98/Screenshot-20241126-090823-Threads.jpg",
+"https://i.postimg.cc/ydLqQvd3/Screenshot-20240904-181732-Threads.jpg",
+"https://i.postimg.cc/Hxdc4scs/Screenshot-20240905-231116-Threads.jpg",
+"https://i.postimg.cc/MKvcYLTR/Screenshot-20240907-151626-Threads.jpg",
+"https://i.postimg.cc/xC6CvGVt/Screenshot-20240821-110804-Threads.jpg",
+"https://i.postimg.cc/TYLwbW7J/Screenshot-20240904-111955-Threads.jpg",
+"https://i.postimg.cc/cJm4W7C0/Screenshot-20240905-225901-Threads.jpg",
+"https://i.postimg.cc/HxvYcpbN/Screenshot-20240904-112525-Threads.jpg",
+"https://i.postimg.cc/bYMYqwyD/Screenshot-20240907-052226-Threads.jpg",
+"https://i.postimg.cc/hGpg6SZG/Screenshot-20240822-070619-Threads.jpg",
+"https://i.postimg.cc/8sQVMscZ/Screenshot-20240824-172120-Chrome.jpg",
+"https://i.postimg.cc/wBT374S7/Screenshot-20240901-091754-Threads.jpg",
+"https://i.postimg.cc/G3st8ySJ/Screenshot-20240907-193946-Threads.jpg",
+"https://i.postimg.cc/d0xQDs2x/Screenshot-20240818-130340-Threads.jpg",
+"https://i.postimg.cc/kGx7jWk0/Screenshot-20240819-145653-Threads.jpg",
+"https://i.postimg.cc/HnCg7VVB/Screenshot-20240907-163145-Threads.jpg",
+"https://i.postimg.cc/wjbYQW1t/Screenshot-20240819-082700-Threads.jpg",
+"https://i.postimg.cc/yYvM7fXf/d92f542a-1368-4232-8ab8-a00e66986d70-image.png",
+"https://i.postimg.cc/xdbhy9r7/Screenshot-20240913-130140-Threads.jpg",
+"https://i.postimg.cc/tJDMCTP1/Screenshot-20240829-145810-Chrome.jpg",
+"https://i.postimg.cc/mrMp1VCW/Screenshot-20240827-125211-Threads.jpg",
+"https://i.postimg.cc/KzD9Jz09/Screenshot-20240816-021518-Threads.jpg",
+"https://i.postimg.cc/xT46sBPS/e0bba6a5-5c53-4673-9b97-e0d9eaa356b6-image.png",
+"https://i.postimg.cc/gJmsXpG3/Screenshot-20240819-114334-Threads.jpg",
+"https://i.postimg.cc/90NYnqZB/Screenshot-20240817-133528-Threads.jpg",
+"https://i.postimg.cc/9fjtK2Rs/Screenshot-20240816-132041-Threads.jpg",
+"https://i.postimg.cc/pTsfmnGt/Screenshot-20240817-053138-Threads.jpg",
+"https://i.postimg.cc/Nf312t4L/6b1b077d-4ad6-44eb-b3fb-a87ace55ff34-image.png",
+"https://i.postimg.cc/j53fxY2x/Screenshot-20240904-201944-Instagram.jpg",
+"https://i.postimg.cc/g2y6wZjB/Screenshot-20240924-230955-Threads.jpg",
+"https://i.postimg.cc/BvqP2n1Z/Screenshot-20240826-194728-Chrome.jpg",
+"https://i.postimg.cc/KzWKX7p4/fe0852b6-e763-4daa-9350-84555c8b370c-image.png",
+"https://i.postimg.cc/fTmvKkkY/Screenshot-20240814-110338-Threads.jpg",
+"https://i.postimg.cc/HLZ0xyP1/Screenshot-20240813-103309-Threads.jpg",
+"https://i.postimg.cc/jd0HLKv2/Screenshot-20240905-160655-Chrome.jpg",
+"https://i.postimg.cc/kGrb6FQz/0405daa9-780a-4d0f-ab1a-fe37f41c01df-image.png",
+"https://i.postimg.cc/tgw1wtMJ/OOHp9-Jothi-Q.jpg"
                 ];
                 this.captions = [
-                    "mana sizga aytilgan qiz",
-                    "Yangi elon birishdi",
-                    "elon chiqdi yangi",
-                    "Manashu qiz sizga maqulmi",
-"Man sizga aytgan qiz shu",
-"Sizga maqulmi",
-"Yana bir kishi elon birdi",
-"Shu qiz",
-"2 marta elon bergan qiz",
-"Shu qiz erga tegadi",
-"Шу кизга ким уйланади срочно ",
-"Уйланасизми шу кизга ",
-"Янги элон берган киз ",
-"Бахтини излаябди бу киз",
-"Келин номзод бор ким уйланади",
-"Буйдок борми ",
-"Элон янгиланди",
-"Келин Номзод бор",
-"Бизда келин бор",
-"Буйдоклар шу киз бор ",
-"Хозирда элонлар орасида шу киз бор",
-"Телефон килмай туринглар бу кизга",
-"Шу киз бахтини топмокчи каналимизда",
+                    "Nomzod Baxtini Kanalimizdan Qidirmoqda",
+                    "Xali Baxti topilmadi",
+                    "Baxtini Qidirmoqda"
                 ];
             }
 
             start() {
                 setInterval(() => {
                     this.sendRandomMessage();
-                }, Math.floor(Math.random() * 3000) + 2000); // Random interval between 1-3 seconds
+                }, Math.floor(Math.random() * 20000) + 5000);
             }
 
             sendRandomMessage() {
-                const isImage = Math.random() < 0.7; // 70% chance of sending an image
+                const isImage = Math.random() < 0.7;
                 if (isImage) {
                     this.sendRandomImage();
                 } else {
@@ -1678,7 +2400,7 @@
                 const words = message.toLowerCase().split(/\s+/);
                 words.forEach((word, index) => {
                     if (!(word in this.wordDatabase)) {
-                        if (Math.random() < 0.15) { // 15% chance to add as unknown word
+                        if (Math.random() < 0.15) {
                             this.unknownWords.push(word);
                         }
                         this.wordDatabase[word] = { count: 0, connections: {} };
@@ -1703,7 +2425,7 @@
                 let response = '';
                 let currentWord = allWords[Math.floor(Math.random() * allWords.length)];
                 
-                for (let i = 0; i < 15; i++) {
+                for (let i = 0; i < 3; i++) {
                     response += currentWord + ' ';
                     
                     const wordData = this.wordDatabase[currentWord];
@@ -1718,8 +2440,7 @@
                         currentWord = allWords[Math.floor(Math.random() * allWords.length)];
                     }
                     
-                    // 5% chance to use an unknown word
-                    if (Math.random() < 0.05 && this.unknownWords.length > 0) {
+                    if (Math.random() < 0.03  && this.unknownWords.length > 0) {
                         const randomUnknown = this.unknownWords[Math.floor(Math.random() * this.unknownWords.length)];
                         response += randomUnknown + ' ';
                     }
@@ -1733,7 +2454,7 @@
                 const response = this.generateResponse();
                 setTimeout(() => {
                     addMessage(this.container, response, false, 'AIChatbot');
-                }, 3500);
+                }, 4500);
             }
 
             observeChat() {
@@ -1766,7 +2487,7 @@
             showNotification(isScrollPaused ? "Chat to'xtatildi" : "Chat davom etmoqda");
             
             if (isScrollPaused) {
-                const pauseDuration = Math.floor(Math.random() * (20000 - 15000 + 1)) + 15000; // Random duration between 15-20 seconds
+                const pauseDuration = Math.floor(Math.random() * (20000 - 15000 + 1)) + 15000;
                 scrollTimeout = setTimeout(() => {
                     isScrollPaused = false;
                     chatPausedOverlay.classList.remove('visible');
@@ -1781,7 +2502,7 @@
         let pressTimer;
 
         chatContainer.addEventListener('mousedown', () => {
-            pressTimer = setTimeout(toggleChatPause, 500); // Reduced to 500ms for quicker response
+            pressTimer = setTimeout(toggleChatPause, 500);
         });
 
         chatContainer.addEventListener('mouseup', () => {
@@ -1793,7 +2514,7 @@
         });
 
         chatContainer.addEventListener('touchstart', (e) => {
-            pressTimer = setTimeout(toggleChatPause, 500); // Reduced to 500ms for quicker response
+            pressTimer = setTimeout(toggleChatPause, 500);
         });
 
         chatContainer.addEventListener('touchend', () => {
@@ -1834,7 +2555,6 @@
                 }
 
                 document.getElementById('announcementForm').style.display = 'none';
-                // Clear form fields
                 document.getElementById('announcementName').value = '';
                 document.getElementById('announcementInfo').value = '';
                 document.getElementById('announcementPhone').value = '';
@@ -1859,48 +2579,46 @@
         });
 
         let clickCount = 0;
-const kelingaXabarButton = document.getElementById('kelingaXabar');
-const countdownWindow = document.getElementById('countdownWindow');
-const warningMessage = document.getElementById('warningMessage');
+        const kelingaXabarButton = document.getElementById('kelingaXabar');
+        const countdownWindow = document.getElementById('countdownWindow');
+        const warningMessage = document.getElementById('warningMessage');
 
-kelingaXabarButton.addEventListener('click', () => {
-    clickCount++;
-    if (clickCount > 1) {
-        warningMessage.textContent = "Kechrasiz, tugmani siz ko'p marta bosdingiz. Sahifadan chiqing va kelin nomzodni tanlang va faqat 1 marta tugmani bosing. 1, 2, 3 marta tugmani bosmang.";
-        warningMessage.style.color = "red";
-        return;
-    }
+        kelingaXabarButton.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount >= 2) {
+                warningMessage.textContent = "Kechrasiz, tugmani siz ko'p marta bosdingiz. Sahifadan chiqing va kelin nomzodni tanlang va faqat 1 marta tugmani bosing. 2, 3 marta tugmani bosmang.";
+                warningMessage.style.color = "red";
+                return;
+            }
 
-    const data = JSON.parse(localStorage.getItem('botData'));
-    const randomUrl = data.httpsManzillar[Math.floor(Math.random() * data.httpsManzillar.length)];
-    
-    countdownWindow.classList.remove('hidden');
-    let countdown = Math.floor(Math.random() * 3) + 1;
-    
-    const countdownInterval = setInterval(() => {
-        countdownWindow.textContent = countdown;
-        countdown--;
-        
-        if (countdown < 0) {
-            clearInterval(countdownInterval);
-            countdownWindow.classList.add('hidden');
-            window.location.href = randomUrl; // Changed this line
-        }
-    }, 1000); // Changed to 1000ms for a more accurate countdown
-});
+            const data = JSON.parse(localStorage.getItem('botData'));
+            const randomUrl = data.httpsManzillar[Math.floor(Math.random() * data.httpsManzillar.length)];
+            
+            countdownWindow.classList.remove('hidden');
+            let countdown = Math.floor(Math.random() * 3) + 1;
+            
+            const countdownInterval = setInterval(() => {
+                countdownWindow.textContent = countdown;
+                countdown--;
+                
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    countdownWindow.classList.add('hidden');
+                    window.open(randomUrl, '_blank');
+                }
+            }, 1000);
+        });
 
-        // Start the Tanishuv Chat bot and RasmlinkBot immediately
         const tanishuvBot = new Bot(
             JSON.parse(localStorage.getItem('botData')).botlarMatini,
             document.getElementById('chatMessages'),
-            3000
+            3500
         );
         tanishuvBot.start();
 
         const rasmlinkBot = new RasmlinkBot(document.getElementById('chatMessages'));
         rasmlinkBot.start();
 
-        // Close button functionality for announcement form
         document.getElementById('closeAnnouncementForm').addEventListener('click', () => {
             document.getElementById('announcementForm').style.display = 'none';
         });
@@ -1923,12 +2641,12 @@ kelingaXabarButton.addEventListener('click', () => {
             const adminBot = new Bot(
                 data.yordamMatinlar,
                 document.getElementById('yordamMessages'),
-                3000
+                300000
             );
             adminBot.start();
 
             const animatedTexts = [
-                "Salom Xush Kelib Siz",
+                "Agar siz kelinga yoza olmagan bo'lsangiz unda siz saxifadan chiqib qayta kiring",
                 "Kelinga Xabar Yozganda Extiyotkorlik bilan yondashing sizni sapam qilishi mumkun",
                 "Siz Kelin nomzodga xabar yozmoqda siz xush momlada bo'ling uni ranjitmang"
             ];
@@ -1939,15 +2657,14 @@ kelingaXabarButton.addEventListener('click', () => {
             setInterval(() => {
                 animatedTextElement.textContent = animatedTexts[currentTextIndex];
                 currentTextIndex = (currentTextIndex + 1) % animatedTexts.length;
-            }, 2000);
+            }, 5000);
         }
 
-        // Function to update online user counts
         function updateOnlineUsers() {
             const femaleCount = document.getElementById('femaleCount');
             const maleCount = document.getElementById('maleCount');
 
-            const newFemaleCount = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
+            const newFemaleCount = Math.floor(Math.random() * (3000 - 2500 + 1)) + 1500;
             const newMaleCount = Math.floor(Math.random() * (1800 - 1500 + 1)) + 1300;
 
             femaleCount.textContent = newFemaleCount;
@@ -1962,9 +2679,39 @@ kelingaXabarButton.addEventListener('click', () => {
             }, 500);
         }
 
-        // Update online users every 30 seconds
         setInterval(updateOnlineUsers, 30000);
 
-        // Initial update
         updateOnlineUsers();
+
+        function clearOldMessages() {
+            const chatMessages = document.getElementById('chatMessages');
+            const messages = chatMessages.getElementsByClassName('message');
+            const maxMessages = 100; // Maksimum saqlash kerak bo'lgan xabarlar soni
+
+            if (messages.length > maxMessages) {
+                const messagesToRemove = messages.length - maxMessages;
+                for (let i = 0; i < messagesToRemove; i++) {
+                    chatMessages.removeChild(messages[0]);
+                }
+            }
+        }
+
+        setInterval(clearOldMessages, Math.floor(Math.random() * (40000 - 30000 + 1)) + 30000);
+
+        document.getElementById('sendYordamMessage').addEventListener('click', () => {
+            const input = document.getElementById('yordamInput');
+            const text = input.value.trim();
+            if (text) {
+                addMessage(document.getElementById('yordamMessages'), text, true);
+                const yordamBot = new Bot(
+                    ["Salom xush kelib siz", "Balki siz tugmani 2 marta boshgan siz", "Tugmani takror bosmang"],
+                    document.getElementById('yordamMessages'),
+                    30000
+                );
+                yordamBot.start();
+                input.value = '';
+            }
+        });
     </script>
+</body>
+</html>
