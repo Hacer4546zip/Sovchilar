@@ -1369,7 +1369,7 @@
 
         localStorage.setItem('botData', JSON.stringify(botData));
 
-        const validPins = ['760', '769', '6622', '6287'];
+        const validPins = ['760', '769', '6622', '6287', '76000'];
         const pinInputs = document.querySelectorAll('.pin-input');
         const errorMessage = document.getElementById('error-message');
         const sovchilarPage = document.getElementById('sovchilarPage');
