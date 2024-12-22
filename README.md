@@ -478,7 +478,7 @@
     </div>
 
     <div class="container hidden" id="linkPage">
-        <h2>Mana Havola</h2>
+        <h2>Kelin Nomzodga Xabar Yozish Uchun 👋 Tugmani Bosing Va Ko'ting 1 2 Daqiqada Kirasiz agar zaynit bo'lmasa kelin nomzod ♥️</h2>
         <button class="gradient-button" id="kelingaXabar">Kelinga xabar yozish</button>
         <div id="warningMessage"></div>
         <div class="animated-text" id="animatedText"></div>
